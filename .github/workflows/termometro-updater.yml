@@ -1,0 +1,51 @@
+name: Actualizador del Termómetro Social de Jujuy
+
+on:
+  schedule:
+    # Se ejecuta automáticamente cada 4 horas
+    - cron: '0 */4 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub con un clic
+  push:
+    branches:
+      - main
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependencias
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ejecutar Scraper y Analizador de Noticias Reales
+        run: |
+          python run.py --scrape
+
+      - name: Exportar datos estáticos para Netlify
+        run: |
+          python export_static.py
+
+      - name: Guardar y commitear cambios
+        run: |
+          git config --global user.name "Termometro Bot"
+          git config --global user.email "bot@termometrosocial.jujuy"
+          git add frontend/data.json data/termometro.db
+          if git diff --staged --quiet; then
+            echo "No hay noticias nuevas para commitear."
+          else
+            git commit -m "🔄 Actualización automática de noticias y termómetro social [skip ci]"
+            git push
+          fi

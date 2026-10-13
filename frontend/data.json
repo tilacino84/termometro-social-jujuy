@@ -1,0 +1,667 @@
+{
+  "termometro": {
+    "indice": 11.9,
+    "nivel": "bajo",
+    "emoji": "🟢",
+    "descripcion": "Clima social tranquilo en Jujuy"
+  },
+  "estadisticas": {
+    "total_noticias": 81,
+    "total_comentarios": 67,
+    "sentimientos": {
+      "POS": 1,
+      "NEG": 8,
+      "NEU": 58
+    },
+    "periodo_dias": 7
+  },
+  "temas_frecuentes": [
+    {
+      "tema": "General",
+      "total": 31
+    },
+    {
+      "tema": "Economía",
+      "total": 15
+    },
+    {
+      "tema": "Política",
+      "total": 9
+    },
+    {
+      "tema": "Seguridad",
+      "total": 9
+    },
+    {
+      "tema": "Salud",
+      "total": 4
+    },
+    {
+      "tema": "Carnaval y Cultura",
+      "total": 3
+    },
+    {
+      "tema": "Litio",
+      "total": 3
+    },
+    {
+      "tema": "Transporte",
+      "total": 3
+    },
+    {
+      "tema": "Educación",
+      "total": 2
+    },
+    {
+      "tema": "Medio Ambiente",
+      "total": 2
+    }
+  ],
+  "timeline_sentimiento": [
+    {
+      "dia": "2026-10-13",
+      "pos": 1,
+      "neg": 8,
+      "neu": 58,
+      "total": 67
+    }
+  ],
+  "noticias_recientes": [
+    {
+      "id": 14,
+      "titulo": "Jujuy alcanzó el 73,86% de ocupación durante el fin de semana largo - Jujuy OnLine Noticias",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMEtxRmk4RlFYV1lxYm44NEJ1Q3ZMSXhhN05talFwYm44ZjlnekYxMjFSNzN4bWlKaEtSUUd4VEp3TXpZRk1pLXgtS0lYUzFKOUpqQWRINF9ZaEJ6VG80Vjh2YTNXRE1pRWRCcXZsV0s1ZWE4ZWZKYjdIWjdBSHJOZkZfd1JDZW41b1FHZE5fOWJYbnpRYVNwWW1yOUMyYjJaY0Nn?oc=5",
+      "fecha": "2026-10-13 11:34:58",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 19,
+      "titulo": "Minería en Jujuy: el sector genera más de 10.000 empleos directos e indirectos - Editorial RN",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcmVBZTJ3OVIxd2YzSlk2eGJPYjNsSGZ0bmRvU0lvQXNVS01UcGd6Zy00NjNoWFNUX2tVdnZyNkxUalpKZC1XRlA4R0h6YWpjVXBvS0FyZVZRRm03ZklSZXRiLXpCNHB4Y1IyVjVGRmZnSXJHZXZFZTJXelZvYWRhOVZBV3F6a05yU3lYSk5LWU9abHpqbkYzalk1MWgxVTV6dFk1bTlTeXg?oc=5",
+      "fecha": "2026-10-13 11:26:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Litio",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 15,
+      "titulo": "Jujuy recibió a más de 17 mil turistas y la Quebrada superó el 84% de ocupación - Que Pasa Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcUxYQkJCbkgwa2VRUTZDaGFqQm5PbWx4YThEV0hGWGdaM3hpeXZRd3d2ZEJPOUExWlducEEyNkZ6UUd4MGJQbXB4TjlWbEdzeHhTdFhDWllTY1UxUFdCU21NSG1tS08tcWNrVXprcXhEeGQ3dEZoS3o3V1NEU0d4clhPczk5WDJrSklEUjBlb0ZFWFQzUzk4S0V6ZjJlR2J5X3BlbkQ0TFFVcDFubElLaGJDRlp2OFJO0gG4AUFVX3lxTE5xTFhCQkJuSDBrZVFRNkNoYWpCbk9tbHhhOERXSEZYZ1ozeGl5dlF3d3ZkQk85QTFaV25wQTI2RnpRR3gwYlBtcHhOOVZsR3N4eFN0WENaWVNjVTFQV0JTbU1IbW1LTy1xY2tVemtxeER4ZDd0RmhLejdXU0RTR3hyWE9zOTlYMmtKSURSMGVvRkVYVDNTOThLRXpmMmVHYnlfcGVuRDRMUVVwMW5sSUtoYkNGWnY4Uk4?oc=5",
+      "fecha": "2026-10-13 11:23:09",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Carnaval y Cultura",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 9,
+      "titulo": "Se mantiene el alerta amarilla por vientos para Jujuy: cómo sigue el tiempo - Todo Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVHUxbkk5c1RmZmJPLVlsXzdtWVBVTzFiSmdhcXhnb2ZVdS1lNFFPTzd5QmgxMEpSYkxvTV9XeVRTTWtLaWJqNDBiRjJLTnUzV3VUX21LajJybndaMTNYNlVEZ2J1Z2lMalpBWTNjeHQ2R19RUHNPX1dLRnRtT3V0Qi1zUVlLQ2JpLVRzZ3RoVGRZa2VxaF9RTDhpOFRyMGd5SERHNVdkTjDSAa4BQVVfeXFMTTE0VGY2bTJyOFdBODhHb2llVDVSQVFqZ2hNWnVnVjBfdWxHcmUwdDVuV3lhTjBpRXk1amRqNUVzMHNBdXplMGVDNVU4MGRfdS03T3BkMXRWY0hhVUNyd0RGaEVVRE1ZYWZ6NC0yaFhiNW5uN0FtZExTbDlFSzJ2VDB3Rk9wcDc5SHBIdEJCN1dvMHctdENJQUNLaVowNlBWbHJZTnZ3X1dxdXJwTW5R?oc=5",
+      "fecha": "2026-10-13 10:01:57",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 129,
+      "titulo": "Río Blanco: miles de fieles participaron de una nueva peregrinación",
+      "link": "https://www.jujuyalmomento.com/rio-blanco/rio-blanco-miles-fieles-participaron-una-nueva-peregrinacion-n208448",
+      "fecha": "2026-10-13 09:48:36",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 128,
+      "titulo": "Violento choque en Libertador: tres motocicletas colisionaron en la Avenida Uriburu",
+      "link": "https://www.jujuyalmomento.com/choque/violento-choque-libertador-tres-motocicletas-colisionaron-la-avenida-uriburu-n208478",
+      "fecha": "2026-10-13 09:48:33",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Salud",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 127,
+      "titulo": "San Pedro de Jujuy: entró a la casa de su ex pareja, le robó dinero y le dejó una carta firmada",
+      "link": "https://www.jujuyalmomento.com/san-pedro-jujuy/san-pedro-jujuy-entro-la-casa-su-ex-pareja-le-robo-dinero-y-le-dejo-una-carta-firmada-n208480",
+      "fecha": "2026-10-13 09:48:30",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 126,
+      "titulo": "Con solo 9 años, Olivia Orrabali llevará a Jujuy al Panamericano de Montevideo",
+      "link": "https://www.jujuyalmomento.com/taekwondo/con-solo-9-anos-olivia-orrabali-llevara-jujuy-al-panamericano-montevideo-n207354",
+      "fecha": "2026-10-13 09:48:27",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Educación",
+      "total_comentarios": 8,
+      "pos": 0,
+      "neg": 0,
+      "neu": 8
+    },
+    {
+      "id": 125,
+      "titulo": "SOBREMESA: Lic. Alejandro Zafarov",
+      "link": "https://www.jujuyalmomento.com/jujuy/sobremesa-lic-alejandro-zafarov-n208428",
+      "fecha": "2026-10-13 09:48:24",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 124,
+      "titulo": "Capital jujeña: un gato llora de hambre y necesita un hogar urgente",
+      "link": "https://www.jujuyalmomento.com/jujuy/capital-jujena-un-gato-llora-hambre-y-necesita-un-hogar-urgente-n208440",
+      "fecha": "2026-10-13 09:48:21",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 123,
+      "titulo": "Rige la ley de Inocencia Fiscal II: qué cambia desde ahora",
+      "link": "https://www.jujuyalmomento.com/ley/rige-la-ley-inocencia-fiscal-ii-que-cambia-ahora-n208394",
+      "fecha": "2026-10-13 09:48:18",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 122,
+      "titulo": "Estado de las rutas en Jujuy: advierten por desmoronamientos, baches y desvíos",
+      "link": "https://www.jujuyalmomento.com/estado/estado-las-rutas-jujuy-advierten-desmoronamientos-baches-y-desvios-n208505",
+      "fecha": "2026-10-13 09:48:15",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 121,
+      "titulo": "Jesica Cirio fue mamá por segunda vez: nació su hijo \"Kimi\"",
+      "link": "https://www.jujuyalmomento.com/jesica-cirio/jesica-cirio-fue-mama-segunda-vez-nacio-su-hijo-kimi-n208475",
+      "fecha": "2026-10-13 09:48:13",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 120,
+      "titulo": "Contactanos",
+      "link": "https://www.jujuyalmomento.com/contenidos/contacto.html",
+      "fecha": "2026-10-13 09:48:10",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 119,
+      "titulo": "San Pedro volverá a las calles reclamando por el tarifazo: \"Es horrible lo que está pasando\"",
+      "link": "https://www.jujuyalmomento.com/san-pedro/san-pedro-volvera-las-calles-reclamando-el-tarifazo-es-horrible-lo-que-esta-pasando-n208485",
+      "fecha": "2026-10-13 09:47:48",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 2,
+      "pos": 1,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 68,
+      "titulo": "El boom minero no asegura sacar a la gente de la extrema vulnerabilidad",
+      "link": "https://www.jujuyalmomento.com/el-boom-minero-no-asegura-sacar-la-gente-la-extrema-vulnerabilidad-n208363",
+      "fecha": "2026-10-13 09:41:06",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Litio",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 67,
+      "titulo": "¿La prioridad es ganar una elección o proveer medicamentos que salvan vidas?",
+      "link": "https://www.jujuyalmomento.com/la-prioridad-es-ganar-una-eleccion-o-proveer-medicamentos-que-salvan-vidas-n208317",
+      "fecha": "2026-10-13 09:41:03",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Salud",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 66,
+      "titulo": "La adquisición de tecnología en el 911 no equivale a obtener resultados",
+      "link": "https://www.jujuyalmomento.com/la-adquisicion-tecnologia-el-911-no-equivale-obtener-resultados-n208435",
+      "fecha": "2026-10-13 09:41:01",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 65,
+      "titulo": "Colectora 66: perro extraviado",
+      "link": "https://www.jujuyalmomento.com/jujuy/colectora-66-perro-extraviado-n208442",
+      "fecha": "2026-10-13 09:40:59",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Medio Ambiente",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 64,
+      "titulo": "Cuestionan a UPCN Jujuy por falta de democracia interna y por no conseguir aumentos",
+      "link": "https://www.jujuyalmomento.com/upcn/cuestionan-upcn-jujuy-falta-democracia-interna-y-no-conseguir-aumentos-n208482",
+      "fecha": "2026-10-13 09:40:56",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 3,
+      "pos": 0,
+      "neg": 3,
+      "neu": 0
+    },
+    {
+      "id": 63,
+      "titulo": "Se conoce la inflación de septiembre: estiman aumento en torno al 2%",
+      "link": "https://www.jujuyalmomento.com/inflacion/se-conoce-la-inflacion-septiembre-estiman-aumento-torno-al-2-n208494",
+      "fecha": "2026-10-13 09:40:54",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Salud",
+      "total_comentarios": 3,
+      "pos": 0,
+      "neg": 1,
+      "neu": 2
+    },
+    {
+      "id": 62,
+      "titulo": "El \"Provincia de Jujuy\" celebra sus 10 ediciones",
+      "link": "https://www.jujuyalmomento.com/taekwondo-itf/el-provincia-jujuy-celebra-sus-10-ediciones-n207627",
+      "fecha": "2026-10-13 09:40:51",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 61,
+      "titulo": "Lo Nuestro: Mica Sancho y Fede Montenegro",
+      "link": "https://www.jujuyalmomento.com/lo-nuestro-mica-sancho-y-fede-montenegro-n208414",
+      "fecha": "2026-10-13 09:40:49",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 60,
+      "titulo": "SOBREMESA: Cristina Guzmán, Abogada y Pdte. M.P.J.",
+      "link": "https://www.jujuyalmomento.com/jujuy/sobremesa-cristina-guzman-abogada-y-pdte-mpj-n208368",
+      "fecha": "2026-10-13 09:40:47",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 59,
+      "titulo": "Arranca el debate en Diputados del Presupuesto 2027",
+      "link": "https://www.jujuyalmomento.com/debate/arranca-el-debate-diputados-del-presupuesto-2027-n208469",
+      "fecha": "2026-10-13 09:40:45",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 58,
+      "titulo": "El Foro Hábitat Digno presentó sus conclusiones y exigió declarar la emergencia en Jujuy",
+      "link": "https://www.jujuyalmomento.com/foro/el-foro-habitat-digno-presento-sus-conclusiones-y-exigio-declarar-la-emergencia-jujuy-n208492",
+      "fecha": "2026-10-13 09:40:38",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 57,
+      "titulo": "Más de 10 días caminando: la marcha \"Por el Agua y por la Vida\" llegó a Capital",
+      "link": "https://www.jujuyalmomento.com/marcha/mas-10-dias-caminando-la-marcha-por-el-agua-y-la-vida-llego-capital-n208486",
+      "fecha": "2026-10-13 09:40:34",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Litio",
+      "total_comentarios": 2,
+      "pos": 0,
+      "neg": 0,
+      "neu": 2
+    },
+    {
+      "id": 56,
+      "titulo": "Julieta Prandi se separó de Emanuel Ortega, un mes después de haberse casado",
+      "link": "https://www.jujuyalmomento.com/julieta-prandi/julieta-prandi-se-separo-emanuel-ortega-un-mes-despues-haberse-casado-n208504",
+      "fecha": "2026-10-13 09:40:31",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 55,
+      "titulo": "El Gobierno reúne a la mesa política, en la previa del viaje de Milei a Washington",
+      "link": "https://www.jujuyalmomento.com/gobierno/el-gobierno-reune-la-mesa-politica-la-previa-del-viaje-milei-washington-n208495",
+      "fecha": "2026-10-13 09:40:29",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 3,
+      "pos": 0,
+      "neg": 0,
+      "neu": 3
+    },
+    {
+      "id": 54,
+      "titulo": "Usina Emprendedora: Mudeba, mujeres que derriban barreras y construyen autonomía",
+      "link": "https://www.jujuyalmomento.com/usina-emprendedora/usina-emprendedora-mudeba-mujeres-que-derriban-barreras-y-construyen-autonomia-n208308",
+      "fecha": "2026-10-13 09:40:27",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    }
+  ],
+  "keywords_trending": [
+    {
+      "palabra": "jujuy",
+      "total": 13,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "escuchar",
+      "total": 12,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "nota",
+      "total": 12,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "tres",
+      "total": 4,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "upcn",
+      "total": 3,
+      "en_negativos": 3,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "agua",
+      "total": 3,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "martes",
+      "total": 3,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "ocupación",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "semana",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "recibió",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "alerta",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "amarilla",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "vientos",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "cómo",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "tiempo",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "pedro",
+      "total": 2,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "casa",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "panamericano",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "será",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 1
+    },
+    {
+      "palabra": "estoy",
+      "total": 2,
+      "en_negativos": 0,
+      "en_positivos": 0
+    }
+  ],
+  "sentimiento_por_tema": [
+    {
+      "tema": "Economía",
+      "total_comentarios": 16,
+      "score_promedio": -0.1239375,
+      "positivos": 0,
+      "negativos": 3,
+      "neutros": 13
+    },
+    {
+      "tema": "Política",
+      "total_comentarios": 12,
+      "score_promedio": -0.08333333333333333,
+      "positivos": 1,
+      "negativos": 2,
+      "neutros": 9
+    },
+    {
+      "tema": "General",
+      "total_comentarios": 9,
+      "score_promedio": 0.0,
+      "positivos": 0,
+      "negativos": 0,
+      "neutros": 9
+    },
+    {
+      "tema": "Educación",
+      "total_comentarios": 8,
+      "score_promedio": 0.0,
+      "positivos": 0,
+      "negativos": 0,
+      "neutros": 8
+    },
+    {
+      "tema": "Seguridad",
+      "total_comentarios": 7,
+      "score_promedio": -0.14285714285714285,
+      "positivos": 0,
+      "negativos": 1,
+      "neutros": 6
+    },
+    {
+      "tema": "Salud",
+      "total_comentarios": 5,
+      "score_promedio": -0.2,
+      "positivos": 0,
+      "negativos": 1,
+      "neutros": 4
+    },
+    {
+      "tema": "Litio",
+      "total_comentarios": 4,
+      "score_promedio": 0.0,
+      "positivos": 0,
+      "negativos": 0,
+      "neutros": 4
+    },
+    {
+      "tema": "Transporte",
+      "total_comentarios": 3,
+      "score_promedio": -0.3333333333333333,
+      "positivos": 0,
+      "negativos": 1,
+      "neutros": 2
+    },
+    {
+      "tema": "Carnaval y Cultura",
+      "total_comentarios": 2,
+      "score_promedio": 0.0,
+      "positivos": 0,
+      "negativos": 0,
+      "neutros": 2
+    },
+    {
+      "tema": "Medio Ambiente",
+      "total_comentarios": 1,
+      "score_promedio": 0.0,
+      "positivos": 0,
+      "negativos": 0,
+      "neutros": 1
+    }
+  ],
+  "actualizado": "2026-10-13T09:51:53.244610",
+  "fuente": "Datos reales recolectados de medios de Jujuy"
+}

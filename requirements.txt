@@ -1,0 +1,14 @@
+# Termómetro Social de Jujuy — Dependencias
+
+# Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+feedparser>=6.0.0
+lxml>=5.0.0
+
+# API
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+
+# Utilidades
+python-dotenv>=1.0.0
