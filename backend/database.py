@@ -356,7 +356,9 @@ def obtener_noticias_con_stats(limite: int = 30, dias: int = 7) -> list[dict]:
             LEFT JOIN comentarios c ON n.id = c.noticia_id
             WHERE n.fecha >= ?
             GROUP BY n.id
-            ORDER BY n.fecha DESC
+            ORDER BY 
+                (CASE WHEN n.link LIKE '%news.google.com%' THEN 1 ELSE 0 END) ASC,
+                n.fecha DESC
             LIMIT ?
             """,
             (fecha_limite, limite),

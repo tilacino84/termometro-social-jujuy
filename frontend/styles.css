@@ -758,6 +758,32 @@ body {
     margin-top: 0.25rem;
 }
 
+.news-card-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--brand-indigo);
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 0.2rem;
+    transition: all 0.2s ease;
+}
+
+.news-card-item:hover .news-card-action {
+    color: #ffffff;
+}
+
+.news-card-action svg {
+    transition: transform 0.2s ease;
+}
+
+.news-card-item:hover .news-card-action svg {
+    transform: translate(2px, -2px);
+}
+
 .news-topic-chip {
     font-size: 0.7rem;
     font-weight: 600;

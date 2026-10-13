@@ -518,7 +518,7 @@ function renderNoticias(noticias) {
         return;
     }
 
-    noticiasListEl.innerHTML = filtered.slice(0, 18).map(n => {
+    noticiasListEl.innerHTML = filtered.slice(0, 24).map(n => {
         let toneClass = 'neu';
         let toneBadge = '⚪ Informativo';
 
@@ -530,12 +530,20 @@ function renderNoticias(noticias) {
             toneBadge = `🟢 Favorable (${n.pos})`;
         }
 
+        const link = (n.link && n.link.startsWith('http')) ? n.link : '#';
+        let dominio = 'Diario';
+        try {
+            dominio = new URL(link).hostname.replace('www.', '').replace('news.', '');
+        } catch (e) {
+            dominio = (n.fuente || 'web').replace('_', ' ');
+        }
+
         const fuenteRaw = n.fuente || 'web';
         const fuenteLegible = fuenteRaw.replace('_', ' ').toUpperCase();
         const fechaCorta = n.fecha ? n.fecha.slice(0, 16) : 'Reciente';
 
         return `
-            <a href="${escapeHtml(n.link || '#')}" target="_blank" rel="noopener noreferrer" class="news-card-item tone-${toneClass}">
+            <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="news-card-item tone-${toneClass}" title="Abrir noticia original en ${escapeHtml(dominio)}">
                 <div class="news-card-top">
                     <span class="news-source-tag ${fuenteRaw}">${fuenteLegible}</span>
                     <span class="news-time-tag">${fechaCorta}</span>
@@ -544,6 +552,10 @@ function renderNoticias(noticias) {
                 <div class="news-card-bottom">
                     <span class="news-topic-chip">${escapeHtml(n.tema || 'General')}</span>
                     <span class="news-tone-badge ${toneClass}">${toneBadge}</span>
+                </div>
+                <div class="news-card-action">
+                    <span>Abrir en ${escapeHtml(dominio)}</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                 </div>
             </a>
         `;
