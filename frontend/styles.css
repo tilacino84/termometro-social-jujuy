@@ -818,6 +818,84 @@ body {
     color: #cbd5e1;
 }
 
+/* ─── REDES SOCIALES PULSO ─── */
+.social-monitor-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.social-channels-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem 1.6rem;
+}
+
+.social-channel-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: all 0.2s ease;
+}
+
+.social-channel-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--border-medium);
+    transform: translateY(-2px);
+}
+
+.social-channel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-channel-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.social-icon {
+    font-size: 1.15rem;
+}
+
+.social-channel-tension {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-pill);
+}
+
+.social-channel-tension.fb { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
+.social-channel-tension.x { background: rgba(244, 63, 94, 0.15); color: #fda4af; }
+.social-channel-tension.yt { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+
+.social-channel-desc {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+.social-pulse-summary {
+    padding: 0.9rem 1.6rem 1.4rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-subtle);
+}
+
 /* ─── FOOTER ─── */
 .system-footer {
     border-top: 1px solid var(--border-subtle);

@@ -31,6 +31,12 @@ with open(js_path, "r", encoding="utf-8") as f:
 with open(html_path, "r", encoding="utf-8") as f:
     html_content = f.read()
 
+data_path = os.path.join(frontend_dir, "data.json")
+data_content = "{}"
+if os.path.exists(data_path):
+    with open(data_path, "r", encoding="utf-8") as f:
+        data_content = f.read().strip()
+
 # 1. Inyectar o reemplazar <style>
 if "<style>" in html_content and "</style>" in html_content:
     html_content = re.sub(r"<style>[\s\S]*?</style>", f"<style>\n{css_content}\n</style>", html_content, count=1)
@@ -38,10 +44,11 @@ elif '<link rel="stylesheet" href="styles.css">' in html_content:
     html_content = html_content.replace('<link rel="stylesheet" href="styles.css">', f"<style>\n{css_content}\n</style>")
 
 # 2. Inyectar o reemplazar <script>
+full_script = f"window.__EMBEDDED_DATA__ = {data_content};\n\n{js_content}"
 if "<script>" in html_content and "</script>" in html_content:
-    html_content = re.sub(r"<script>[\s\S]*?</script>", f"<script>\n{js_content}\n</script>", html_content, count=1)
+    html_content = re.sub(r"<script>[\s\S]*?</script>", f"<script>\n{full_script}\n</script>", html_content, count=1)
 elif '<script src="app.js"></script>' in html_content:
-    html_content = html_content.replace('<script src="app.js"></script>', f"<script>\n{js_content}\n</script>")
+    html_content = html_content.replace('<script src="app.js"></script>', f"<script>\n{full_script}\n</script>")
 
 with open(html_path, "w", encoding="utf-8") as f:
     f.write(html_content)

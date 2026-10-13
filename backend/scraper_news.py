@@ -51,34 +51,69 @@ def _limpiar_texto(texto: str) -> str:
     return texto
 
 
+MESES_ES = {
+    "enero": "01", "febrero": "02", "marzo": "03", "abril": "04",
+    "mayo": "05", "junio": "06", "julio": "07", "agosto": "08",
+    "septiembre": "09", "setiembre": "09", "octubre": "10",
+    "noviembre": "11", "diciembre": "12",
+}
+
 def _parsear_fecha(fecha_str: str) -> str:
     """
-    Intenta parsear múltiples formatos de fecha y retorna YYYY-MM-DD HH:MM:SS.
-    Si falla, retorna la fecha/hora actual.
+    Parsea fechas en múltiples formatos (ISO, español NOA, RSS, microsegundos)
+    y retorna YYYY-MM-DD HH:MM:SS exacto.
     """
-    formatos = [
-        "%a, %d %b %Y %H:%M:%S %z",       # RSS estándar
-        "%a, %d %b %Y %H:%M:%S %Z",       # RSS con timezone nombre
-        "%Y-%m-%dT%H:%M:%S%z",             # ISO 8601
-        "%Y-%m-%dT%H:%M:%SZ",             # ISO 8601 UTC
-        "%Y-%m-%d %H:%M:%S",              # MySQL/SQLite
-        "%d/%m/%Y %H:%M",                 # Formato AR común
-        "%d/%m/%Y",                        # Solo fecha AR
-        "%Y-%m-%d",                        # Solo fecha ISO
-    ]
-    for fmt in formatos:
-        try:
-            dt = datetime.strptime(fecha_str.strip(), fmt)
-            return dt.strftime("%Y-%m-%d %H:%M:%S")
-        except (ValueError, AttributeError):
-            continue
+    if not fecha_str:
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    # Si feedparser provee un struct_time
+    s = str(fecha_str).strip()
+
+    # Si es struct_time de feedparser
     if hasattr(fecha_str, "tm_year"):
         try:
             return datetime(*fecha_str[:6]).strftime("%Y-%m-%d %H:%M:%S")
         except Exception:
             pass
+
+    # Limpiar ISO con milisegundos (ej: 2026-10-11T12:58:00.000Z -> 2026-10-11 12:58:00)
+    iso_clean = re.sub(r"\.\d+Z?", "", s).replace("Z", "")
+    iso_clean = iso_clean.replace("T", " ")
+
+    formatos = [
+        "%Y-%m-%d %H:%M:%S",
+        "%Y-%m-%d %H:%M",
+        "%Y-%m-%d",
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S %Z",
+        "%a, %d %b %Y %H:%M:%S",
+        "%d/%m/%Y %H:%M:%S",
+        "%d/%m/%Y %H:%M",
+        "%d/%m/%Y",
+    ]
+
+    for fmt in formatos:
+        try:
+            dt = datetime.strptime(iso_clean[:19], fmt)
+            return dt.strftime("%Y-%m-%d %H:%M:%S")
+        except (ValueError, AttributeError):
+            continue
+
+    # Formato en español: "11 de octubre de 2026 - 09:58" o "11 de octubre de 2026"
+    s_lower = s.lower()
+    match_es = re.search(r"(\d{1,2})\s+de\s+([a-záéíóú]+)\s+de\s+(\d{4})(?:\s*[-–]\s*(\d{1,2}):(\d{2}))?", s_lower)
+    if match_es:
+        dia = match_es.group(1).zfill(2)
+        mes_nombre = match_es.group(2)
+        anio = match_es.group(3)
+        hora = match_es.group(4) or "12"
+        minuto = match_es.group(5) or "00"
+        mes_num = MESES_ES.get(mes_nombre, "01")
+        return f"{anio}-{mes_num}-{dia} {hora.zfill(2)}:{minuto.zfill(2)}:00"
+
+    # Regex simple para YYYY-MM-DD
+    match_iso = re.search(r"(\d{4})-(\d{2})-(\d{2})", s)
+    if match_iso:
+        return f"{match_iso.group(1)}-{match_iso.group(2)}-{match_iso.group(3)} 12:00:00"
 
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -414,17 +449,42 @@ def _extraer_noticia_de_url(
 
     # Extraer fecha
     fecha = ""
-    for selector in selectores.get("fecha", "time").split(","):
-        selector = selector.strip()
-        try:
-            elem = soup.select_one(selector)
-            if elem:
-                # Intentar el atributo datetime primero
-                fecha_raw = elem.get("datetime", elem.get_text(strip=True))
-                fecha = _parsear_fecha(fecha_raw)
-                break
-        except Exception:
-            continue
+
+    # 1. Intentar meta tags de publicación (los más precisos)
+    meta_props = [
+        ("meta", {"property": "article:published_time"}),
+        ("meta", {"property": "og:published_time"}),
+        ("meta", {"name": "publish-date"}),
+        ("meta", {"name": "date"}),
+        ("meta", {"itemprop": "datePublished"}),
+    ]
+    for tag_name, attrs in meta_props:
+        meta_elem = soup.find(tag_name, attrs)
+        if meta_elem and meta_elem.get("content"):
+            fecha = _parsear_fecha(meta_elem["content"])
+            break
+
+    # 2. Intentar selectores configurados o tags time
+    if not fecha:
+        selectores_fecha = selectores.get("fecha", "time, span.date, .fecha").split(",")
+        for selector in selectores_fecha:
+            selector = selector.strip()
+            try:
+                elem = soup.select_one(selector)
+                if elem:
+                    fecha_raw = elem.get("datetime") or elem.get_text(strip=True)
+                    if fecha_raw:
+                        fecha = _parsear_fecha(fecha_raw)
+                        break
+            except Exception:
+                continue
+
+    # 3. Intentar extraer fecha del slug de la URL (ej: /2026-10-11-22-13-0-)
+    if not fecha and url:
+        match_url = re.search(r"/(202\d)[-/](\d{1,2})[-/](\d{1,2})", url)
+        if match_url:
+            anio, mes, dia = match_url.group(1), match_url.group(2).zfill(2), match_url.group(3).zfill(2)
+            fecha = f"{anio}-{mes}-{dia} 12:00:00"
 
     if not fecha:
         fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

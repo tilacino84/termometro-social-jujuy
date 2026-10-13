@@ -40,7 +40,7 @@ from backend.analyzer import (
 logger = logging.getLogger(__name__)
 
 
-def exportar_dashboard_json(dias: int = 7, output_path: str = None) -> str:
+def exportar_dashboard_json(dias: int = 30, output_path: str = None) -> str:
     """Genera y guarda el payload completo del dashboard como un archivo JSON estático."""
     init_db()
 
@@ -55,7 +55,7 @@ def exportar_dashboard_json(dias: int = 7, output_path: str = None) -> str:
     total_noticias = contar_noticias(dias)
     temas = obtener_temas_frecuentes(dias, limite=10)
     timeline = obtener_timeline_sentimiento(dias)
-    noticias = obtener_noticias_con_stats(limite=30, dias=dias)
+    noticias = obtener_noticias_con_stats(limite=100, dias=dias)
     keywords = obtener_palabras_clave_trending(dias, limite=20)
     sentimiento_por_tema = obtener_resumen_sentimiento_por_tema(dias)
 
