@@ -393,6 +393,80 @@ def obtener_timeline_sentimiento(dias: int = 7) -> list[dict]:
         conn.close()
 
 
+def obtener_descontento_por_fuente(dias: int = 30) -> list[dict]:
+    """
+    Calcula el nivel de descontento real por medio de noticias jujeño,
+    basado en las reacciones y comentarios críticos recopilados.
+    """
+    fecha_limite = (datetime.now() - timedelta(days=dias)).strftime("%Y-%m-%d")
+    conn = _get_connection()
+    try:
+        rows = conn.execute(
+            """
+            SELECT
+                n.fuente,
+                COUNT(c.id) as total_opiniones,
+                SUM(CASE WHEN c.sentimiento = 'NEG' THEN 1 ELSE 0 END) as reclamos,
+                SUM(CASE WHEN c.sentimiento = 'POS' THEN 1 ELSE 0 END) as favorables,
+                SUM(CASE WHEN c.sentimiento = 'NEU' THEN 1 ELSE 0 END) as neutrales
+            FROM noticias n
+            INNER JOIN comentarios c ON n.id = c.noticia_id
+            WHERE n.fecha >= ?
+            GROUP BY n.fuente
+            HAVING total_opiniones > 0
+            ORDER BY reclamos DESC, total_opiniones DESC
+            """,
+            (fecha_limite,),
+        ).fetchall()
+        
+        resultado = []
+        for r in rows:
+            d = dict(r)
+            tot = d["total_opiniones"]
+            rec = d["reclamos"]
+            porcentaje_descontento = round((rec / tot) * 100, 1) if tot > 0 else 0.0
+            d["porcentaje_descontento"] = porcentaje_descontento
+            resultado.append(d)
+        return resultado
+    finally:
+        conn.close()
+
+
+def obtener_comentarios_destacados(limite: int = 25, dias: int = 30) -> list[dict]:
+    """
+    Retorna los testimonios y comentarios ciudadanos reales más relevantes,
+    asociados a cada noticia y portal de Jujuy.
+    """
+    fecha_limite = (datetime.now() - timedelta(days=dias)).strftime("%Y-%m-%d")
+    conn = _get_connection()
+    try:
+        rows = conn.execute(
+            """
+            SELECT
+                c.id,
+                c.texto,
+                c.sentimiento,
+                c.score,
+                c.fecha,
+                n.titulo as noticia_titulo,
+                n.fuente as noticia_fuente,
+                n.link as noticia_link,
+                n.tema as noticia_tema
+            FROM comentarios c
+            INNER JOIN noticias n ON c.noticia_id = n.id
+            WHERE c.fecha >= ?
+            ORDER BY 
+                (CASE WHEN c.sentimiento = 'NEG' THEN 0 WHEN c.sentimiento = 'POS' THEN 1 ELSE 2 END) ASC,
+                c.fecha DESC
+            LIMIT ?
+            """,
+            (fecha_limite, limite),
+        ).fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
 # ─────────────────────────────────────────────
 # INICIALIZACIÓN AL IMPORTAR
 # ─────────────────────────────────────────────

@@ -75,15 +75,24 @@ LEXICO_NEGATIVO = {
     # Servicios públicos
     "abandono": -1.5, "dejadez": -1.5, "destrucción": -2, "deterioro": -1.5,
     "corte": -1, "falta": -1, "escasez": -1.5, "colapso": -2,
-    # Acciones negativas
+    "tarifazo": -2.0, "tarifazos": -2.0, "bache": -1.2, "baches": -1.2,
+    "desmoronamiento": -1.5, "desmoronamientos": -1.5, "desvío": -0.8,
+    # Acciones negativas y reclamos
     "empeorar": -1.5, "destruir": -2, "robar": -2, "mentir": -2,
-    "engañar": -2, "estafar": -2, "despedir": -1, "cerrar": -0.5,
-    "recortar": -1, "reclamar": -0.5, "protestar": -0.5, "denunciar": -0.5,
+    "engañar": -2, "estafar": -2, "despedir": -1.5, "despido": -1.5,
+    "despidos": -1.5, "cerrar": -0.5, "recortar": -1.2, "recorte": -1.5,
+    "reclamar": -1.2, "reclamo": -1.2, "reclamos": -1.2, "reclamando": -1.2,
+    "protestar": -1.2, "protesta": -1.2, "marcha": -0.8, "paro": -1.5,
+    "huelga": -1.5, "manifestación": -1.0, "denunciar": -1.2, "denuncia": -1.2,
+    # Situación salarial y económica
+    "inflación": -1.2, "miseria": -2.0, "hambre": -2.0, "ajuste": -1.5,
+    "aumento": -0.5, "caro": -1.0, "no alcanza": -1.8, "debajo": -1.0,
+    "vulnerabilidad": -1.5, "emergencia": -1.5, "malestar": -1.5,
     # Desaprobación
-    "no sirve": -1.5, "no funciona": -1.5, "no alcanza": -1,
+    "no sirve": -1.5, "no funciona": -1.5,
     "cansado": -1, "cansada": -1, "harto": -1.5, "harta": -1.5,
     "basta": -1.5, "nunca": -0.5, "nadie": -0.5, "nada": -0.5,
-    "peor": -1.5, "siempre lo mismo": -1.5,
+    "peor": -1.5, "siempre lo mismo": -1.5, "horrible": -2.0,
 }
 
 # Modificadores de intensidad

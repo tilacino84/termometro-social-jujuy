@@ -241,9 +241,26 @@ def scrapear_rss() -> int:
                 if not link or not titulo:
                     continue
 
-                # Google News a veces redirige; intentar obtener la URL real
+                # Google News: extraer URL real del artículo
                 if "news.google.com" in link:
-                    link = _resolver_url_google_news(link) or link
+                    # 1. Intentar extraer del HTML del summary (más confiable)
+                    summary_html = entry.get("summary", "")
+                    real_link = _extraer_link_de_summary(summary_html)
+                    if real_link:
+                        link = real_link
+                    else:
+                        # 2. Usar el dominio source + búsqueda por título como fallback
+                        source_href = entry.get("source", {}).get("href", "")
+                        if source_href and not source_href.startswith("http://news.google"):
+                            # Fallback: URL de búsqueda de Google del título
+                            import urllib.parse
+                            q = urllib.parse.quote(titulo[:80])
+                            link = f"https://www.google.com/search?q={q}&tbm=nws"
+                        else:
+                            # Último recurso: intentar seguir redirect
+                            resolved = _resolver_url_google_news(link)
+                            if resolved:
+                                link = resolved
 
                 # Parsear fecha
                 fecha_raw = entry.get("published", entry.get("updated", ""))
@@ -293,6 +310,33 @@ def _parsear_fecha_struct(struct_time) -> str:
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
+def _extraer_link_de_summary(summary_html: str) -> Optional[str]:
+    """
+    Extrae la URL real del artículo desde el HTML del campo summary de Google News.
+    El summary de Google News RSS contiene HTML con el link real al artículo original.
+    """
+    if not summary_html:
+        return None
+    try:
+        soup = BeautifulSoup(summary_html, "html.parser")
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href and href.startswith("http") and "news.google.com" not in href:
+                return href
+    except Exception:
+        pass
+    # Fallback regex
+    match = re.search(r'href=["\']([^"\']+)["\']', summary_html)
+    if match:
+        href = match.group(1)
+        if href.startswith("http") and "news.google.com" not in href:
+            return href
+    return None
+
+
+
+
+
 def _resolver_url_google_news(google_url: str) -> Optional[str]:
     """
     Intenta resolver la URL de redirección de Google News.
@@ -321,6 +365,8 @@ def _resolver_url_google_news(google_url: str) -> Optional[str]:
             return urls[0]
 
     return None
+
+
 
 
 # ─────────────────────────────────────────────

@@ -143,36 +143,26 @@ body {
     gap: 0.85rem;
 }
 
-.timeframe-switch {
-    display: flex;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-subtle);
+.timeframe-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.3);
     border-radius: var(--radius-pill);
-    padding: 3px;
-    gap: 2px;
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+    color: #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.pill-btn {
-    border: none;
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 0.4rem 0.95rem;
-    border-radius: var(--radius-pill);
-    cursor: pointer;
-    transition: all 0.2s ease;
+.timeframe-badge .badge-icon {
+    font-size: 0.9rem;
 }
 
-.pill-btn:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.pill-btn.active {
-    background: var(--brand-indigo);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+.timeframe-badge strong {
+    color: #818cf8;
+    font-weight: 700;
 }
 
 .refresh-action-btn {
@@ -776,6 +766,14 @@ body {
     color: #ffffff;
 }
 
+.news-card-item.is-search-link .news-card-action {
+    color: #60a5fa;
+}
+
+.news-card-item.is-search-link:hover .news-card-action {
+    color: #93c5fd;
+}
+
 .news-card-action svg {
     transition: transform 0.2s ease;
 }
@@ -846,54 +844,195 @@ body {
     transition: all 0.2s ease;
 }
 
-.social-channel-item:hover {
+/* ─── DESCONTENTO EN MEDIOS Y COMUNIDAD DE JUJUY ─── */
+.social-monitor-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.media-discontent-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem 1.6rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.media-discontent-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: all 0.2s ease;
+}
+
+.media-discontent-item:hover {
     background: rgba(255, 255, 255, 0.04);
     border-color: var(--border-medium);
     transform: translateY(-2px);
 }
 
-.social-channel-header {
+.media-discontent-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.social-channel-name {
+.media-name {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     font-weight: 700;
     color: #ffffff;
 }
 
-.social-icon {
-    font-size: 1.15rem;
-}
-
-.social-channel-tension {
+.media-badge-tag {
     font-family: var(--font-heading);
-    font-size: 0.82rem;
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 0.2rem 0.65rem;
     border-radius: var(--radius-pill);
 }
 
-.social-channel-tension.fb { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
-.social-channel-tension.x { background: rgba(244, 63, 94, 0.15); color: #fda4af; }
-.social-channel-tension.yt { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+.media-badge-tag.critico { background: rgba(239, 68, 68, 0.18); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
+.media-badge-tag.alerta { background: rgba(245, 158, 11, 0.18); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.3); }
+.media-badge-tag.calmo { background: rgba(16, 185, 129, 0.18); color: #a7f3d0; border: 1px solid rgba(16, 185, 129, 0.3); }
 
-.social-channel-desc {
-    font-size: 0.76rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
+.media-progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-pill);
+    overflow: hidden;
 }
 
-.social-pulse-summary {
-    padding: 0.9rem 1.6rem 1.4rem;
-    font-size: 0.82rem;
+.media-progress-fill {
+    height: 100%;
+    border-radius: var(--radius-pill);
+    transition: width 0.6s ease;
+}
+
+.media-progress-fill.red { background: linear-gradient(90deg, #f59e0b, #ef4444); }
+.media-progress-fill.green { background: linear-gradient(90deg, #10b981, #3b82f6); }
+
+.media-detail-text {
+    font-size: 0.77rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Muro de Voces Ciudadanas */
+.voices-subhead {
+    padding: 1.1rem 1.6rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voices-subhead h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.citizen-voices-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    padding: 1rem 1.6rem 1.5rem;
+}
+
+.voice-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid #64748b;
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.voice-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--border-medium);
+}
+
+.voice-card.neg { border-left-color: #ef4444; }
+.voice-card.pos { border-left-color: #10b981; }
+.voice-card.neu { border-left-color: #3b82f6; }
+
+.voice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.voice-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.voice-tag.neg { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+.voice-tag.pos { background: rgba(16, 185, 129, 0.15); color: #a7f3d0; }
+.voice-tag.neu { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
+
+.voice-source {
+    font-size: 0.73rem;
     color: var(--text-muted);
-    border-top: 1px solid var(--border-subtle);
+}
+
+.voice-quote {
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.voice-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 0.5rem;
+}
+
+.voice-context-link {
+    color: #94a3b8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.15s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80%;
+}
+
+.voice-context-link:hover {
+    color: #60a5fa;
+    text-decoration: underline;
 }
 
 /* ─── FOOTER ─── */

@@ -11,7 +11,7 @@ const API_BASE = window.location.origin.includes(':8000')
     ? `${window.location.origin}/api` 
     : 'http://localhost:8000/api';
 
-let currentDias = 7;
+const DIAS_ANALISIS = 7;
 let activeFilter = 'all';
 let rawMasterData = (typeof window !== 'undefined' && window.__EMBEDDED_DATA__) ? window.__EMBEDDED_DATA__ : null; // Todos los datos originales cargados
 
@@ -39,26 +39,23 @@ const temasListEl = document.getElementById('temas-list');
 const sentimentTopicsBody = document.getElementById('sentiment-topics-body');
 const keywordsCloudEl = document.getElementById('keywords-cloud');
 const noticiasListEl = document.getElementById('noticias-list');
-const periodSelector = document.getElementById('period-selector');
 const btnRefresh = document.getElementById('btn-refresh');
 const lastUpdateText = document.getElementById('last-update');
 const topicChipsContainer = document.getElementById('topic-filter-chips');
 
-// Elementos de Redes Sociales
-const socialFbScoreEl = document.getElementById('social-fb-score');
-const socialXScoreEl = document.getElementById('social-x-score');
-const socialYtScoreEl = document.getElementById('social-yt-score');
-const socialPulseSummaryEl = document.getElementById('social-pulse-summary');
+// Elementos de Descontento en Medios y Voces Ciudadanas
+const mediaDiscontentListEl = document.getElementById('media-discontent-list');
+const citizenVoicesListEl = document.getElementById('citizen-voices-list');
+const voicesTotalCountEl = document.getElementById('voices-total-count');
 
 // ─── INICIALIZACIÓN ───
 document.addEventListener('DOMContentLoaded', () => {
-    initPeriodSelector();
     initTopicFilterChips();
     initRefreshButton();
 
     // Renderizado instantáneo si existen datos embebidos
     if (rawMasterData && rawMasterData.noticias_recientes) {
-        aplicarFiltroPeriodo(currentDias);
+        aplicarAnalisisSemanal();
         if (rawMasterData.actualizado) updateTimestamp(rawMasterData.actualizado);
     }
 
@@ -72,21 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ─── CONTROLES DE INTERACCIÓN ───
-function initPeriodSelector() {
-    if (!periodSelector) return;
-    const buttons = periodSelector.querySelectorAll('.pill-btn');
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentDias = parseInt(btn.dataset.dias, 10) || 7;
-            
-            // Aplicar filtro de período real inmediatamente sobre los datos cargados
-            aplicarFiltroPeriodo(currentDias);
-        });
-    });
-}
-
 function initTopicFilterChips() {
     if (!topicChipsContainer) return;
     const chips = topicChipsContainer.querySelectorAll('.chip');
@@ -97,7 +79,7 @@ function initTopicFilterChips() {
             activeFilter = chip.dataset.filter || 'all';
             
             if (rawMasterData) {
-                aplicarFiltroPeriodo(currentDias);
+                aplicarAnalisisSemanal();
             }
         });
     });
@@ -141,28 +123,38 @@ async function fetchMasterData(manual = false) {
 
     if (data && data.noticias_recientes) {
         rawMasterData = data;
-        aplicarFiltroPeriodo(currentDias);
+        aplicarAnalisisSemanal();
         updateTimestamp(data.actualizado);
     }
 }
 
-// ─── FILTRADO DINÁMICO REAL POR PERÍODO (Sin inventar nada) ───
-function aplicarFiltroPeriodo(dias) {
+// ─── ANÁLISIS SEMANAL INTEGRAL (Últimos 7 Días) ───
+function aplicarAnalisisSemanal() {
     if (!rawMasterData || !rawMasterData.noticias_recientes) return;
 
-    const ahora = new Date();
-    const tiempoLimite = ahora.getTime() - (dias * 24 * 60 * 60 * 1000);
-
-    // Filtrar noticias reales que caen estrictamente en el período
     const todasLasNotas = rawMasterData.noticias_recientes;
-    const notasFiltradas = todasLasNotas.filter(n => {
-        if (!n.fecha) return true; // Si no tiene fecha, conservarla como reciente
-        const fechaNota = new Date(n.fecha.replace(' ', 'T'));
-        if (isNaN(fechaNota.getTime())) return true;
-        return fechaNota.getTime() >= tiempoLimite;
+    
+    // Determinar ancla temporal segura: la fecha más reciente de las noticias o ahora
+    let maxFechaMs = 0;
+    todasLasNotas.forEach(n => {
+        if (n.fecha) {
+            const t = new Date(n.fecha.replace(' ', 'T')).getTime();
+            if (!isNaN(t) && t > maxFechaMs) maxFechaMs = t;
+        }
     });
 
-    // Recalcular métricas en base a las noticias reales del período
+    const ahoraMs = Date.now();
+    const referenciaMs = maxFechaMs > 0 ? Math.max(maxFechaMs, ahoraMs) : ahoraMs;
+    const tiempoLimite = referenciaMs - (DIAS_ANALISIS * 24 * 60 * 60 * 1000);
+
+    // Filtrar noticias reales pertenecientes a la semana
+    const notasFiltradas = todasLasNotas.filter(n => {
+        if (!n.fecha) return true;
+        const fn = new Date(n.fecha.replace(' ', 'T')).getTime();
+        return isNaN(fn) || fn >= tiempoLimite;
+    });
+
+    // Recalcular métricas en base a las noticias reales de la semana
     const totalNotas = notasFiltradas.length;
 
     let totalComentarios = 0;
@@ -189,7 +181,7 @@ function aplicarFiltroPeriodo(dias) {
         temasMap[tema] = (temasMap[tema] || 0) + 1;
 
         // Agrupación timeline por día
-        const dia = n.fecha ? n.fecha.slice(0, 10) : ahora.toISOString().slice(0, 10);
+        const dia = n.fecha ? n.fecha.slice(0, 10) : new Date().toISOString().slice(0, 10);
         if (!timelineMap[dia]) {
             timelineMap[dia] = { dia, pos: 0, neg: 0, neu: 0, total: 0 };
         }
@@ -199,7 +191,7 @@ function aplicarFiltroPeriodo(dias) {
         timelineMap[dia].total += cTot;
     });
 
-    // Calcular índice del termómetro del período
+    // Calcular índice del termómetro semanal
     let indice = 0;
     if (totalComentarios > 0) {
         indice = Math.round((negCount / totalComentarios) * 1000) / 10;
@@ -213,18 +205,18 @@ function aplicarFiltroPeriodo(dias) {
     // Preparar timeline ordenado por fecha
     const timelineOrdenado = Object.values(timelineMap).sort((a, b) => a.dia.localeCompare(b.dia));
 
-    // Renderizar componentes con datos del período
-    renderGauge(indice, totalNotas, totalComentarios, dias);
+    // Renderizar componentes con el análisis semanal
+    renderGauge(indice, totalNotas, totalComentarios);
     renderMetrics({ POS: posCount, NEG: negCount, NEU: neuCount });
     renderTimeline(timelineOrdenado);
     renderTemas(temasOrdenados);
-    renderSocialMediaPulse(dias, negCount, posCount, totalComentarios);
+    renderDescontentoMedios(DIAS_ANALISIS, notasFiltradas);
     renderKeywords(rawMasterData.keywords_trending || []);
     renderNoticias(notasFiltradas);
 }
 
-// ─── 1. GAUGE / VELOCÍMETRO DEL PERÍODO ───
-function renderGauge(indice, totalNotas, totalComentarios, dias) {
+// ─── 1. GAUGE / VELOCÍMETRO SEMANAL ───
+function renderGauge(indice, totalNotas, totalComentarios) {
     const rawVal = Math.min(Math.max(indice, 0), 100);
 
     let nivel = 'Calmo';
@@ -234,23 +226,23 @@ function renderGauge(indice, totalNotas, totalComentarios, dias) {
     if (totalNotas === 0) {
         nivel = 'Sin registros';
         emoji = '⚪';
-        desc = `No se hallaron noticias registradas en las últimas ${dias === 1 ? '24 horas' : dias + ' días'}. Podés ampliar el rango temporal a 7 o 30 días.`;
+        desc = `No se hallaron noticias registradas en los últimos 7 días.`;
     } else if (rawVal <= 15) {
         nivel = 'Calmo / Favorable';
         emoji = '🟢';
-        desc = `Clima social con estabilidad general en Jujuy (${dias === 1 ? 'últimas 24 horas' : 'últimos ' + dias + ' días'}).`;
+        desc = `Clima social con estabilidad general y baja conflictividad en Jujuy durante los últimos 7 días.`;
     } else if (rawVal <= 35) {
         nivel = 'Moderado';
         emoji = '🟡';
-        desc = `Clima social con debates y reclamos sectoriales puntuales en la provincia.`;
+        desc = `Clima social moderado con debates y reclamos sectoriales puntuales en la provincia esta semana.`;
     } else if (rawVal <= 65) {
         nivel = 'Tensión Media';
         emoji = '🟠';
-        desc = `Tensión social en alza con marcada presencia de reclamos ciudadanos y conflictividad.`;
+        desc = `Tensión social en alza con presencia de reclamos ciudadanos y conflictividad en los últimos 7 días.`;
     } else {
         nivel = 'Alerta / Conflicto';
         emoji = '🔴';
-        desc = `Clima de alta conflictividad y preocupación ciudadana predominante.`;
+        desc = `Clima de alta conflictividad y preocupación ciudadana predominante en Jujuy.`;
     }
 
     if (gaugeValueEl) gaugeValueEl.textContent = totalNotas === 0 ? '0%' : `${rawVal.toFixed(1)}%`;
@@ -260,11 +252,12 @@ function renderGauge(indice, totalNotas, totalComentarios, dias) {
     if (termometroDescEl) termometroDescEl.textContent = desc;
 
     if (metaNoticiasEl) {
-        metaNoticiasEl.textContent = `${totalNotas} noticias analizadas (${dias === 1 ? 'últimas 24 hs' : 'últimos ' + dias + ' días'})`;
+        metaNoticiasEl.textContent = `${totalNotas} noticias analizadas (últimos 7 días)`;
     }
     if (metaComentariosEl) {
         metaComentariosEl.textContent = `${totalComentarios} citas y opiniones de vecinos`;
     }
+
 
     // Animación SVG Gauge (-90deg a +90deg)
     const angle = -90 + (rawVal / 100) * 180;
@@ -413,23 +406,117 @@ function renderTemas(temas) {
 }
 
 // ─── 5. PULSO EN REDES SOCIALES (Facebook, X/Twitter, YouTube) ───
-function renderSocialMediaPulse(dias, negCount, posCount, totalComentarios) {
-    // Cálculo proporcional de polaridad en comentarios sociales
-    const total = totalComentarios || 1;
-    
-    // En Facebook suele concentrarse mayor volumen de vecinos con reclamos
-    const fbTension = Math.min(Math.round(((negCount * 1.2) / total) * 100), 100);
-    // En X/Twitter suele haber debate político y gremial
-    const xTension = Math.min(Math.round(((negCount * 1.1) / total) * 100), 100);
-    // En YouTube suele ser más equilibrado con foco informativo
-    const ytTension = Math.min(Math.round(((negCount * 0.8) / total) * 100), 100);
+// ─── 5. DESCONTENTO EN MEDIOS Y VOCES CIUDADANAS REALES DE JUJUY ───
+function renderDescontentoMedios(dias, notasDelPeriodo) {
+    if (!mediaDiscontentListEl) return;
 
-    if (socialFbScoreEl) socialFbScoreEl.textContent = `${fbTension}% tensión`;
-    if (socialXScoreEl) socialXScoreEl.textContent = `${xTension}% tensión`;
-    if (socialYtScoreEl) socialYtScoreEl.textContent = `${ytTension}% tensión`;
+    // Medios reconocidos de la provincia
+    const mediosDef = [
+        { key: 'jujuy_al_momento', match: 'momento', nombre: 'Jujuy Al Momento', logo: '📰', reclamos: 0, total: 0 },
+        { key: 'eltribuno', match: 'tribuno', nombre: 'El Tribuno de Jujuy', logo: '🗞️', reclamos: 0, total: 0 },
+        { key: 'jujuy_online', match: 'online', nombre: 'Jujuy OnLine Noticias', logo: '🌐', reclamos: 0, total: 0 },
+        { key: 'pregon', match: 'pregon', nombre: 'Diario Pregón', logo: '📜', reclamos: 0, total: 0 }
+    ];
 
-    if (socialPulseSummaryEl) {
-        socialPulseSummaryEl.textContent = `Monitoreando interacciones en páginas de noticias de Jujuy. Mayor actividad registrada en comentarios sobre transporte, servicios públicos y paritarias salariales (${dias === 1 ? 'últimas 24 hs' : 'últimos ' + dias + ' días'}).`;
+    // Computar según las notas reales del período seleccionado
+    notasDelPeriodo.forEach(n => {
+        const fuenteStr = (n.fuente || '').toLowerCase();
+        for (const m of mediosDef) {
+            if (fuenteStr.includes(m.match)) {
+                const tot = n.total_comentarios || 1;
+                const neg = n.neg || (n.sentimiento === 'NEG' ? 1 : 0);
+                m.total += tot;
+                m.reclamos += neg;
+                break;
+            }
+        }
+    });
+
+    // Renderizar tarjetas por medio
+    mediaDiscontentListEl.innerHTML = mediosDef.map(m => {
+        const pct = m.total > 0 ? Math.round((m.reclamos / m.total) * 100) : 0;
+        let badgeClass = 'calmo';
+        let badgeText = 'Tranquilo';
+        let fillClass = 'green';
+
+        if (pct >= 35) {
+            badgeClass = 'critico';
+            badgeText = `${pct}% Reclamos (Alto)`;
+            fillClass = 'red';
+        } else if (pct >= 15) {
+            badgeClass = 'alerta';
+            badgeText = `${pct}% Descontento`;
+            fillClass = 'red';
+        } else if (m.total > 0) {
+            badgeClass = 'calmo';
+            badgeText = `${pct}% Críticas (Bajo)`;
+        } else {
+            badgeClass = 'calmo';
+            badgeText = 'Sin incidentes';
+        }
+
+        return `
+            <div class="media-discontent-item">
+                <div class="media-discontent-header">
+                    <span class="media-name"><span>${m.logo}</span> ${m.nombre}</span>
+                    <span class="media-badge-tag ${badgeClass}">${badgeText}</span>
+                </div>
+                <div class="media-progress-bar">
+                    <div class="media-progress-fill ${fillClass}" style="width: ${Math.max(pct, 6)}%"></div>
+                </div>
+                <p class="media-detail-text">
+                    ${m.reclamos} reclamos detectados sobre ${m.total} registros analizados en notas de este medio.
+                </p>
+            </div>
+        `;
+    }).join('');
+
+    // Renderizar muro de testimonios y comentarios ciudadanos reales
+    if (citizenVoicesListEl) {
+        let comms = (rawMasterData && rawMasterData.comentarios_destacados) ? rawMasterData.comentarios_destacados : [];
+        
+        // Filtrar comentarios que correspondan a las notas del período
+        if (notasDelPeriodo && notasDelPeriodo.length > 0) {
+            const titulosValidos = new Set(notasDelPeriodo.map(n => (n.titulo || '').toLowerCase()));
+            const commsFiltrados = comms.filter(c => titulosValidos.has((c.noticia_titulo || '').toLowerCase()));
+            if (commsFiltrados.length > 0) {
+                comms = commsFiltrados;
+            }
+        }
+
+        if (voicesTotalCountEl) {
+            voicesTotalCountEl.textContent = `${comms.length} testimonios ciudadanos en notas (${dias === 1 ? 'últimas 24 hs' : 'últimos ' + dias + ' días'})`;
+        }
+
+        if (!comms.length) {
+            citizenVoicesListEl.innerHTML = '<div class="chart-empty" style="grid-column: 1/-1; padding: 2rem; text-align: center; color: var(--text-muted);">Sin testimonios registrados en este intervalo temporal</div>';
+            return;
+        }
+
+        citizenVoicesListEl.innerHTML = comms.slice(0, 9).map(c => {
+            const sent = c.sentimiento || 'NEU';
+            let tagClass = 'neu';
+            let tagLabel = '⚪ Informativo';
+            if (sent === 'NEG') { tagClass = 'neg'; tagLabel = '🔴 Reclamo Ciudadano'; }
+            else if (sent === 'POS') { tagClass = 'pos'; tagLabel = '🟢 Opinión Favorable'; }
+
+            const medioNombre = formatearMedio(c.noticia_fuente);
+            const fechaStr = formatearFechaPublicacion(c.fecha);
+
+            return `
+                <div class="voice-card ${tagClass}">
+                    <div class="voice-header">
+                        <span class="voice-tag ${tagClass}">${tagLabel}</span>
+                        <span class="voice-source">${fechaStr}</span>
+                    </div>
+                    <p class="voice-quote">“${escapeHtml(c.texto)}”</p>
+                    <div class="voice-footer">
+                        <span class="voice-source">En nota: <strong>${escapeHtml(medioNombre)}</strong></span>
+                        ${c.noticia_link ? `<a href="${c.noticia_link}" target="_blank" rel="noopener noreferrer" class="voice-context-link" title="${escapeHtml(c.noticia_titulo || '')}">Abrir noticia ↗</a>` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
     }
 }
 
@@ -481,22 +568,46 @@ function renderNoticias(noticias) {
             toneBadge = `🟢 Favorable (${n.pos})`;
         }
 
-        const link = (n.link && n.link.startsWith('http')) ? n.link : '#';
+        const rawLink = n.link || '';
+        const isGoogleSearch = rawLink.includes('google.com/search');
+        const isGoogleNews = rawLink.includes('news.google.com');
+        const hasValidLink = rawLink.startsWith('http') && !isGoogleNews;
+
+        const link = hasValidLink ? rawLink : (rawLink || '#');
+
+        // Determinar dominio / label del enlace
         let dominio = 'Diario Local';
-        try {
-            dominio = new URL(link).hostname.replace('www.', '').replace('news.', '');
-        } catch (e) {
-            dominio = (n.fuente || 'web').replace('_', ' ');
+        let accionLabel = 'Abrir noticia';
+        
+        if (isGoogleSearch) {
+            dominio = 'Google Noticias';
+            accionLabel = 'Buscar en Google Noticias';
+        } else if (hasValidLink) {
+            try {
+                dominio = new URL(link).hostname.replace('www.', '').replace('news.', '');
+                accionLabel = `Abrir en ${dominio}`;
+            } catch (e) {
+                dominio = (n.fuente || 'web').replace(/_/g, ' ');
+                accionLabel = `Abrir en ${dominio}`;
+            }
+        } else {
+            dominio = (n.fuente || 'web').replace(/_/g, ' ');
+            accionLabel = 'Ver fuente';
         }
 
         const fuenteRaw = n.fuente || 'web';
-        const fuenteLegible = fuenteRaw.replace('_', ' ').toUpperCase();
+        const fuenteLegible = fuenteRaw.replace(/_/g, ' ').toUpperCase();
         
         // Formatear fecha REAL verificada
         const fechaFormateada = formatearFechaPublicacion(n.fecha);
 
+        // Icono diferente para búsqueda vs link directo
+        const iconSvg = isGoogleSearch
+            ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`
+            : `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
         return `
-            <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="news-card-item tone-${toneClass}" title="Abrir noticia original en ${escapeHtml(dominio)}">
+            <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="news-card-item tone-${toneClass}${isGoogleSearch ? ' is-search-link' : ''}" title="${escapeHtml(accionLabel)}">
                 <div class="news-card-top">
                     <span class="news-source-tag ${fuenteRaw}">${fuenteLegible}</span>
                     <span class="news-time-tag">${escapeHtml(fechaFormateada)}</span>
@@ -507,13 +618,14 @@ function renderNoticias(noticias) {
                     <span class="news-tone-badge ${toneClass}">${toneBadge}</span>
                 </div>
                 <div class="news-card-action">
-                    <span>Abrir en ${escapeHtml(dominio)}</span>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    <span>${escapeHtml(accionLabel)}</span>
+                    ${iconSvg}
                 </div>
             </a>
         `;
     }).join('');
 }
+
 
 // ─── FORMATEADOR DE FECHAS REALES DE PUBLICACIÓN ───
 function formatearFechaPublicacion(fechaStr) {
@@ -572,3 +684,16 @@ function escapeHtml(str) {
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#039;');
 }
+
+function formatearMedio(fuente) {
+    if (!fuente) return 'Medio Local';
+    const f = String(fuente).toLowerCase();
+    if (f.includes('somosjujuy')) return 'Somos Jujuy';
+    if (f.includes('tribuno')) return 'El Tribuno de Jujuy';
+    if (f.includes('almomento')) return 'Jujuy Al Momento';
+    if (f.includes('google')) return 'Google Noticias';
+    if (f.includes('cronica')) return 'Crónica Jujuy';
+    if (f.includes('diario')) return 'Diario de Jujuy';
+    return fuente.replace(/_/g, ' ').toUpperCase();
+}
+

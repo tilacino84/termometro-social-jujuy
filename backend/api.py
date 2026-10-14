@@ -29,6 +29,8 @@ from backend.database import (
     obtener_timeline_sentimiento,
     obtener_noticias_recientes,
     obtener_comentarios_por_noticia,
+    obtener_descontento_por_fuente,
+    obtener_comentarios_destacados,
 )
 from backend.analyzer import (
     obtener_palabras_clave_trending,
@@ -84,6 +86,8 @@ async def get_dashboard(dias: int = Query(7, ge=1, le=90)):
         noticias = obtener_noticias_con_stats(limite=20, dias=dias)
         keywords = obtener_palabras_clave_trending(dias, limite=15)
         sentimiento_por_tema = obtener_resumen_sentimiento_por_tema(dias)
+        descontento_fuentes = obtener_descontento_por_fuente(dias)
+        comentarios_destacados = obtener_comentarios_destacados(limite=20, dias=dias)
 
         # Determinar el nivel del termómetro
         if indice <= 25:
@@ -123,6 +127,8 @@ async def get_dashboard(dias: int = Query(7, ge=1, le=90)):
             "noticias_recientes": noticias,
             "keywords_trending": keywords,
             "sentimiento_por_tema": sentimiento_por_tema,
+            "descontento_por_fuente": descontento_fuentes,
+            "comentarios_destacados": comentarios_destacados,
             "actualizado": datetime.now().isoformat(),
         }
     except Exception as e:

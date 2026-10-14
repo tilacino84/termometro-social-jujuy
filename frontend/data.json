@@ -1,72 +1,300 @@
 {
   "termometro": {
-    "indice": 11.9,
+    "indice": 14.4,
     "nivel": "bajo",
     "emoji": "🟢",
     "descripcion": "Clima social tranquilo en Jujuy"
   },
   "estadisticas": {
-    "total_noticias": 78,
-    "total_comentarios": 67,
+    "total_noticias": 129,
+    "total_comentarios": 104,
     "sentimientos": {
-      "POS": 1,
-      "NEG": 8,
-      "NEU": 58
+      "POS": 4,
+      "NEG": 15,
+      "NEU": 85
     },
     "periodo_dias": 30
   },
   "temas_frecuentes": [
     {
       "tema": "General",
-      "total": 31
+      "total": 55
     },
     {
       "tema": "Política",
-      "total": 12
+      "total": 20
     },
     {
       "tema": "Seguridad",
-      "total": 11
+      "total": 17
+    },
+    {
+      "tema": "Economía",
+      "total": 13
+    },
+    {
+      "tema": "Salud",
+      "total": 6
     },
     {
       "tema": "Carnaval y Cultura",
       "total": 5
     },
     {
-      "tema": "Economía",
-      "total": 5
+      "tema": "Transporte",
+      "total": 4
     },
     {
-      "tema": "Salud",
-      "total": 4
+      "tema": "Educación",
+      "total": 3
     },
     {
       "tema": "Litio",
       "total": 3
     },
     {
-      "tema": "Transporte",
-      "total": 3
-    },
-    {
-      "tema": "Educación",
-      "total": 2
-    },
-    {
       "tema": "Medio Ambiente",
-      "total": 2
+      "total": 3
     }
   ],
   "timeline_sentimiento": [
     {
+      "dia": "2026-10-12",
+      "pos": 0,
+      "neg": 0,
+      "neu": 7,
+      "total": 7
+    },
+    {
       "dia": "2026-10-13",
-      "pos": 1,
-      "neg": 8,
-      "neu": 58,
-      "total": 67
+      "pos": 4,
+      "neg": 15,
+      "neu": 78,
+      "total": 97
     }
   ],
   "noticias_recientes": [
+    {
+      "id": 177,
+      "titulo": "Jujuy Básquet presentó su roster para la temporada 2026/2027",
+      "link": "https://www.jujuyalmomento.com/liga-argentina-basquet/jujuy-basquet-presento-su-roster-la-temporada-20262027-n208544",
+      "fecha": "2026-10-13 23:40:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 172,
+      "titulo": "12 años de ajuste y persecución: ahora quieren discutir el modelo de provincia",
+      "link": "https://www.jujuyalmomento.com/12-anos-ajuste-y-persecucion-ahora-quieren-discutir-el-modelo-provincia-n208546",
+      "fecha": "2026-10-13 22:54:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 166,
+      "titulo": "El ISJ autorizó 145 derivaciones de afiliados a centros de salud de otras provincias - Somos Jujuy",
+      "link": "https://www.google.com/search?q=El%20ISJ%20autoriz%C3%B3%20145%20derivaciones%20de%20afiliados%20a%20centros%20de%20salud%20de%20otras%20provin&tbm=nws",
+      "fecha": "2026-10-13 21:30:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Salud",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 179,
+      "titulo": "Club Tiro vuelve a ser sede de un Senior G2",
+      "link": "https://www.jujuyalmomento.com/tenis/club-tiro-vuelve-ser-sede-un-senior-g2-n208094",
+      "fecha": "2026-10-13 21:16:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 185,
+      "titulo": "El Gobierno reunió a la mesa política para frenar a la oposición en el Congreso",
+      "link": "https://www.jujuyalmomento.com/gobierno/el-gobierno-reunio-la-mesa-politica-frenar-la-oposicion-el-congreso-n208530",
+      "fecha": "2026-10-13 20:09:09",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 182,
+      "titulo": "La canasta básica aumentó un 1,7%: familia necesitó más de $1.600.000 para no ser pobre",
+      "link": "https://www.jujuyalmomento.com/canasta-basica/la-canasta-basica-aumento-un-17-familia-necesito-mas-1600000-no-ser-pobre-n208526",
+      "fecha": "2026-10-13 19:53:29",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 165,
+      "titulo": "Ingreso a Primer Año: dónde estudiar Ciencias Sociales, Informática, Robótica, Turismo y otras orientaciones en Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Ingreso%20a%20Primer%20A%C3%B1o%3A%20d%C3%B3nde%20estudiar%20Ciencias%20Sociales%2C%20Inform%C3%A1tica%2C%20Rob%C3%B3tica%2C%20T&tbm=nws",
+      "fecha": "2026-10-13 17:30:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 1,
+      "pos": 1,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 146,
+      "titulo": "Ley de Coparticipación: comenzó el debate con 28 intendentes de Jujuy - Todo Jujuy",
+      "link": "https://www.google.com/search?q=Ley%20de%20Coparticipaci%C3%B3n%3A%20comenz%C3%B3%20el%20debate%20con%2028%20intendentes%20de%20Jujuy%20-%20Todo%20Juj&tbm=nws",
+      "fecha": "2026-10-13 16:43:19",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 186,
+      "titulo": "Intendentes comenzaron a discutir la Ley de Coparticipación en la Legislatura",
+      "link": "https://www.jujuyalmomento.com/intendentes/intendentes-comenzaron-discutir-la-ley-coparticipacion-la-legislatura-n208518",
+      "fecha": "2026-10-13 15:54:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 142,
+      "titulo": "Clima en Jujuy: cielo nublado y frío para este martes 13 de octubre - TN",
+      "link": "https://www.google.com/search?q=Clima%20en%20Jujuy%3A%20cielo%20nublado%20y%20fr%C3%ADo%20para%20este%20martes%2013%20de%20octubre%20-%20TN&tbm=nws",
+      "fecha": "2026-10-13 15:30:57",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 167,
+      "titulo": "Estas son las escuelas que tomarán examen para ingresar a 1° año en Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Estas%20son%20las%20escuelas%20que%20tomar%C3%A1n%20examen%20para%20ingresar%20a%201%C2%B0%20a%C3%B1o%20en%20Jujuy%20-%20Somo&tbm=nws",
+      "fecha": "2026-10-13 14:59:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Educación",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 156,
+      "titulo": "Buscan voluntarios para vivir en San Salvador de Jujuy: ofrecen alojamiento a cambio de colaborar 5 horas por 5 días a la semana - El Cronista",
+      "link": "https://www.google.com/search?q=Buscan%20voluntarios%20para%20vivir%20en%20San%20Salvador%20de%20Jujuy%3A%20ofrecen%20alojamiento%20a%20ca&tbm=nws",
+      "fecha": "2026-10-13 14:40:38",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 1,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 181,
+      "titulo": "\"Queremos que ya empiece\", la ansiedad de Kusnier a días de su debut con Jujuy Básquet",
+      "link": "https://www.jujuyalmomento.com/jujuy-basquet/queremos-que-ya-empiece-la-ansiedad-kusnier-dias-su-debut-jujuy-basquet-n208110",
+      "fecha": "2026-10-13 14:01:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Economía",
+      "total_comentarios": 6,
+      "pos": 0,
+      "neg": 0,
+      "neu": 6
+    },
+    {
+      "id": 158,
+      "titulo": "La Policía Federal capacita a las Fuerzas de Jujuy en prevención del terrorismo - Jujuy Al Momento",
+      "link": "https://www.google.com/search?q=La%20Polic%C3%ADa%20Federal%20capacita%20a%20las%20Fuerzas%20de%20Jujuy%20en%20prevenci%C3%B3n%20del%20terrorismo%20&tbm=nws",
+      "fecha": "2026-10-13 13:51:07",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 178,
+      "titulo": "La Policía Federal capacita a las Fuerzas de Jujuy en prevención del terrorismo",
+      "link": "https://www.jujuyalmomento.com/policia-federal/la-policia-federal-capacita-las-fuerzas-jujuy-prevencion-del-terrorismo-n208516",
+      "fecha": "2026-10-13 13:51:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 3,
+      "pos": 0,
+      "neg": 0,
+      "neu": 3
+    },
+    {
+      "id": 183,
+      "titulo": "Argentina pidió al Tribunal del Mar frenar la explotación petrolera en las Islas Malvinas",
+      "link": "https://www.jujuyalmomento.com/argentina/argentina-pidio-al-tribunal-del-mar-frenar-la-explotacion-petrolera-las-islas-malvinas-n208515",
+      "fecha": "2026-10-13 13:35:57",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 173,
+      "titulo": "El futuro de ATFA, en discusión: qué posición tomó la Liga Jujeña",
+      "link": "https://www.jujuyalmomento.com/afa/el-futuro-atfa-discusion-que-posicion-tomo-la-liga-jujena-n208407",
+      "fecha": "2026-10-13 12:40:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 7,
+      "pos": 1,
+      "neg": 0,
+      "neu": 6
+    },
     {
       "id": 53,
       "titulo": "Quirófano móvil: el cronograma de servicios mascoteros de esta semana",
@@ -103,6 +331,84 @@
       "tema": "Transporte",
       "total_comentarios": 1,
       "pos": 0,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 150,
+      "titulo": "Martes con probables lluvias y alerta amarilla por vientos - El Tribuno de Jujuy",
+      "link": "https://www.google.com/search?q=Martes%20con%20probables%20lluvias%20y%20alerta%20amarilla%20por%20vientos%20-%20El%20Tribuno%20de%20Jujuy&tbm=nws",
+      "fecha": "2026-10-13 11:44:44",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 147,
+      "titulo": "Jujuy comienza a debatir la Ley de Coparticipación Municipal: qué reclaman los intendentes - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Jujuy%20comienza%20a%20debatir%20la%20Ley%20de%20Coparticipaci%C3%B3n%20Municipal%3A%20qu%C3%A9%20reclaman%20los%20i&tbm=nws",
+      "fecha": "2026-10-13 11:44:41",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 174,
+      "titulo": "Preocupación por la salud de la ex vedette Mónica Guido: está internada hace tres semanas",
+      "link": "https://www.jujuyalmomento.com/preocupacion/preocupacion-la-salud-la-ex-vedette-monica-guido-esta-internada-hace-tres-semanas-n208502",
+      "fecha": "2026-10-13 11:42:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Salud",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 14,
+      "titulo": "Jujuy alcanzó el 73,86% de ocupación durante el fin de semana largo - Jujuy OnLine Noticias",
+      "link": "https://www.google.com/search?q=Jujuy%20alcanz%C3%B3%20el%2073%2C86%25%20de%20ocupaci%C3%B3n%20durante%20el%20fin%20de%20semana%20largo%20-%20Jujuy%20OnLi&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 11:34:58",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 19,
+      "titulo": "Minería en Jujuy: el sector genera más de 10.000 empleos directos e indirectos - Editorial RN",
+      "link": "https://www.google.com/search?q=Miner%C3%ADa%20en%20Jujuy%3A%20el%20sector%20genera%20m%C3%A1s%20de%2010.000%20empleos%20directos%20e%20indirectos%20-&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 11:26:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Litio",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 15,
+      "titulo": "Jujuy recibió a más de 17 mil turistas y la Quebrada superó el 84% de ocupación - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Jujuy%20recibi%C3%B3%20a%20m%C3%A1s%20de%2017%20mil%20turistas%20y%20la%20Quebrada%20super%C3%B3%20el%2084%25%20de%20ocupaci%C3%B3n%20&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 11:23:09",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Carnaval y Cultura",
+      "total_comentarios": 1,
+      "pos": 0,
       "neg": 0,
       "neu": 1
     },
@@ -133,6 +439,32 @@
       "neu": 2
     },
     {
+      "id": 148,
+      "titulo": "Continúa la alerta por fuertes vientos en Jujuy - Jujuy Al Momento",
+      "link": "https://www.google.com/search?q=Contin%C3%BAa%20la%20alerta%20por%20fuertes%20vientos%20en%20Jujuy%20-%20Jujuy%20Al%20Momento&tbm=nws",
+      "fecha": "2026-10-13 11:11:53",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 184,
+      "titulo": "Del ascenso a la élite: Luciano Arrueta seguirá en Sonder",
+      "link": "https://www.jujuyalmomento.com/ascenso/del-ascenso-la-elite-luciano-arrueta-seguira-sonder-n208481",
+      "fecha": "2026-10-13 11:07:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
       "id": 119,
       "titulo": "San Pedro volverá a las calles reclamando por el tarifazo: \"Es horrible lo que está pasando\"",
       "link": "https://www.jujuyalmomento.com/san-pedro/san-pedro-volvera-las-calles-reclamando-el-tarifazo-es-horrible-lo-que-esta-pasando-n208485",
@@ -144,6 +476,19 @@
       "pos": 1,
       "neg": 1,
       "neu": 0
+    },
+    {
+      "id": 9,
+      "titulo": "Se mantiene el alerta amarilla por vientos para Jujuy: cómo sigue el tiempo - Todo Jujuy",
+      "link": "https://www.google.com/search?q=Se%20mantiene%20el%20alerta%20amarilla%20por%20vientos%20para%20Jujuy%3A%20c%C3%B3mo%20sigue%20el%20tiempo%20-%20To&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 10:01:57",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
     },
     {
       "id": 124,
@@ -172,6 +517,19 @@
       "neu": 0
     },
     {
+      "id": 23,
+      "titulo": "Clima en Jujuy hoy martes 13 de octubre: cielo cubierto y frío intenso - TN",
+      "link": "https://www.google.com/search?q=Clima%20en%20Jujuy%20hoy%20martes%2013%20de%20octubre%3A%20cielo%20cubierto%20y%20fr%C3%ADo%20intenso&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 09:05:08",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
       "id": 136,
       "titulo": "Martes con lluvias y alerta amarilla por vientos en Jujuy",
       "link": "https://jujuyonlinenoticias.com.ar/martes-con-lluvias-y-alerta-amarilla-por-vientos-en-jujuy/",
@@ -183,6 +541,266 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
+    },
+    {
+      "id": 192,
+      "titulo": "El ISJ participó de una reunión federal de obras sociales provinciales",
+      "link": "https://jujuyonlinenoticias.com.ar/el-isj-participo-de-una-reunion-federal-de-obras-sociales-provinciales/",
+      "fecha": "2026-10-13 07:35:08",
+      "fuente": "jujuy_online",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 191,
+      "titulo": "Zoonosis: cronograma semanal del quirófano móvil y operativo de bienestar animal",
+      "link": "https://jujuyonlinenoticias.com.ar/zoonosis-cronograma-semanal-del-quirofano-movil-y-operativo-de-bienestar-animal/",
+      "fecha": "2026-10-13 06:24:18",
+      "fuente": "jujuy_online",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 7,
+      "titulo": "Clima hoy en San Salvador del Jujuy: el pronóstico del tiempo para este martes 13 octubre de 2026 - Clarin.com",
+      "link": "https://www.google.com/search?q=Clima%20hoy%20en%20San%20Salvador%20del%20Jujuy%3A%20el%20pron%C3%B3stico%20del%20tiempo%20para%20este%20martes%201&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 03:06:19",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 143,
+      "titulo": "Clima hoy en San Salvador del Jujuy: el pronóstico del tiempo para este martes 13 octubre de 2026 - Clarin.com",
+      "link": "https://www.google.com/search?q=Clima%20hoy%20en%20San%20Salvador%20del%20Jujuy%3A%20el%20pron%C3%B3stico%20del%20tiempo%20para%20este%20martes%201&tbm=nws",
+      "fecha": "2026-10-13 03:06:19",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 36,
+      "titulo": "Alberto Bernis confirmó que Jujuy Crece no hará una alianza electoral con los libertarios y habló de su futuro político - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Alberto%20Bernis%20confirm%C3%B3%20que%20Jujuy%20Crece%20no%20har%C3%A1%20una%20alianza%20electoral%20con%20los%20li&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 01:35:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 168,
+      "titulo": "Alberto Bernis confirmó que Jujuy Crece no hará una alianza electoral con los libertarios y habló de su futuro político - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Alberto%20Bernis%20confirm%C3%B3%20que%20Jujuy%20Crece%20no%20har%C3%A1%20una%20alianza%20electoral%20con%20los%20li&tbm=nws",
+      "fecha": "2026-10-13 01:35:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 20,
+      "titulo": "Jujuy: una competencia de enduro atravesó territorio comunitario sin estudio de impacto ambiental - Página|12",
+      "link": "https://www.google.com/search?q=Jujuy%3A%20una%20competencia%20de%20enduro%20atraves%C3%B3%20territorio%20comunitario%20sin%20estudio%20de%20&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-13 00:29:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 154,
+      "titulo": "Jujuy: una competencia de enduro atravesó territorio comunitario sin estudio de impacto ambiental - Página|12",
+      "link": "https://www.google.com/search?q=Jujuy%3A%20una%20competencia%20de%20enduro%20atraves%C3%B3%20territorio%20comunitario%20sin%20estudio%20de%20&tbm=nws",
+      "fecha": "2026-10-13 00:29:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 30,
+      "titulo": "Gimnasia y Tiro rompió el silencio tras los incidentes en Jujuy y pidió que se revise lo ocurrido - Informate Salta",
+      "link": "https://www.google.com/search?q=Gimnasia%20y%20Tiro%20rompi%C3%B3%20el%20silencio%20tras%20los%20incidentes%20en%20Jujuy%20y%20pidi%C3%B3%20que%20se%20r&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 23:54:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 152,
+      "titulo": "Gimnasia y Tiro rompió el silencio tras los incidentes en Jujuy y pidió que se revise lo ocurrido - Informate Salta",
+      "link": "https://www.google.com/search?q=Gimnasia%20y%20Tiro%20rompi%C3%B3%20el%20silencio%20tras%20los%20incidentes%20en%20Jujuy%20y%20pidi%C3%B3%20que%20se%20r&tbm=nws",
+      "fecha": "2026-10-12 23:54:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 32,
+      "titulo": "Normando Álvarez García aseguró que \"las puertas están abiertas\" para retomar el diálogo con los gremios docentes - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Normando%20%C3%81lvarez%20Garc%C3%ADa%20asegur%C3%B3%20que%20%22las%20puertas%20est%C3%A1n%20abiertas%22%20para%20retomar%20el&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 23:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Educación",
+      "total_comentarios": 2,
+      "pos": 0,
+      "neg": 0,
+      "neu": 2
+    },
+    {
+      "id": 145,
+      "titulo": "Coparticipación municipal: este martes la Legislatura recibirá a los intendentes para iniciar el debate - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Coparticipaci%C3%B3n%20municipal%3A%20este%20martes%20la%20Legislatura%20recibir%C3%A1%20a%20los%20intendentes&tbm=nws",
+      "fecha": "2026-10-12 23:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 21,
+      "titulo": "Rescataron a un hombre que cayó al Dique Los Alisos - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Rescataron%20a%20un%20hombre%20que%20cay%C3%B3%20al%20Dique%20Los%20Alisos%20-%20Somos%20Jujuy&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 21:35:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 155,
+      "titulo": "Rescataron a un hombre que cayó al Dique Los Alisos - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Rescataron%20a%20un%20hombre%20que%20cay%C3%B3%20al%20Dique%20Los%20Alisos%20-%20Somos%20Jujuy&tbm=nws",
+      "fecha": "2026-10-12 21:35:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 22,
+      "titulo": "La trata de personas “se ha mudado totalmente a la virtualidad” y es tema de debate en Jujuy - Vía País",
+      "link": "https://www.google.com/search?q=La%20trata%20de%20personas%20%E2%80%9Cse%20ha%20mudado%20totalmente%20a%20la%20virtualidad%E2%80%9D%20y%20es%20tema%20de%20deb&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 21:18:48",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 157,
+      "titulo": "La trata de personas “se ha mudado totalmente a la virtualidad” y es tema de debate en Jujuy - Vía País",
+      "link": "https://www.google.com/search?q=La%20trata%20de%20personas%20%E2%80%9Cse%20ha%20mudado%20totalmente%20a%20la%20virtualidad%E2%80%9D%20y%20es%20tema%20de%20deb&tbm=nws",
+      "fecha": "2026-10-12 21:18:48",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 33,
+      "titulo": "Conocé el cronograma semanal del quirófano móvil y operativo de bienestar animal - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Conoc%C3%A9%20el%20cronograma%20semanal%20del%20quir%C3%B3fano%20m%C3%B3vil%20y%20operativo%20de%20bienestar%20animal&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 20:39:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 169,
+      "titulo": "Conocé el cronograma semanal del quirófano móvil y operativo de bienestar animal - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Conoc%C3%A9%20el%20cronograma%20semanal%20del%20quir%C3%B3fano%20m%C3%B3vil%20y%20operativo%20de%20bienestar%20animal&tbm=nws",
+      "fecha": "2026-10-12 20:39:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 13,
+      "titulo": "Jujuy recibió a 17.744 turistas durante el fin de semana largo - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Jujuy%20recibi%C3%B3%20a%2017.744%20turistas%20durante%20el%20fin%20de%20semana%20largo%20-%20Somos%20Jujuy&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 19:55:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 170,
+      "titulo": "Jujuy tiene 14.000 trabajadores rurales registrados y estiman que otros 7.000 aún están en la informalidad - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Jujuy%20tiene%2014.000%20trabajadores%20rurales%20registrados%20y%20estiman%20que%20otros%207.000%20a%C3%BA&tbm=nws",
+      "fecha": "2026-10-12 19:34:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
     },
     {
       "id": 88,
@@ -207,8 +825,21 @@
       "tema": "Política",
       "total_comentarios": 1,
       "pos": 0,
+      "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 10,
+      "titulo": "Clima en Jujuy hoy lunes 12 de octubre: muy nuboso y frío con viento moderado - TN",
+      "link": "https://www.google.com/search?q=Clima%20en%20Jujuy%20hoy%20lunes%2012%20de%20octubre%3A%20muy%20nuboso%20y%20fr%C3%ADo%20con%20viento%20moderado&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 15:05:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
       "neg": 0,
-      "neu": 1
+      "neu": 0
     },
     {
       "id": 57,
@@ -220,8 +851,8 @@
       "tema": "Litio",
       "total_comentarios": 2,
       "pos": 0,
-      "neg": 0,
-      "neu": 2
+      "neg": 1,
+      "neu": 1
     },
     {
       "id": 50,
@@ -234,6 +865,32 @@
       "total_comentarios": 1,
       "pos": 0,
       "neg": 1,
+      "neu": 0
+    },
+    {
+      "id": 27,
+      "titulo": "Competencia Trasmotaña Enduro con denuncia penales - Jujuy Dice",
+      "link": "https://www.google.com/search?q=Competencia%20Trasmota%C3%B1a%20Enduro%20con%20denuncia%20penales%20-%20Jujuy%20Dice&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 14:34:22",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 161,
+      "titulo": "Competencia Trasmotaña Enduro con denuncia penales - Jujuy Dice",
+      "link": "https://www.google.com/search?q=Competencia%20Trasmota%C3%B1a%20Enduro%20con%20denuncia%20penales%20-%20Jujuy%20Dice&tbm=nws",
+      "fecha": "2026-10-12 14:34:22",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
       "neu": 0
     },
     {
@@ -263,6 +920,84 @@
       "neu": 1
     },
     {
+      "id": 35,
+      "titulo": "Realizarán un workshop sobre diseño de jardines y paisajismo en Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Realizar%C3%A1n%20un%20workshop%20sobre%20dise%C3%B1o%20de%20jardines%20y%20paisajismo%20en%20Jujuy%20-%20Somos%20Ju&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 12:56:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 34,
+      "titulo": "Invitan a adolescentes a participar de un taller gratuito de ciencia y emprendimiento en Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Invitan%20a%20adolescentes%20a%20participar%20de%20un%20taller%20gratuito%20de%20ciencia%20y%20emprendim&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 12:39:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 26,
+      "titulo": "Jujuy: Atauche saca a relucir su estructura y una de sus alfiles reactiva la guerra con Quintar - Letra P",
+      "link": "https://www.google.com/search?q=Jujuy%3A%20Atauche%20saca%20a%20relucir%20su%20estructura%20y%20una%20de%20sus%20alfiles%20reactiva%20la%20gue&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 12:36:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 159,
+      "titulo": "Jujuy: Atauche saca a relucir su estructura y una de sus alfiles reactiva la guerra con Quintar - Letra P",
+      "link": "https://www.google.com/search?q=Jujuy%3A%20Atauche%20saca%20a%20relucir%20su%20estructura%20y%20una%20de%20sus%20alfiles%20reactiva%20la%20gue&tbm=nws",
+      "fecha": "2026-10-12 12:36:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 171,
+      "titulo": "Último día de la ExpoJuy 2026: música en vivo, gastronomía y propuestas para disfrutar este lunes - Somos Jujuy",
+      "link": "https://www.google.com/search?q=%C3%9Altimo%20d%C3%ADa%20de%20la%20ExpoJuy%202026%3A%20m%C3%BAsica%20en%20vivo%2C%20gastronom%C3%ADa%20y%20propuestas%20para%20dis&tbm=nws",
+      "fecha": "2026-10-12 12:14:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 12,
+      "titulo": "¿Dónde quedó la primavera? Jujuy tendrá días grises y temperaturas muy bajas - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=%C2%BFD%C3%B3nde%20qued%C3%B3%20la%20primavera%3F%20Jujuy%20tendr%C3%A1%20d%C3%ADas%20grises%20y%20temperaturas%20muy%20bajas%20-%20Q&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 12:07:19",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
       "id": 128,
       "titulo": "Violento choque en Libertador: tres motocicletas colisionaron en la Avenida Uriburu",
       "link": "https://www.jujuyalmomento.com/choque/violento-choque-libertador-tres-motocicletas-colisionaron-la-avenida-uriburu-n208478",
@@ -274,6 +1009,58 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
+    },
+    {
+      "id": 180,
+      "titulo": "Un remisero fue grabado cuando le robaba una gran suma a pasajeros en Tilcara",
+      "link": "https://www.jujuyalmomento.com/remisero/un-remisero-fue-grabado-cuando-le-robaba-una-gran-suma-pasajeros-tilcara-n208474",
+      "fecha": "2026-10-12 12:04:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 8,
+      "titulo": "Rige un alerta amarilla por vientos fuertes para Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Rige%20un%20alerta%20amarilla%20por%20vientos%20fuertes%20para%20Jujuy%20-%20Somos%20Jujuy&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 11:59:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 149,
+      "titulo": "Rige un alerta amarilla por vientos fuertes para Jujuy - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Rige%20un%20alerta%20amarilla%20por%20vientos%20fuertes%20para%20Jujuy%20-%20Somos%20Jujuy&tbm=nws",
+      "fecha": "2026-10-12 11:59:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 176,
+      "titulo": "Wanda Nara explicó por qué aumentó 10 kilos para su película",
+      "link": "https://www.jujuyalmomento.com/wanda-nara/wanda-nara-explico-que-aumento-10-kilos-su-pelicula-n208477",
+      "fecha": "2026-10-12 11:47:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
     },
     {
       "id": 121,
@@ -315,6 +1102,19 @@
       "neu": 1
     },
     {
+      "id": 25,
+      "titulo": "Alerta por vientos fuertes afecta a un sector de Jujuy - Jujuy Al Momento",
+      "link": "https://www.google.com/search?q=Alerta%20por%20vientos%20fuertes%20afecta%20a%20un%20sector%20de%20Jujuy%20-%20Jujuy%20Al%20Momento&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 11:13:24",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
       "id": 62,
       "titulo": "El \"Provincia de Jujuy\" celebra sus 10 ediciones",
       "link": "https://www.jujuyalmomento.com/taekwondo-itf/el-provincia-jujuy-celebra-sus-10-ediciones-n207627",
@@ -337,8 +1137,177 @@
       "tema": "Política",
       "total_comentarios": 3,
       "pos": 0,
-      "neg": 1,
-      "neu": 2
+      "neg": 2,
+      "neu": 1
+    },
+    {
+      "id": 160,
+      "titulo": "Un concurso que no deja de crecer en Jujuy - El Tribuno de Jujuy",
+      "link": "https://www.google.com/search?q=Un%20concurso%20que%20no%20deja%20de%20crecer%20en%20Jujuy%20-%20El%20Tribuno%20de%20Jujuy&tbm=nws",
+      "fecha": "2026-10-12 03:28:58",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 24,
+      "titulo": "Un concurso que no deja de crecer en Jujuy - El Tribuno de Jujuy",
+      "link": "https://www.google.com/search?q=Un%20concurso%20que%20no%20deja%20de%20crecer%20en%20Jujuy%20-%20El%20Tribuno%20de%20Jujuy&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-12 03:14:32",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 163,
+      "titulo": "VIDEOS. Piedrazos y patadas en el clásico entre Gimnasia de Jujuy y Gimnasia y Tiro - El Tribuno",
+      "link": "https://www.google.com/search?q=VIDEOS.%20Piedrazos%20y%20patadas%20en%20el%20cl%C3%A1sico%20entre%20Gimnasia%20de%20Jujuy%20y%20Gimnasia%20y%20T&tbm=nws",
+      "fecha": "2026-10-11 23:07:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 18,
+      "titulo": "Escándalo en Jujuy: hinchas se pelearon colgados del alambrado en el clásico del norte - MinutoUno",
+      "link": "https://www.google.com/search?q=Esc%C3%A1ndalo%20en%20Jujuy%3A%20hinchas%20se%20pelearon%20colgados%20del%20alambrado%20en%20el%20cl%C3%A1sico%20del&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 23:04:27",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 153,
+      "titulo": "Escándalo en Jujuy: hinchas se pelearon colgados del alambrado en el clásico del norte - MinutoUno",
+      "link": "https://www.google.com/search?q=Esc%C3%A1ndalo%20en%20Jujuy%3A%20hinchas%20se%20pelearon%20colgados%20del%20alambrado%20en%20el%20cl%C3%A1sico%20del&tbm=nws",
+      "fecha": "2026-10-11 23:04:27",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 17,
+      "titulo": "Graves incidentes en Gimnasia de Jujuy vs. Gimnasia y Tiro de Salta: barras de ambos equipos se enfrentaron sobre el alambrado - La Nación",
+      "link": "https://www.google.com/search?q=Graves%20incidentes%20en%20Gimnasia%20de%20Jujuy%20vs.%20Gimnasia%20y%20Tiro%20de%20Salta%3A%20barras%20de%20a&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 22:30:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 151,
+      "titulo": "Graves incidentes en Gimnasia de Jujuy vs. Gimnasia y Tiro de Salta: barras de ambos equipos se enfrentaron sobre el alambrado - La Nación",
+      "link": "https://www.google.com/search?q=Graves%20incidentes%20en%20Gimnasia%20de%20Jujuy%20vs.%20Gimnasia%20y%20Tiro%20de%20Salta%3A%20barras%20de%20a&tbm=nws",
+      "fecha": "2026-10-11 22:30:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 29,
+      "titulo": "Gimnasia de Jujuy no aguantó la ventaja y perdió dos puntos - Solo Ascenso",
+      "link": "https://www.google.com/search?q=Gimnasia%20de%20Jujuy%20no%20aguant%C3%B3%20la%20ventaja%20y%20perdi%C3%B3%20dos%20puntos%20-%20Solo%20Ascenso&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 22:04:53",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Medio Ambiente",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 162,
+      "titulo": "Gimnasia de Jujuy no aguantó la ventaja y perdió dos puntos - Solo Ascenso",
+      "link": "https://www.google.com/search?q=Gimnasia%20de%20Jujuy%20no%20aguant%C3%B3%20la%20ventaja%20y%20perdi%C3%B3%20dos%20puntos%20-%20Solo%20Ascenso&tbm=nws",
+      "fecha": "2026-10-11 22:04:53",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Medio Ambiente",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 16,
+      "titulo": "Video: batalla arriba del alambrado en Jujuy - Olé",
+      "link": "https://www.google.com/search?q=Video%3A%20batalla%20arriba%20del%20alambrado%20en%20Jujuy&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 20:30:29",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 31,
+      "titulo": "Tensión en Jujuy: recibieron a los ''cascotazos'' al plantel de Gimnasia y Tiro y quedó grabado - Que Pasa Salta",
+      "link": "https://www.google.com/search?q=Tensi%C3%B3n%20en%20Jujuy%3A%20recibieron%20a%20los%20%27%27cascotazos%27%27%20al%20plantel%20de%20Gimnasia%20y%20Tiro%20&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 19:21:14",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 164,
+      "titulo": "Tensión en Jujuy: recibieron a los ''cascotazos'' al plantel de Gimnasia y Tiro y quedó grabado - Que Pasa Salta",
+      "link": "https://www.google.com/search?q=Tensi%C3%B3n%20en%20Jujuy%3A%20recibieron%20a%20los%20%27%27cascotazos%27%27%20al%20plantel%20de%20Gimnasia%20y%20Tiro%20&tbm=nws",
+      "fecha": "2026-10-11 19:21:14",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 28,
+      "titulo": "Condenan a cuatro años de prisión a mujer por narcomenudeo en Jujuy - Diario Panorama",
+      "link": "https://www.google.com/search?q=Condenan%20a%20cuatro%20a%C3%B1os%20de%20prisi%C3%B3n%20a%20mujer%20por%20narcomenudeo%20en%20Jujuy%20-%20Diario%20Pan&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 17:34:04",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
     },
     {
       "id": 129,
@@ -352,6 +1321,32 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
+    },
+    {
+      "id": 11,
+      "titulo": "Domingo inestable en Jujuy: ¿a qué hora podrían llegar las lluvias? - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Domingo%20inestable%20en%20Jujuy%3A%20%C2%BFa%20qu%C3%A9%20hora%20podr%C3%ADan%20llegar%20las%20lluvias%3F%20-%20Somos%20Juju&tbm=nws&hl=es-419&gl=AR",
+      "fecha": "2026-10-11 12:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
+    },
+    {
+      "id": 144,
+      "titulo": "Domingo inestable en Jujuy: ¿a qué hora podrían llegar las lluvias? - Somos Jujuy",
+      "link": "https://www.google.com/search?q=Domingo%20inestable%20en%20Jujuy%3A%20%C2%BFa%20qu%C3%A9%20hora%20podr%C3%ADan%20llegar%20las%20lluvias%3F%20-%20Somos%20Juju&tbm=nws",
+      "fecha": "2026-10-11 12:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 0,
+      "pos": 0,
+      "neg": 0,
+      "neu": 0
     },
     {
       "id": 65,
@@ -378,828 +1373,126 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
-    },
-    {
-      "id": 125,
-      "titulo": "SOBREMESA: Lic. Alejandro Zafarov",
-      "link": "https://www.jujuyalmomento.com/jujuy/sobremesa-lic-alejandro-zafarov-n208428",
-      "fecha": "2026-10-09 21:13:51",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 61,
-      "titulo": "Lo Nuestro: Mica Sancho y Fede Montenegro",
-      "link": "https://www.jujuyalmomento.com/lo-nuestro-mica-sancho-y-fede-montenegro-n208414",
-      "fecha": "2026-10-09 14:55:19",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 126,
-      "titulo": "Con solo 9 años, Olivia Orrabali llevará a Jujuy al Panamericano de Montevideo",
-      "link": "https://www.jujuyalmomento.com/taekwondo/con-solo-9-anos-olivia-orrabali-llevara-jujuy-al-panamericano-montevideo-n207354",
-      "fecha": "2026-10-09 14:31:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Educación",
-      "total_comentarios": 8,
-      "pos": 0,
-      "neg": 0,
-      "neu": 8
-    },
-    {
-      "id": 51,
-      "titulo": "Cómo inscribirse para recibir los subsidios de luz y gas: el paso a paso del trámite",
-      "link": "https://www.jujuyalmomento.com/subsidios/como-inscribirse-recibir-los-subsidios-luz-y-gas-el-paso-paso-del-tramite-n208395",
-      "fecha": "2026-10-09 12:59:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 123,
-      "titulo": "Rige la ley de Inocencia Fiscal II: qué cambia desde ahora",
-      "link": "https://www.jujuyalmomento.com/ley/rige-la-ley-inocencia-fiscal-ii-que-cambia-ahora-n208394",
-      "fecha": "2026-10-09 12:54:02",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 74,
-      "titulo": "Del CV a la entrevista: capacitaciones gratuitas para acceder al empleo",
-      "link": "https://jujuyonlinenoticias.com.ar/del-cv-a-la-entrevista-capacitaciones-gratuitas-para-acceder-al-empleo/",
-      "fecha": "2026-10-09 11:30:41",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Economía",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 141,
-      "titulo": "Hospital San Roque cumplió 176 años y avanza con obras",
-      "link": "https://jujuyonlinenoticias.com.ar/hospital-san-roque-cumplio-176-anos-y-avanza-con-obras/",
-      "fecha": "2026-10-09 11:15:02",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Salud",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 81,
-      "titulo": "ExpoJuy y Micaela Chauque: agenda cultural de Jujuy",
-      "link": "https://jujuyonlinenoticias.com.ar/expojuy-y-micaela-chauque-agenda-cultural-de-jujuy/",
-      "fecha": "2026-10-09 11:06:07",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Carnaval y Cultura",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 80,
-      "titulo": "Nuevos deportistas jujeños clasificaron a los Juegos Nacionales Evita",
-      "link": "https://jujuyonlinenoticias.com.ar/nuevos-deportistas-jujenos-clasificaron-a-los-juegos-nacionales-evita/",
-      "fecha": "2026-10-09 07:49:38",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 60,
-      "titulo": "SOBREMESA: Cristina Guzmán, Abogada y Pdte. M.P.J.",
-      "link": "https://www.jujuyalmomento.com/jujuy/sobremesa-cristina-guzman-abogada-y-pdte-mpj-n208368",
-      "fecha": "2026-10-08 21:03:50",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 68,
-      "titulo": "El boom minero no asegura sacar a la gente de la extrema vulnerabilidad",
-      "link": "https://www.jujuyalmomento.com/el-boom-minero-no-asegura-sacar-la-gente-la-extrema-vulnerabilidad-n208363",
-      "fecha": "2026-10-08 20:22:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Litio",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 67,
-      "titulo": "¿La prioridad es ganar una elección o proveer medicamentos que salvan vidas?",
-      "link": "https://www.jujuyalmomento.com/la-prioridad-es-ganar-una-eleccion-o-proveer-medicamentos-que-salvan-vidas-n208317",
-      "fecha": "2026-10-07 22:10:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Salud",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 54,
-      "titulo": "Usina Emprendedora: Mudeba, mujeres que derriban barreras y construyen autonomía",
-      "link": "https://www.jujuyalmomento.com/usina-emprendedora/usina-emprendedora-mudeba-mujeres-que-derriban-barreras-y-construyen-autonomia-n208308",
-      "fecha": "2026-10-07 21:30:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 138,
-      "titulo": "El FMI alertó por la energía, la deuda y pidió más ajuste",
-      "link": "https://jujuyonlinenoticias.com.ar/el-fmi-alerto-por-la-energia-la-deuda-y-pidio-mas-ajuste/",
-      "fecha": "2026-10-07 11:42:36",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Economía",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 78,
-      "titulo": "Messi se despidió de la Selección Argentina",
-      "link": "https://jujuyonlinenoticias.com.ar/messi-se-despidio-de-la-seleccion-argentina/",
-      "fecha": "2026-10-07 06:00:03",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 139,
-      "titulo": "Flavio Bolsonaro ganó la primera vuelta y enfrentará a Lula",
-      "link": "https://jujuyonlinenoticias.com.ar/flavio-bolsonaro-gano-la-primera-vuelta-y-enfrentara-a-lula/",
-      "fecha": "2026-10-05 11:11:00",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 85,
-      "titulo": "La Policía de Jujuy incorporó más de 160 nuevos agentes para reforzar la seguridad",
-      "link": "https://jujuyonlinenoticias.com.ar/la-policia-de-jujuy-incorporo-mas-de-160-nuevos-agentes-para-reforzar-la-seguridad/",
-      "fecha": "2026-10-02 11:28:23",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 84,
-      "titulo": "La Corte aclaró el alcance de su fallo sobre la Ley de Tierras",
-      "link": "https://jujuyonlinenoticias.com.ar/la-corte-aclaro-el-alcance-de-su-fallo-sobre-la-ley-de-tierras/",
-      "fecha": "2026-10-01 12:58:55",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 132,
-      "titulo": "La Corte dejó vigente la derogación de la Ley de Tierras",
-      "link": "https://jujuyonlinenoticias.com.ar/la-corte-dejo-vigente-la-derogacion-de-la-ley-de-tierras/",
-      "fecha": "2026-09-30 11:47:57",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 83,
-      "titulo": "Fin de semana trágico: dos muertes y 65 hechos viales en Jujuy",
-      "link": "https://jujuyonlinenoticias.com.ar/fin-de-semana-tragico-dos-muertes-y-65-hechos-viales-en-jujuy/",
-      "fecha": "2026-09-28 09:01:23",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 72,
-      "titulo": "Casa Baca abre sus puertas a “Territorios Sensibles”: una muestra colectiva que celebra la creación y la transformación",
-      "link": "https://jujuyonlinenoticias.com.ar/casa-baca-abre-sus-puertas-a-territorios-sensibles-una-muestra-colectiva-que-celebra-la-creacion-y-la-transformacion/",
-      "fecha": "2026-09-24 16:07:16",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Carnaval y Cultura",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 140,
-      "titulo": "Más de 2.500 chicos competirán en el Torneo Nacional de Fútbol Infantil «Diablitos 2026»",
-      "link": "https://jujuyonlinenoticias.com.ar/mas-de-2-500-chicos-competiran-en-el-torneo-nacional-de-futbol-infantil-diablitos-2026/",
-      "fecha": "2026-09-24 15:54:45",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 77,
-      "titulo": "Centros culturales de Jujuy ofrecen muestras, talleres y música esta semana",
-      "link": "https://jujuyonlinenoticias.com.ar/centros-culturales-de-jujuy-ofrecen-muestras-talleres-y-musica-esta-semana/",
-      "fecha": "2026-09-16 08:55:15",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Carnaval y Cultura",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 130,
-      "titulo": "Narcomenudeo: 34 procedimientos y más de 16 mil dosis secuestradas en Jujuy",
-      "link": "https://jujuyonlinenoticias.com.ar/narcomenudeo-34-procedimientos-y-mas-de-16-mil-dosis-secuestradas-en-jujuy/",
-      "fecha": "2026-09-15 10:56:51",
-      "fuente": "jujuy_online",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 14,
-      "titulo": "Jujuy alcanzó el 73,86% de ocupación durante el fin de semana largo - Jujuy OnLine Noticias",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMEtxRmk4RlFYV1lxYm44NEJ1Q3ZMSXhhN05talFwYm44ZjlnekYxMjFSNzN4bWlKaEtSUUd4VEp3TXpZRk1pLXgtS0lYUzFKOUpqQWRINF9ZaEJ6VG80Vjh2YTNXRE1pRWRCcXZsV0s1ZWE4ZWZKYjdIWjdBSHJOZkZfd1JDZW41b1FHZE5fOWJYbnpRYVNwWW1yOUMyYjJaY0Nn?oc=5",
-      "fecha": "2026-10-13 11:34:58",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 19,
-      "titulo": "Minería en Jujuy: el sector genera más de 10.000 empleos directos e indirectos - Editorial RN",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcmVBZTJ3OVIxd2YzSlk2eGJPYjNsSGZ0bmRvU0lvQXNVS01UcGd6Zy00NjNoWFNUX2tVdnZyNkxUalpKZC1XRlA4R0h6YWpjVXBvS0FyZVZRRm03ZklSZXRiLXpCNHB4Y1IyVjVGRmZnSXJHZXZFZTJXelZvYWRhOVZBV3F6a05yU3lYSk5LWU9abHpqbkYzalk1MWgxVTV6dFk1bTlTeXg?oc=5",
-      "fecha": "2026-10-13 11:26:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Litio",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 15,
-      "titulo": "Jujuy recibió a más de 17 mil turistas y la Quebrada superó el 84% de ocupación - Que Pasa Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcUxYQkJCbkgwa2VRUTZDaGFqQm5PbWx4YThEV0hGWGdaM3hpeXZRd3d2ZEJPOUExWlducEEyNkZ6UUd4MGJQbXB4TjlWbEdzeHhTdFhDWllTY1UxUFdCU21NSG1tS08tcWNrVXprcXhEeGQ3dEZoS3o3V1NEU0d4clhPczk5WDJrSklEUjBlb0ZFWFQzUzk4S0V6ZjJlR2J5X3BlbkQ0TFFVcDFubElLaGJDRlp2OFJO0gG4AUFVX3lxTE5xTFhCQkJuSDBrZVFRNkNoYWpCbk9tbHhhOERXSEZYZ1ozeGl5dlF3d3ZkQk85QTFaV25wQTI2RnpRR3gwYlBtcHhOOVZsR3N4eFN0WENaWVNjVTFQV0JTbU1IbW1LTy1xY2tVemtxeER4ZDd0RmhLejdXU0RTR3hyWE9zOTlYMmtKSURSMGVvRkVYVDNTOThLRXpmMmVHYnlfcGVuRDRMUVVwMW5sSUtoYkNGWnY4Uk4?oc=5",
-      "fecha": "2026-10-13 11:23:09",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Carnaval y Cultura",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 9,
-      "titulo": "Se mantiene el alerta amarilla por vientos para Jujuy: cómo sigue el tiempo - Todo Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVHUxbkk5c1RmZmJPLVlsXzdtWVBVTzFiSmdhcXhnb2ZVdS1lNFFPTzd5QmgxMEpSYkxvTV9XeVRTTWtLaWJqNDBiRjJLTnUzV3VUX21LajJybndaMTNYNlVEZ2J1Z2lMalpBWTNjeHQ2R19RUHNPX1dLRnRtT3V0Qi1zUVlLQ2JpLVRzZ3RoVGRZa2VxaF9RTDhpOFRyMGd5SERHNVdkTjDSAa4BQVVfeXFMTTE0VGY2bTJyOFdBODhHb2llVDVSQVFqZ2hNWnVnVjBfdWxHcmUwdDVuV3lhTjBpRXk1amRqNUVzMHNBdXplMGVDNVU4MGRfdS03T3BkMXRWY0hhVUNyd0RGaEVVRE1ZYWZ6NC0yaFhiNW5uN0FtZExTbDlFSzJ2VDB3Rk9wcDc5SHBIdEJCN1dvMHctdENJQUNLaVowNlBWbHJZTnZ3X1dxdXJwTW5R?oc=5",
-      "fecha": "2026-10-13 10:01:57",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 23,
-      "titulo": "Clima en Jujuy hoy martes 13 de octubre: cielo cubierto y frío intenso - TN",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTmY1OU4zWHVGSTAwcUhfWF9HYUZVdkpKVzVERGVTTmxILXZ3X1BmM0NyUzlPQmdLWVJtM2R4RndXaUt4X0RHbGdyWlBqTVRpd0wxWERrQjZFaHpzOE9nQm1GLUZET1l0eFVENC1wOXRidVlIMkhhQTQzODRFdmRUYUR0TFZWSlJJQ1N5TExnanBMUDA2WEdnZ2Vza0VBeUN0UUw1ZTJtRVJ1ZWROdmxGUlpXRdIBxwFBVV95cUxQMTlWY1NKaGdLNUloQTA3eHBBemZLRjBYUEFIVU01MlpBOV9veDVpWGQtQ2FrbVY1RFBmRElVM2o0SHFoblV6cUJ0Wnp4MERYQ2ZUak5XdWxwbGNSWFRia2prVHdocHhTSXYyN3dTNkFkRGRGYWdBR3hhSEx1Q2dwd0ZQMXBxRWR5N090RkhCRWt5YWJOSnhBaU5mZFNwNVA1bGpVTFh0ejBqMUtLLWJNNlU3RndTWG9PdXdjVURQejJuVTFhdV80?oc=5",
-      "fecha": "2026-10-13 09:05:08",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 7,
-      "titulo": "Clima hoy en San Salvador del Jujuy: el pronóstico del tiempo para este martes 13 octubre de 2026 - Clarin.com",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPdkIxai02Zzl0cm1wNUt0ZzZPOERxcGFVWHppb3RnRnlrM0tQakpLVmJRa196OVFuMEZQU19MY0lNcFpCM3VOTUNmc21BczNfb0tKdjJYNHB6Q3VPU002NTg5SGpkM1FNYTR0RmJGelZSN3hSNk1jOXR2LU84c1NVU3JlQzVUNk9oOEpJMDREek1ySnhmNFNabHZWVFVtSmRXS0lMY2RxZFd1SHc4ZWFROXpONml3QkQ1YXN4bHNNMUVqOEdDbFNrVkFn0gHPAUFVX3lxTE53WlpMVDRoemR0N0ROY2xRTDlMNXJ4b3NydlVpUWZRZTNRdW96VGM4ekM0OWVibzUyaGdOSWMwYnJPM1cxemFhcVdJNzF3RE5aOVBOSDNpU1JvVTdDWXBTZWRhWkMtamZ5WUVTdXZaSzRMbHBmWnlCeFg2YU5DdWRPRlJON0hnUEdoa1MxRkFYTXNWTWpiZXgxdkFfZXdsTUNsbUJrS1RHZ3NPT0VocEt1MWhzR3o3MUNCeDNWTDg4clNqUWR5LWlJa2hJRHF3RQ?oc=5",
-      "fecha": "2026-10-13 03:06:19",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 36,
-      "titulo": "Alberto Bernis confirmó que Jujuy Crece no hará una alianza electoral con los libertarios y habló de su futuro político - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQR2xlRGxKVTJHdzRHbnFuMWJNckF6NXBXeDZHaDV0VENjZkltTDgzU2R2X2c5NjJ6RzBsU1d4SElnM09GNVB4VnFzU3hCTlJjRms4MXByb2toajNWTDQ2NFR3VlVleTNGZGh0bFMyNnNZd0VHRDdacW1iUVN1dW9PRlRBMEIzb2lhek9nQWhJbHNXVG9ocXFYbjNSdVBxMU1ZN01tclVJSTloYmdOWTNoYWFReTE1TTFISVUzeXctS2Q3ZEZHN1ljU3l5enVWLUhEN2dVYWQxSlVHeXfSAeABQVVfeXFMTll5R3J0TVItbEZfX05ScGdIZm96MnF6OU5Qa3RqbkdBSFhPbXhDUkV1YlZaS3d3WnJPbTFwR1VBNi1odlpJSno5QzRMczl6VUJYb29odUQ5ODd2OXNxNi1INW9YNElxNXJCNGhKaDUtOUZxaXh4VVJjZTltanpyQVRtci1wa3A2ZEs4cDNmX0ZFNE1hTTFsS3pKcDBBaWl6NF9mZGdkNFNZLTRUVXlONTNaaTB4UFRlRFVHLXRNbGZKWUR0NmdqejFOSm8tTF8ycUs5eU42b0lCUkotM2o4cXY?oc=5",
-      "fecha": "2026-10-13 01:35:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 20,
-      "titulo": "Jujuy: una competencia de enduro atravesó territorio comunitario sin estudio de impacto ambiental - Página|12",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOWXNJYXFIWDh4Ym5yNnp1cVgyQWw2QmV3Smt3eDVRWFRWOW9WbHk3Y0RRMV9CZnU3Uk91YUc3TEtTNGltTFhCbEdRbmFSLU1PUjlHTjZHa3JpbGVDLTBQaDJJUGtfZVJjVkE5cWVCS2dkX3ZXOEpuSC1OeWZHNGgwSUlxR29GMnQ3WFpwZTRQVXk2dnZ0UnpIcWQyVExWSzJXTWkyNnlHXzdPYjlWT1RRckhUcVY2aG52SUhuRWs4MXZ6bnpxdXJqb3lieENwQWFHb1E?oc=5",
-      "fecha": "2026-10-13 00:29:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 30,
-      "titulo": "Gimnasia y Tiro rompió el silencio tras los incidentes en Jujuy y pidió que se revise lo ocurrido - Informate Salta",
-      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNNGFBYXZKNkxEUlVROG9UdGtZNU0xNlNNX3NOcXc5LTFDeGtVdy1vTTJFcXdJb05TZGgxX01zUElFLU5hSElKLXp1OW51U0R6LXFRbFM0MUtBOGlKbkQ0azhRekFNdWYzb05GdWMzQmd6SGlSQTUtNlctUnROTzlITDBCRGFuRFloNy1qMkhDTXppQmg0Wml1RThORnpDT0wwd25MUkRBLVhvX2R5bnJLOUxhemZFenpibWgzLS1fNFR0eERnbFJGUXFIYi1LUzE2NGpCN0NhRmI4alpmMGNKUk1aUTA1RXEzN0JWY2YxcTJueW5r0gGDAkFVX3lxTE82T04ydmpoVHVDM1hTVFFrOEVGeEp0R1VmdXZTZ1FJdEYwY21GdFRlVm04QU9Ma3J6bkxEenh4eld1RVlWUGowTlN3VDN0amtreXI0T3ZtakNUb0xsbm1OQ2Vhc3lXZ1pZYmFvMjkyellhQlk3ajJiSFZIVjFQTUhIN01JeHZHZUpsaTd0SXFnbWRNSTQ0ZGhMNWJXUGljTUJteENCY0NMTTFDRzhOVmx4VVRpY1NhTldLaUtMUzJpLW9TUkxUeV9kVi0wblRQdW8tNnJwRlNCbEU5am1TUldfcEhNNXdSSElHclprYU96MmgzbVJCcHkyQVdmWlhpRTdIVzQ?oc=5",
-      "fecha": "2026-10-12 23:54:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 32,
-      "titulo": "Normando Álvarez García aseguró que \"las puertas están abiertas\" para retomar el diálogo con los gremios docentes - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPR3RrWVlWalg4NWR3VWMtb2JSUk5nZHFRYjNKMUdiTkFhOVJUS3Y2WXU2elhibTdpRWNXNFVIbFF3NXUwUFZiMGk5Q2JHZXA4aGlkM2lrSE5rcjBrWEZmVUwwNE81UWRvTHY4ZlBBZ1VoOW9IOHpZVGtDcllNSmR3dGIxeXdBSVl0VkRsbFUzenJqSmJpa2djbF90eHdYekFpTVVyenpNSG52RHNyaDNPaEJzNTdaZmp3emxsMktpT21BcEVjeTVPQzV4SzZvel960gHWAUFVX3lxTE1paVZuYXlTV21vX21SUDEyOEVrOG5HY3pQLXMwcHpwbmFSV2FlckJyRVRMZ0w5Nl9wRGRJTmVJb25TM25BUHd4Snc5ZHQ2RFlLUTVVZG4zQkYwQVdId3cwaVZqckg5MTBGNFFhT21IRnNMcmMxSmNWelktSHBpMWVOTmxCZHZvbWRfWTR1Y05oRS12dGlVYnBBY01RWU1JdHRoaG41a0tydU5VWXIxVVZjZXFwMnRKX2dsWkpfWEJwYkpSeFdEazVKWjg5eFAzOFdQWFRRSWc?oc=5",
-      "fecha": "2026-10-12 23:00:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Educación",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 21,
-      "titulo": "Rescataron a un hombre que cayó al Dique Los Alisos - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQX3U4MjZVTDBES3dQWWhCaUVyWTZvNllIUFU5Y0JVWTN2Z0dmYnBrc3lsWl9oakpPZ0xpZk5jOWlOQjRRTkNCYmEydHgwOEIzRk1hN0h0cXE1a2FyLVFfX1BMT0pBR212R0xzeVdIY21SRWtkcHZadVhLZTNfWWxTREhtVFl6Z9IBiwFBVV95cUxQU3M2RWNNb3U4VGYxemNvLXNmVmQyUTdaS19SOC1wMmthQUtRSzFKTmdSbVBQQW8yUGRPOGFFMmdqNm5iRlFSTkRfR2c0SWx2UGlZRUkycktUSVFhNXJBNU42RUhXZEdpdmpBdVh5RU9Tck9Pa0RKRjFEZjRtVGgyV2RtSWZOYmItQXJn?oc=5",
-      "fecha": "2026-10-12 21:35:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 22,
-      "titulo": "La trata de personas “se ha mudado totalmente a la virtualidad” y es tema de debate en Jujuy - Vía País",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQVhhRkZzWlVHbGxteGtPTGx6dWEyUnBkRWRtMWlSSHBBU1JMS25iYUozaGRpSk5BUUVzYWp1QzAwUkdhOWdvMW5TVlJlQV9DbFk1WVZVeVVfVjN5S3RkRkpjbE9BSUhEdmxuNmZ0am1uYmx1WWZ3cWFNdkl0NkluVGQxNndMSVNnd3Foa3BjM1V1aE9IMGhmbHI0WVdoOEdmTmNlYnpKSmQtTWt6c3c?oc=5",
-      "fecha": "2026-10-12 21:18:48",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 33,
-      "titulo": "Conocé el cronograma semanal del quirófano móvil y operativo de bienestar animal - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcTdGSHN5NTdHSjZZUThLd050VF9SYVcwY0dzRVIwcmtXdmpCa3k5dS1XOWpkSUhQcHlLUEdkcUlIcm9BenAySFNaakdJQy1TWEFKeFZ2bmdndFd3azY3ZmFIVlkxWUZRVzNWSWlPT3pLUllBcGNramdwWWEyTnJibmNKcG9VU3dvNzNVSDJMQnRBSWdTSlBZanZUUlNjMGFWY0tZdWVWRmVVNjh3VmdUVXpGZXRDUGNwbkxj0gHAAUFVX3lxTFBlVkl5OEdHM0htd3Z4LXBxbmZ4MkN1OFZJNFpRWFVwbVdfZkx2Skw4eUUtX245cXBZSy1CSHhoblMyVVFJVnFqdmdXOXQwdGJheHpsWmtfOUxCcklNblZnVlhadXJ0c2xwaFpHU1pqVjN1bkx5cHNHS0owSTBlbEp6WndGdXIzd29yRnBXSEZrZng3WE5lVFowSndLblRlcGtoNW1XeG9hVkV4NmxlSV9kNVdLdmRDU2NSWFJaeEp2RA?oc=5",
-      "fecha": "2026-10-12 20:39:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 13,
-      "titulo": "Jujuy recibió a 17.744 turistas durante el fin de semana largo - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMU9Da2l2Zm9Ha1pOZ3BWME52NGx4cHZ4TTcxeV9HUzRJcXNsanR6akkxM2otNktoUjlKdk14WG9fUklIV0N1aEFWTm8tSDVvblRxQ2EwMWQ1RVotcVlPazJUR2p6QzFVS0pReDhVeGRFc2NjV2haMEhLc3VJQjFjcVZ5a1B3amNMU1FiazlKcy1nem1NcElnWndoTzMxZ9IBowFBVV95cUxQVjFzbkwzaW1WR3dHVEVEOG5DZkFEOXg5Rk41UkRwYnJ5Q3lsQmNmN25KMHdnNHJ6YjZ2Y2Q4cFRmOUFlSmlhWHRNa3JVRkphOWs1eE5ZSTI2cUUyNlZCZEVNcU8zX0FKVXZZQ2VzRkdxWWZjeHJYVUY4bmdtcVJZdjNjLVpVTDVYb2tBWC1LMm03M3J4R0dyQXRpWFVVNVhLN1FN?oc=5",
-      "fecha": "2026-10-12 19:55:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 10,
-      "titulo": "Clima en Jujuy hoy lunes 12 de octubre: muy nuboso y frío con viento moderado - TN",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOTlo1RXhEdGdjOG5nOEgzcEp5WnF6S0ZxcVRtZENYSU5MNmZWczc4bmdTUHRndmVYRVVUWWY2Y3ZzcFZEREJubElZQk9FN0h2ZWxjVFJ0MGtWM2VOV3hXcVdfNjM2TmFaMFc4V3U3YVJTbml3U0xHYmszQTlQTlVBVEx4Y1pZaTFjWWwybGxRdFd0LWFtd2dPdzFNLW1lZjFVSHpsZDhvZUZMTDdnSGFwVWUzUTVjazZ0STU1MdIB0AFBVV95cUxNSE94bzlGcWlrWW42d0VHTWdQaGJFalRoVWZ1SXNPQ2V0YmdkUmlEa2tESmhjNDllV3lhN3dsaHFGVEYtQXZpUmtES0ZvQ2VhSl8ySk1GMVUtN1pWQ0ZPb1JHbnlia3ZNQVBkYTdMcldmRjRROGtTcG10TW5ZQkNhbUtlLVp4ODFUc3k4VTI1SlFUeDF2WXk5TUxJamVQcllkWTVSY2h5eElTTm45YTRMYkk5V2MybnRkZm9odzd5QzUzekFFRFlWejNvR3E1LVQ0?oc=5",
-      "fecha": "2026-10-12 15:05:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 27,
-      "titulo": "Competencia Trasmotaña Enduro con denuncia penales - Jujuy Dice",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPV2lKeU92WHlCZ1dRV2YtYXBVXzlBRkpGUXBzd21iNXltZzdoSTZWTnFjQVo1bFNEYW5JOWdkRjZZS05GSndKYkRXRmpaVEZzREpDc3pRb0J0NDYxZ1F6UGpyYWJMbTNBTjFwMEJzdXo2d1JMTUUzREJFVjg4eTdSTlJ6aUtfV1Q3SlpURkpHMHhlcE9UZ01qTURTa1Z4R2twRVVmeXNn?oc=5",
-      "fecha": "2026-10-12 14:34:22",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 35,
-      "titulo": "Realizarán un workshop sobre diseño de jardines y paisajismo en Jujuy - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdGtHWjBwMG5hd0VmejAxR0VmZWxDZVdhbjhSQnBKUkZob3VHaVBmQ3R0bEt1bHB5X09QMXRweG1Ec3ZFbEh6NjIybnZNR1dVXzZlQ1dDdVBaZGhwMlBobzZMNjRSeFNwWEdQUnotdUpQTjh4QmlkaHpJREJqT0NHSE4teEdVWVQxbjZhSkR6c3NKVWxYbXNPVlJyT0JrWmRWWk04atIBqgFBVV95cUxQQW1hbUx1bHUzQXZTV0hfcHp1TnIzVktWOWpGeGJmOW5zVS1Kbk1zdG1fVDNVbXRaTlRIQVA0VzFmZzVnaW1Ra3RfdTViNVhYS3FjNS1wc2FqQjRUZm5BRElqQWFlLXVoMmdCZkpHNUpkZHBoX2lOd2ZTaTlMWUpjbGpJelFNYUUtM2UzNWtMWmxxT3hZRGtnUE5HdkMyMXZvbXJpaFR5TzNHdw?oc=5",
-      "fecha": "2026-10-12 12:56:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 34,
-      "titulo": "Invitan a adolescentes a participar de un taller gratuito de ciencia y emprendimiento en Jujuy - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaFVyZmFyVTlkM002Q21PQ2x4UjJTSFZMNkVuMHU2bDRnY0hQeURwcGNiOHFUcW5IZjJSQnRqclNMSXRGa0tqQkEyLW5MODhMS2xmVl9UZHNOVUtvT3RHUU1mUm9kSC1LQllfZUJXX3pjd1N0WFZnU1BSUmxNLVdwVE9EcUx0VWZuNWNvUkM2cURJLXB1R2U4NmEzUUZINUhJd1VHQ1R3SVdDRmx1dnk3b3pFemt5Qjl4dlgxUNIBwgFBVV95cUxOb3VnTldoRDlXVktDaDFFbmtDclVhR2VjZEJEZFUzRUM1c2kzc1VhYUhwaU1kRE0wNHpzR0E2ME1LM3lERDkxNmp5d1JfTnVJbXhvLWhYaDBPWTYzSFV3dmczaHpCX3RlQWxqdlFZZUItNDczaVh2RWRsSlhEeXFpY29fbFpnQ2paNmVtVUtqQ2gwLXpiNVVqb25sbVpVUDFuUENLQVhoRmRnR0dhWFVxRXRoZTBaVjZUeFhZd014Y2EtQQ?oc=5",
-      "fecha": "2026-10-12 12:39:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 26,
-      "titulo": "Jujuy: Atauche saca a relucir su estructura y una de sus alfiles reactiva la guerra con Quintar - Letra P",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORGdGQWFOcTMwSkRQcE1RU05STU1xY2tCR05waGNUbUQwZFh5TFA5dDctUF9hY0FpRWY4WktKZnViZXNJWDc2QmVTYnRZaXlLR1pxQVhnM3dwX3lPR0dXdUFfdzNEUXdtTkVwSEVaWUR3RG9zLUZ2ODJweDUtZlp2N1pNNFZYMUw1WDBVcW9MWUZHa0sycFVRZ1k0ZWdSbTl4bTNMNXd1TENRMEpoTEFLMG9qZUNqNDhwU0c1OHEweUZ3VEFEekc3UdIBzgFBVV95cUxNOFZ4ZHd4cjlWNGp2eWhfU2JhelNLalRtY1pfdVlOem9Qc2FhTFM2dUJXV0xRQzZMT2lZNFlYSDRRVW4tV243Q2hjVWM0YlEwRDRoOGJkNmh0NkloOEVFTzIyVTBWQjdabDBYWVAtaDM0ZzN4NVJCcjBzTmdEd1RGQUpDY1ZFak5WSVlBODg5RjZXOURUME1HSjVQOXN3bG5UZjgwV2JYSVVIUDFNTURka1RxQmMxXzNSY0k4ZHlVRGJVMWtqeEd2WXBIOHo0UQ?oc=5",
-      "fecha": "2026-10-12 12:36:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 12,
-      "titulo": "¿Dónde quedó la primavera? Jujuy tendrá días grises y temperaturas muy bajas - Que Pasa Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU2ZOYldFdUd5Vl9sV0tDMkJ3UHNiX1k1eDZLVDU0R3oxTEktdDAyMU5EcFFvODNGZnI3RXRkd3lTZjZrUkktU3BJRW9Sb1V4ZlQ5VEhITXBlQWFNVDVzS3E2NGVma2xDYVpfODdheU1DcnRVVjJNMTBENUNYLVNxOV8xU0lwOS0xcUppMUM5b3BQckhSYTRManBCY3VTR3JEaEtMcVd1b3FZRnA2a0ZsOXozRQ?oc=5",
-      "fecha": "2026-10-12 12:07:19",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 8,
-      "titulo": "Rige un alerta amarilla por vientos fuertes para Jujuy - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSEo3QktGM0E2WWkwVGRTNDdHU090NmtIRU1zSHBXZ0RqZ2F0N3ZjSkFRQUpwV2w5YXRseFBFRi1Md2hHY2t2QlA5YUpTUFdPbWNLZm9KUGxyQUpyMUNuYml0ajljUy10N08zbEt0MVpOZlFGbHQ3dXRpMnlSVXFfRTJPY0hjR1BvZGVyLXlwMNIBlAFBVV95cUxNRk9yU1dDYUZZSFFSODlIMHgwbFlIX0Zlc04xdEdaREV5RW5HbjRuUkdsdGJNV2lYQV9BOFpmcVNKNWZnY29lcUI5c0pCc0xiamFBRjNjZmw2a25TTFFqUDdWak1aenlFLVFrSkRabmF0b2Nsc1dEM1M2SzNadER3VGpZYkwwN1Y3cXBiUDQzQUF1LVVK?oc=5",
-      "fecha": "2026-10-12 11:59:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 25,
-      "titulo": "Alerta por vientos fuertes afecta a un sector de Jujuy - Jujuy Al Momento",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNQWpPLWdDZVpicklZNTBUa0hTMUdOWVYweU9MaGJtb21heXZrQ0tqaG5MdDh1ZkNLZjBfbDVvNDdDUHY0X3VZbU9SdFF5ejJZYnJhMWlkU1paWVIzV3pfelpweUxVWmpHaldDOVJyQ2JQUi1qMFFpYzM1NWd5eHVCbTNSU3hsSG5wakF6UU1MQ2FqSE1GOFHSAZsBQVVfeXFMTTRXZ192QVdhSjQxTUxocDRVclN3NzdxZ055ZHhiUmtDcU1IMXBQZXU2RVY1ZlBKMHc5V3BKZGQtWG9kTVlYX2RJYTlENjJkZWdzMzhuRThZalc1UFRJbEdSYS11dng3bXd3MUVPOUJEWEh3TWE1b0JwbktNSnVNUmdPVTZRQUJzUGctam1SV1hKUFhtSEY0VUpmMTg?oc=5",
-      "fecha": "2026-10-12 11:13:24",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 24,
-      "titulo": "Un concurso que no deja de crecer en Jujuy - El Tribuno de Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRkFaRU44bEVNV0syQVl6bU9sVEVSN2QyWXlHVTY0cjExcmgyMVdWazB0LTFQUDNnc0JybzlkbnBPRjJPSDEtQ1pRNUR6alh4SlZkcHFSOThqU2RHRlRibV8weVhkLWlGcWhkbDc0bHNuTHIyU2RpMGdHbmVMRXZiNUVPSnRuR3RxaUo4MU9oN2NmaWJIc19ZYm5WaE5vRXlQbnJ3SEJMQnVCRElQcWfSAbMBQVVfeXFMTnlWTU12T1YxOGJIUFg4aDJVN19zTWZUNHdGWURTei1uNWdFLWZqZ1QxUHdyZk1STVA1anVKOFBjcTVXa3dwbnp6ZTZ3OFYtSkw4N2dldExqb08teFRuZ3l0Ums5a0cxZUJQUFAwZWNvMDBuU3JPaXZFZU9CY3h3T3FHbEVaYkdGeXBvZWItdjBjcHhFR19xeC1paE1aYVY2SnVaMHdfYmtza3NyQm5DMnBjTVk?oc=5",
-      "fecha": "2026-10-12 03:14:32",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 18,
-      "titulo": "Escándalo en Jujuy: hinchas se pelearon colgados del alambrado en el clásico del norte - MinutoUno",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNMGNxMVRtOUs3N0lOa2daVmJLWmI1eGtNcVpXUFdiM3hJWmJkYjRMdldnaVZGenZ0VDI0dlNDUUxHajlqLWQwRmxORW9GaWZkRGhiSkl4OWQ0bXk1cGNRNUZRcWprczlRZlFycGUtR1Y3b0UzZElfZEtsc3VzRHlFWjlDRzBxOFphWHg0UEhNdUhUemZGUVE0MmZRd0lZMlFxTVVzY1FsSzM0bUtraDRXdHIwSDcwb1N5ekl5cTllb2_SAcABQVVfeXFMTTBjcTFUbTlLNzdJTmtnWlZiS1piNXhrTXFaV1BXYjN4SVpiZGI0THZXZ2lWRnp2dFQyNHZTQ1FMR2o5ai1kMEZsTkVvRmlmZERoYkpJeDlkNG15NXBjUTVGUXFqa3M5UWZRcnBlLUdWN29FM2RJX2RLbHN1c0R5RVo5Q0cwcThaYVh4NFBITXVIVHpmRlFRNDJmUXdJWTJRcU1Vc2NRbEszNG1La2g0V3RyMEg3MG9TeXpJeXE5ZW9v?oc=5",
-      "fecha": "2026-10-11 23:04:27",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 17,
-      "titulo": "Graves incidentes en Gimnasia de Jujuy vs. Gimnasia y Tiro de Salta: barras de ambos equipos se enfrentaron sobre el alambrado - La Nación",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQRWZfejhHcFpqRF9jUG82MEpwRWRaa3k4VW1MSGh5MExHMmwway1ydG5FTnNVQzI5aERwV1dDdTFfc2VhQWpMekFCaWNxUndhakZCOWg1c3dmWTI0aWJGY0lzMl9ObHFaRURrMXFYbHZSYjBEZUkzS2dFREVlVGp0RExnNDROX05zT0lLaDF1aXQyZXBFZ1FVQTJWZEZOTXdPdkx5YXNUVS1zNW50QkpmNTVfd2FCQlNJTE10aHlFMzFNT1NpSmhCZktzSFRWT21KNjRIcDRXem5KdWN6NU9YdA?oc=5",
-      "fecha": "2026-10-11 22:30:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 29,
-      "titulo": "Gimnasia de Jujuy no aguantó la ventaja y perdió dos puntos - Solo Ascenso",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNlZVWVYydnJQcHJBT0RWMWM5eWpFMHJxeWhhcDA3bEJwalA5ZXlaVER5anV5ZUFUelN2cjNFOXAtaTZJX3NNdmxxYXNuS0JXUkdLeHJaTjNIdVNadlZxcWd5RzJZYmRSNFpnRUx0cDJGbGJPVW92bHMwUmJVMWJPelBhM3pidGdrYnZJTnkwZ3JKTmNSSmszUlJkVG1QZ3ZrTWE5MHlaVFVLNThIMk1hT0VocnJ6Rzh5NWc?oc=5",
-      "fecha": "2026-10-11 22:04:53",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Medio Ambiente",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 16,
-      "titulo": "Video: batalla arriba del alambrado en Jujuy - Olé",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOdDMwQzRvR0hHQ1ZNX0pXbTJwS09zdlY4bFFzMWtqckFDWE1DQzZtS2tGLVVkTE56T1R2ZXAyZHhQdFQwNk16N0FNcTNocXo4R2dtblBudV9Zd0oxUmZBQmQ2Rlg1dU1lTmVsNG16d200YTVQNWprZFdqRTIzd0FqSUNyeVhUeGdXSE5Lb1VQR005cFJkWFdMOGRxa3NqR3hYWXhFd1R6TkZDbGZvcWxweUlOR3dVTzVkTy0xQVJqNldPRzNtS0Y1OEZ6dWJwM0d6akJzM1hSY2nSAd4BQVVfeXFMT0JVd3NjbFFjenhKX3JPeWNTSzJxRnNLN18tVEhVZHROUHFndnFKZHAtQjJvbzg2NkVLbjd5bDk5NUI4dGk4S2xndDhnN3NiOGlCckdFa1d4SUlzRkxXY0dUbGZFQkJiRmtjXzZzR0RmVUY1RTRZUUw5ZkJxcVZ4alQyZU9fcWgxVFFVLVQ1Z0FMMzgyU0lLSWtMMzNNM3ltZWhXdFFGTWkxTUJ6OEFNNnhsczdLRWtJZjAwVDcyVHYzdE5PV3JWeEFjN05ORHRTTnZVRE9yVFRSb3AtaEh3?oc=5",
-      "fecha": "2026-10-11 20:30:29",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 31,
-      "titulo": "Tensión en Jujuy: recibieron a los ''cascotazos'' al plantel de Gimnasia y Tiro y quedó grabado - Que Pasa Salta",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdURBRlZ4OENtRHNDZ2lvN0lpZ0lzYlBla0tZaU83b05XRndnZFYtQmtjbmplOGlOOTBRZHFNNWY0V2JCVG9sR3I0NVFrclB2bUdmbEx5WW9UWXdYUmE4Q2ZpN1owVVA2X1ZxXy1UX0lVeFdHTXpMazRNdnFvc1I5UnVCSURiRzRZc2VpYVQyRzM5VU4tVVFsbGRCOUxyZ09yNm1CWFJwUFE5MG1HMjNPcVdsZ0QySzhnRUE?oc=5",
-      "fecha": "2026-10-11 19:21:14",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 28,
-      "titulo": "Condenan a cuatro años de prisión a mujer por narcomenudeo en Jujuy - Diario Panorama",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbzRZYTVuUTJZS2ktMGJNZmloTmdtcUM3MzNiZmtyRGZaWlpySVkxd3haTERXaEN0d1l0MDIxMjdWTmcwalJ3M0xuazhwbjd6UTlodGhWNWE1Wi11WFFhdEg1RVdoVVBDUVBfTERvakpqSWxlZE1Ob3VSR3d1N05ORG5qejA4VEV0Qm10QUNaa3hHUWN3Q19WTHBIX0RWeW1w?oc=5",
-      "fecha": "2026-10-11 17:34:04",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 11,
-      "titulo": "Domingo inestable en Jujuy: ¿a qué hora podrían llegar las lluvias? - Somos Jujuy",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMGdVTG9fbXQ0ZkN6djZ0dkhRYk5ZbjVrcmZZR29hWjdNbF9DcFFNWmNmSDVqd2ZtM0dhQVozNUs3Qkp0Y0I0WWs5RFFUWFJSZXBiSXplLV91WjQ1VXFVc0VmdzhWRnhvTE1SczZqMDdKX0R4aHdWUklTZTFEbkE4V3dFWld6WkJuMkNFQ3RrWGFQLWhrN1kzYktzMDV2QdIBowFBVV95cUxONkVKVExsWWVnc2Y1M1F6aktpQkt3eE9oUE90QVBXUGZYbDl4QW91ZzlyLXFZREtYWFJQaklMS29NbVB0RXlIcTB3ME5TcW5od0NYRFAwYTU1elZvdlIzU2NIcFIxYWc1akhCTVI3YmxFQVpuQkxqS014MzNOWEZLeE1sVERoQkhVYkphOGllc18zU1E5UW9vZkpXU19xMmhleWxv?oc=5",
-      "fecha": "2026-10-11 12:00:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
     }
   ],
   "keywords_trending": [
     {
       "palabra": "jujuy",
-      "total": 13,
-      "en_negativos": 1,
-      "en_positivos": 0
+      "total": 36,
+      "en_negativos": 2,
+      "en_positivos": 2
     },
     {
-      "palabra": "escuchar",
-      "total": 12,
+      "palabra": "martes",
+      "total": 7,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
-      "palabra": "nota",
-      "total": 12,
+      "palabra": "octubre",
+      "total": 5,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
       "palabra": "tres",
+      "total": 5,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "somos",
+      "total": 4,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "coparticipación",
+      "total": 4,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "intendentes",
+      "total": 4,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "clima",
+      "total": 4,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "jujeña",
       "total": 4,
       "en_negativos": 1,
       "en_positivos": 0
     },
     {
-      "palabra": "upcn",
-      "total": 3,
-      "en_negativos": 3,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "agua",
-      "total": 3,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "martes",
-      "total": 3,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "ocupación",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "semana",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "recibió",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
       "palabra": "alerta",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "amarilla",
-      "total": 2,
+      "total": 4,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
       "palabra": "vientos",
-      "total": 2,
+      "total": 4,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
-      "palabra": "cómo",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "tiempo",
-      "total": 2,
-      "en_negativos": 0,
-      "en_positivos": 0
-    },
-    {
-      "palabra": "pedro",
-      "total": 2,
+      "palabra": "salud",
+      "total": 3,
       "en_negativos": 1,
       "en_positivos": 0
     },
     {
-      "palabra": "casa",
-      "total": 2,
+      "palabra": "tiro",
+      "total": 3,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
-      "palabra": "panamericano",
-      "total": 2,
+      "palabra": "debate",
+      "total": 3,
       "en_negativos": 0,
       "en_positivos": 0
     },
     {
-      "palabra": "será",
-      "total": 2,
+      "palabra": "legislatura",
+      "total": 3,
       "en_negativos": 0,
       "en_positivos": 1
     },
     {
-      "palabra": "estoy",
-      "total": 2,
+      "palabra": "salvador",
+      "total": 3,
+      "en_negativos": 0,
+      "en_positivos": 1
+    },
+    {
+      "palabra": "será",
+      "total": 3,
+      "en_negativos": 0,
+      "en_positivos": 1
+    },
+    {
+      "palabra": "casa",
+      "total": 3,
+      "en_negativos": 0,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "días",
+      "total": 3,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
+      "palabra": "federal",
+      "total": 3,
       "en_negativos": 0,
       "en_positivos": 0
     }
@@ -1207,67 +1500,67 @@
   "sentimiento_por_tema": [
     {
       "tema": "Política",
-      "total_comentarios": 12,
-      "score_promedio": -0.08333333333333333,
-      "positivos": 1,
-      "negativos": 2,
-      "neutros": 9
+      "total_comentarios": 26,
+      "score_promedio": -0.1346153846153846,
+      "positivos": 2,
+      "negativos": 5,
+      "neutros": 19
     },
     {
       "tema": "General",
-      "total_comentarios": 9,
-      "score_promedio": 0.0,
-      "positivos": 0,
+      "total_comentarios": 24,
+      "score_promedio": 0.041666666666666664,
+      "positivos": 1,
       "negativos": 0,
-      "neutros": 9
-    },
-    {
-      "tema": "Educación",
-      "total_comentarios": 8,
-      "score_promedio": 0.0,
-      "positivos": 0,
-      "negativos": 0,
-      "neutros": 8
+      "neutros": 23
     },
     {
       "tema": "Economía",
-      "total_comentarios": 5,
-      "score_promedio": -0.3966,
-      "positivos": 0,
+      "total_comentarios": 14,
+      "score_promedio": -0.10592857142857144,
+      "positivos": 1,
       "negativos": 3,
-      "neutros": 2
+      "neutros": 10
     },
     {
-      "tema": "Salud",
-      "total_comentarios": 5,
-      "score_promedio": -0.2,
+      "tema": "Educación",
+      "total_comentarios": 11,
+      "score_promedio": 0.0,
       "positivos": 0,
-      "negativos": 1,
-      "neutros": 4
+      "negativos": 0,
+      "neutros": 11
     },
     {
       "tema": "Seguridad",
-      "total_comentarios": 5,
-      "score_promedio": -0.2,
+      "total_comentarios": 11,
+      "score_promedio": -0.09090909090909091,
       "positivos": 0,
       "negativos": 1,
-      "neutros": 4
+      "neutros": 10
+    },
+    {
+      "tema": "Salud",
+      "total_comentarios": 7,
+      "score_promedio": -0.19285714285714287,
+      "positivos": 0,
+      "negativos": 2,
+      "neutros": 5
     },
     {
       "tema": "Litio",
       "total_comentarios": 4,
-      "score_promedio": 0.0,
+      "score_promedio": -0.45,
       "positivos": 0,
-      "negativos": 0,
-      "neutros": 4
+      "negativos": 2,
+      "neutros": 2
     },
     {
       "tema": "Transporte",
       "total_comentarios": 3,
-      "score_promedio": -0.3333333333333333,
+      "score_promedio": -0.6666666666666666,
       "positivos": 0,
-      "negativos": 1,
-      "neutros": 2
+      "negativos": 2,
+      "neutros": 1
     },
     {
       "tema": "Carnaval y Cultura",
@@ -1286,6 +1579,364 @@
       "neutros": 1
     }
   ],
-  "actualizado": "2026-10-13T12:02:41.043669",
+  "descontento_por_fuente": [
+    {
+      "fuente": "jujuy_al_momento",
+      "total_opiniones": 72,
+      "reclamos": 15,
+      "favorables": 2,
+      "neutrales": 55,
+      "porcentaje_descontento": 20.8
+    },
+    {
+      "fuente": "google_news",
+      "total_opiniones": 28,
+      "reclamos": 0,
+      "favorables": 2,
+      "neutrales": 26,
+      "porcentaje_descontento": 0.0
+    },
+    {
+      "fuente": "jujuy_online",
+      "total_opiniones": 3,
+      "reclamos": 0,
+      "favorables": 0,
+      "neutrales": 3,
+      "porcentaje_descontento": 0.0
+    }
+  ],
+  "comentarios_destacados": [
+    {
+      "id": 93,
+      "texto": "12 años de ajuste y persecución: ahora quieren discutir el modelo de provincia",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 22:54:00",
+      "noticia_titulo": "12 años de ajuste y persecución: ahora quieren discutir el modelo de provincia",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/12-anos-ajuste-y-persecucion-ahora-quieren-discutir-el-modelo-provincia-n208546",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 124,
+      "texto": "Preocupación por la salud de la ex vedette Mónica Guido: está internada hace tres semanas",
+      "sentimiento": "NEG",
+      "score": -0.5,
+      "fecha": "2026-10-13 11:42:00",
+      "noticia_titulo": "Preocupación por la salud de la ex vedette Mónica Guido: está internada hace tres semanas",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/preocupacion/preocupacion-la-salud-la-ex-vedette-monica-guido-esta-internada-hace-tres-semanas-n208502",
+      "noticia_tema": "Salud"
+    },
+    {
+      "id": 54,
+      "texto": "Capital jujeña: un gato llora de hambre y necesita un hogar urgente",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:48:21",
+      "noticia_titulo": "Capital jujeña: un gato llora de hambre y necesita un hogar urgente",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/jujuy/capital-jujena-un-gato-llora-hambre-y-necesita-un-hogar-urgente-n208440",
+      "noticia_tema": "Transporte"
+    },
+    {
+      "id": 56,
+      "texto": "Estado de las rutas en Jujuy: advierten por desmoronamientos, baches y desvíos",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:48:15",
+      "noticia_titulo": "Estado de las rutas en Jujuy: advierten por desmoronamientos, baches y desvíos",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/estado/estado-las-rutas-jujuy-advierten-desmoronamientos-baches-y-desvios-n208505",
+      "noticia_tema": "Transporte"
+    },
+    {
+      "id": 59,
+      "texto": "San Pedro volverá a las calles reclamando por el tarifazo: \"Es horrible lo que está pasando\"",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:47:48",
+      "noticia_titulo": "San Pedro volverá a las calles reclamando por el tarifazo: \"Es horrible lo que está pasando\"",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/san-pedro/san-pedro-volvera-las-calles-reclamando-el-tarifazo-es-horrible-lo-que-esta-pasando-n208485",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 60,
+      "texto": "El boom minero no asegura sacar a la gente de la extrema vulnerabilidad",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:41:06",
+      "noticia_titulo": "El boom minero no asegura sacar a la gente de la extrema vulnerabilidad",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/el-boom-minero-no-asegura-sacar-la-gente-la-extrema-vulnerabilidad-n208363",
+      "noticia_tema": "Litio"
+    },
+    {
+      "id": 64,
+      "texto": "Decir que nosotros no queremos salir a manifestarnos ni luchar por un sueldo digno es de mal gusto. Nuestro sueldo es miserable, no llegamos ni a la canasta básica. ¿Y vamos a tener miedo a los descuentos si no ganamos nada?",
+      "sentimiento": "NEG",
+      "score": -0.583,
+      "fecha": "2026-10-13 09:40:56",
+      "noticia_titulo": "Cuestionan a UPCN Jujuy por falta de democracia interna y por no conseguir aumentos",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/upcn/cuestionan-upcn-jujuy-falta-democracia-interna-y-no-conseguir-aumentos-n208482",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 65,
+      "texto": "En UPCN no hay asambleas reales; se toman decisiones entre dos o tres personas y las actas se dibujan. No se deja trabajar a nadie por los compañeros y tampoco sabemos qué se hace con la plata del loteo ni con el alquiler de las instalaciones a una facultad privada. No hay rendición de cuentas",
+      "sentimiento": "NEG",
+      "score": -0.5,
+      "fecha": "2026-10-13 09:40:56",
+      "noticia_titulo": "Cuestionan a UPCN Jujuy por falta de democracia interna y por no conseguir aumentos",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/upcn/cuestionan-upcn-jujuy-falta-democracia-interna-y-no-conseguir-aumentos-n208482",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 66,
+      "texto": "Cuestionan a UPCN Jujuy por falta de democracia interna y por no conseguir aumentos",
+      "sentimiento": "NEG",
+      "score": -0.9,
+      "fecha": "2026-10-13 09:40:56",
+      "noticia_titulo": "Cuestionan a UPCN Jujuy por falta de democracia interna y por no conseguir aumentos",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/upcn/cuestionan-upcn-jujuy-falta-democracia-interna-y-no-conseguir-aumentos-n208482",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 69,
+      "texto": "Se conoce la inflación de septiembre: estiman aumento en torno al 2%",
+      "sentimiento": "NEG",
+      "score": -0.85,
+      "fecha": "2026-10-13 09:40:54",
+      "noticia_titulo": "Se conoce la inflación de septiembre: estiman aumento en torno al 2%",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/inflacion/se-conoce-la-inflacion-septiembre-estiman-aumento-torno-al-2-n208494",
+      "noticia_tema": "Salud"
+    },
+    {
+      "id": 74,
+      "texto": "El Foro Hábitat Digno presentó sus conclusiones y exigió declarar la emergencia en Jujuy",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:40:38",
+      "noticia_titulo": "El Foro Hábitat Digno presentó sus conclusiones y exigió declarar la emergencia en Jujuy",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/foro/el-foro-habitat-digno-presento-sus-conclusiones-y-exigio-declarar-la-emergencia-jujuy-n208492",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 76,
+      "texto": "Más de 10 días caminando: la marcha \"Por el Agua y por la Vida\" llegó a Capital",
+      "sentimiento": "NEG",
+      "score": -0.8,
+      "fecha": "2026-10-13 09:40:34",
+      "noticia_titulo": "Más de 10 días caminando: la marcha \"Por el Agua y por la Vida\" llegó a Capital",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/marcha/mas-10-dias-caminando-la-marcha-por-el-agua-y-la-vida-llego-capital-n208486",
+      "noticia_tema": "Litio"
+    },
+    {
+      "id": 83,
+      "texto": "Lógicamente nosotros no podemos aceptar un 2% que quedamos muy por debajo de lo que necesita el trabajador para una canasta salarial, canasta alimentaria, mucho menos considerando los aumentos de los distintos impuestos nacionales, provinciales, las tasas municipales",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:40:22",
+      "noticia_titulo": "Malestar en UPCN por la falta de paritarias y el posible bono de fin de año",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/malestar/malestar-upcn-la-falta-paritarias-y-el-posible-bono-fin-ano-n208348",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 85,
+      "texto": "Malestar en UPCN por la falta de paritarias y el posible bono de fin de año",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:40:22",
+      "noticia_titulo": "Malestar en UPCN por la falta de paritarias y el posible bono de fin de año",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/malestar/malestar-upcn-la-falta-paritarias-y-el-posible-bono-fin-ano-n208348",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 87,
+      "texto": "Dos hombres fueron condenados a prisión efectiva por robo de cables y asaltos en Perico",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-13 09:40:18",
+      "noticia_titulo": "Dos hombres fueron condenados a prisión efectiva por robo de cables y asaltos en Perico",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/robo/dos-hombres-fueron-condenados-prision-efectiva-robo-cables-y-asaltos-perico-n208491",
+      "noticia_tema": "Seguridad"
+    },
+    {
+      "id": 98,
+      "texto": "Ingreso a Primer Año: dónde estudiar Ciencias Sociales, Informática, Robótica, Turismo y otras orientaciones en Jujuy - Somos Jujuy",
+      "sentimiento": "POS",
+      "score": 0.5,
+      "fecha": "2026-10-13 17:30:00",
+      "noticia_titulo": "Ingreso a Primer Año: dónde estudiar Ciencias Sociales, Informática, Robótica, Turismo y otras orientaciones en Jujuy - Somos Jujuy",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=Ingreso%20a%20Primer%20A%C3%B1o%3A%20d%C3%B3nde%20estudiar%20Ciencias%20Sociales%2C%20Inform%C3%A1tica%2C%20Rob%C3%B3tica%2C%20T&tbm=nws",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 103,
+      "texto": "Buscan voluntarios para vivir en San Salvador de Jujuy: ofrecen alojamiento a cambio de colaborar 5 horas por 5 días a la semana - El Cronista",
+      "sentimiento": "POS",
+      "score": 1.0,
+      "fecha": "2026-10-13 14:40:38",
+      "noticia_titulo": "Buscan voluntarios para vivir en San Salvador de Jujuy: ofrecen alojamiento a cambio de colaborar 5 horas por 5 días a la semana - El Cronista",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=Buscan%20voluntarios%20para%20vivir%20en%20San%20Salvador%20de%20Jujuy%3A%20ofrecen%20alojamiento%20a%20ca&tbm=nws",
+      "noticia_tema": "General"
+    },
+    {
+      "id": 116,
+      "texto": "no son discusiones gremiales de Buenos Aires, es algo que nos compete a todos, es un convenio colectivo de trabajo, eso es en todo el país. En Jujuy tenemos muchos técnicos que se recibieron en ATFA, entonces en las elecciones del 12 de noviembre van a votar",
+      "sentimiento": "POS",
+      "score": 0.5,
+      "fecha": "2026-10-13 12:40:00",
+      "noticia_titulo": "El futuro de ATFA, en discusión: qué posición tomó la Liga Jujeña",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/afa/el-futuro-atfa-discusion-que-posicion-tomo-la-liga-jujena-n208407",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 58,
+      "texto": "Será momento de organizarnos y caer a la Legislatura, porque los diputados tienen el poder de ayudar y otorgarle al pueblo el desglose que está pidiendo. Fueron elegidos por la gente y tienen que responder a favor del pueblo, no de los grandes empresarios",
+      "sentimiento": "POS",
+      "score": 1.0,
+      "fecha": "2026-10-13 09:47:48",
+      "noticia_titulo": "San Pedro volverá a las calles reclamando por el tarifazo: \"Es horrible lo que está pasando\"",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/san-pedro/san-pedro-volvera-las-calles-reclamando-el-tarifazo-es-horrible-lo-que-esta-pasando-n208485",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 92,
+      "texto": "Jujuy Básquet presentó su roster para la temporada 2026/2027",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 23:40:00",
+      "noticia_titulo": "Jujuy Básquet presentó su roster para la temporada 2026/2027",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/liga-argentina-basquet/jujuy-basquet-presento-su-roster-la-temporada-20262027-n208544",
+      "noticia_tema": "General"
+    },
+    {
+      "id": 94,
+      "texto": "El ISJ autorizó 145 derivaciones de afiliados a centros de salud de otras provincias - Somos Jujuy",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 21:30:00",
+      "noticia_titulo": "El ISJ autorizó 145 derivaciones de afiliados a centros de salud de otras provincias - Somos Jujuy",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=El%20ISJ%20autoriz%C3%B3%20145%20derivaciones%20de%20afiliados%20a%20centros%20de%20salud%20de%20otras%20provin&tbm=nws",
+      "noticia_tema": "Salud"
+    },
+    {
+      "id": 95,
+      "texto": "Club Tiro vuelve a ser sede de un Senior G2",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 21:16:00",
+      "noticia_titulo": "Club Tiro vuelve a ser sede de un Senior G2",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/tenis/club-tiro-vuelve-ser-sede-un-senior-g2-n208094",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 96,
+      "texto": "El Gobierno reunió a la mesa política para frenar a la oposición en el Congreso",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 20:09:09",
+      "noticia_titulo": "El Gobierno reunió a la mesa política para frenar a la oposición en el Congreso",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/gobierno/el-gobierno-reunio-la-mesa-politica-frenar-la-oposicion-el-congreso-n208530",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 97,
+      "texto": "La canasta básica aumentó un 1,7%: familia necesitó más de $1.600.000 para no ser pobre",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 19:53:29",
+      "noticia_titulo": "La canasta básica aumentó un 1,7%: familia necesitó más de $1.600.000 para no ser pobre",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/canasta-basica/la-canasta-basica-aumento-un-17-familia-necesito-mas-1600000-no-ser-pobre-n208526",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 99,
+      "texto": "Ley de Coparticipación: comenzó el debate con 28 intendentes de Jujuy - Todo Jujuy",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 16:43:19",
+      "noticia_titulo": "Ley de Coparticipación: comenzó el debate con 28 intendentes de Jujuy - Todo Jujuy",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=Ley%20de%20Coparticipaci%C3%B3n%3A%20comenz%C3%B3%20el%20debate%20con%2028%20intendentes%20de%20Jujuy%20-%20Todo%20Juj&tbm=nws",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 100,
+      "texto": "Intendentes comenzaron a discutir la Ley de Coparticipación en la Legislatura",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 15:54:00",
+      "noticia_titulo": "Intendentes comenzaron a discutir la Ley de Coparticipación en la Legislatura",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/intendentes/intendentes-comenzaron-discutir-la-ley-coparticipacion-la-legislatura-n208518",
+      "noticia_tema": "Política"
+    },
+    {
+      "id": 101,
+      "texto": "Clima en Jujuy: cielo nublado y frío para este martes 13 de octubre - TN",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 15:30:57",
+      "noticia_titulo": "Clima en Jujuy: cielo nublado y frío para este martes 13 de octubre - TN",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=Clima%20en%20Jujuy%3A%20cielo%20nublado%20y%20fr%C3%ADo%20para%20este%20martes%2013%20de%20octubre%20-%20TN&tbm=nws",
+      "noticia_tema": "General"
+    },
+    {
+      "id": 102,
+      "texto": "Estas son las escuelas que tomarán examen para ingresar a 1° año en Jujuy - Somos Jujuy",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 14:59:00",
+      "noticia_titulo": "Estas son las escuelas que tomarán examen para ingresar a 1° año en Jujuy - Somos Jujuy",
+      "noticia_fuente": "google_news",
+      "noticia_link": "https://www.google.com/search?q=Estas%20son%20las%20escuelas%20que%20tomar%C3%A1n%20examen%20para%20ingresar%20a%201%C2%B0%20a%C3%B1o%20en%20Jujuy%20-%20Somo&tbm=nws",
+      "noticia_tema": "Educación"
+    },
+    {
+      "id": 104,
+      "texto": ". Sobre su adaptación al sistema de juego que propone el entrenador Guillermo Tasso, fue sincero:",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 14:01:00",
+      "noticia_titulo": "\"Queremos que ya empiece\", la ansiedad de Kusnier a días de su debut con Jujuy Básquet",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/jujuy-basquet/queremos-que-ya-empiece-la-ansiedad-kusnier-dias-su-debut-jujuy-basquet-n208110",
+      "noticia_tema": "Economía"
+    },
+    {
+      "id": 105,
+      "texto": ". El esfuerzo fue largo, el plantel entrena desde agosto:",
+      "sentimiento": "NEU",
+      "score": 0.0,
+      "fecha": "2026-10-13 14:01:00",
+      "noticia_titulo": "\"Queremos que ya empiece\", la ansiedad de Kusnier a días de su debut con Jujuy Básquet",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/jujuy-basquet/queremos-que-ya-empiece-la-ansiedad-kusnier-dias-su-debut-jujuy-basquet-n208110",
+      "noticia_tema": "Economía"
+    }
+  ],
+  "actualizado": "2026-10-13T21:34:45.423753",
   "fuente": "Datos reales recolectados de medios de Jujuy"
 }

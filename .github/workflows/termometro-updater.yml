@@ -37,12 +37,13 @@ jobs:
       - name: Exportar datos estáticos para Netlify
         run: |
           python export_static.py
+          python build_standalone.py
 
       - name: Guardar y commitear cambios
         run: |
           git config --global user.name "Termometro Bot"
           git config --global user.email "bot@termometrosocial.jujuy"
-          git add frontend/data.json data/termometro.db
+          git add frontend/data.json frontend/index.html data/termometro.db
           if git diff --staged --quiet; then
             echo "No hay noticias nuevas para commitear."
           else
