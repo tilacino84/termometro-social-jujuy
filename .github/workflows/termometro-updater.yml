@@ -2,12 +2,18 @@ name: Actualizador del Termómetro Social de Jujuy
 
 on:
   schedule:
-    # Se ejecuta automáticamente cada 4 horas
-    - cron: '0 */4 * * *'
+    # Se ejecuta automáticamente cada 3 horas (en el minuto 15 para evitar congestión)
+    - cron: '15 */3 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub con un clic
   push:
     branches:
       - main
+    paths-ignore:
+      - 'frontend/data.json'
+      - 'frontend/index.html'
+      - 'data/**'
+      - 'README.md'
+      - '.gitignore'
 
 jobs:
   scrape-and-update:
@@ -18,16 +24,18 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Python
-        uses: setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
 
       - name: Instalar dependencias
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Ejecutar Scraper y Analizador de Noticias Reales
@@ -41,12 +49,13 @@ jobs:
 
       - name: Guardar y commitear cambios
         run: |
-          git config --global user.name "Termometro Bot"
-          git config --global user.email "bot@termometrosocial.jujuy"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add frontend/data.json frontend/index.html data/termometro.db
           if git diff --staged --quiet; then
             echo "No hay noticias nuevas para commitear."
           else
-            git commit -m "🔄 Actualización automática de noticias y termómetro social [skip ci]"
-            git push
+            git commit -m "🔄 Actualización automática de noticias y termómetro social"
+            git push origin main
           fi
