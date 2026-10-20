@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pages: write
+      id-token: write
 
     steps:
       - name: Clonar repositorio
@@ -61,10 +63,20 @@ jobs:
           fi
           git commit -m "🔄 Actualización automática de noticias y termómetro social"
           for intento in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push origin main && exit 0
+            git pull --rebase -X theirs origin main && git push origin main && break
             echo "Reintentando push ($intento)..."
             git rebase --abort 2>/dev/null || true
             sleep 5
           done
-          echo "No se pudo publicar la actualización." >&2
-          exit 1
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto de frontend a GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'frontend'
+
+      - name: Desplegar sitio en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
