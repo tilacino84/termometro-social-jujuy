@@ -2,9 +2,8 @@ name: Actualizador del Termómetro Social de Jujuy
 
 on:
   schedule:
-    # Se ejecuta automáticamente cada 3 horas (en el minuto 15 para evitar congestión)
     - cron: '15 */3 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub con un clic
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,6 +13,10 @@ on:
       - 'data/**'
       - 'README.md'
       - '.gitignore'
+
+concurrency:
+  group: termometro-updater
+  cancel-in-progress: false
 
 jobs:
   scrape-and-update:
@@ -51,11 +54,17 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
           git add frontend/data.json frontend/index.html data/termometro.db
           if git diff --staged --quiet; then
             echo "No hay noticias nuevas para commitear."
-          else
-            git commit -m "🔄 Actualización automática de noticias y termómetro social"
-            git push origin main
+            exit 0
           fi
+          git commit -m "🔄 Actualización automática de noticias y termómetro social"
+          for intento in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push origin main && exit 0
+            echo "Reintentando push ($intento)..."
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          echo "No se pudo publicar la actualización." >&2
+          exit 1
