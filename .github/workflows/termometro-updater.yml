@@ -26,6 +26,10 @@ jobs:
       pages: write
       id-token: write
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
@@ -47,7 +51,7 @@ jobs:
         run: |
           python run.py --scrape
 
-      - name: Exportar datos estáticos para Netlify
+      - name: Exportar datos estáticos para Netlify y GitHub Pages
         run: |
           python export_static.py
           python build_standalone.py
@@ -58,16 +62,16 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add frontend/data.json frontend/index.html data/termometro.db
           if git diff --staged --quiet; then
-            echo "No hay noticias nuevas para commitear."
-            exit 0
+            echo "No hay noticias nuevas para commitear en el repositorio."
+          else
+            git commit -m "🔄 Actualización automática de noticias y termómetro social"
+            for intento in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push origin main && break
+              echo "Reintentando push ($intento)..."
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            done
           fi
-          git commit -m "🔄 Actualización automática de noticias y termómetro social"
-          for intento in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push origin main && break
-            echo "Reintentando push ($intento)..."
-            git rebase --abort 2>/dev/null || true
-            sleep 5
-          done
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
