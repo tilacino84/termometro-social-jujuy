@@ -33,11 +33,14 @@ from backend.database import (
     obtener_noticias_con_stats,
     obtener_descontento_por_fuente,
     obtener_comentarios_destacados,
+    obtener_mapa_departamentos,
+    obtener_feed_social,
 )
 from backend.analyzer import (
     obtener_palabras_clave_trending,
     obtener_resumen_sentimiento_por_tema,
 )
+from backend.config import DEPARTAMENTOS_JUJUY, LÉXICO_REGIONAL_JUJUY
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +65,8 @@ def exportar_dashboard_json(dias: int = 30, output_path: str = None) -> str:
     sentimiento_por_tema = obtener_resumen_sentimiento_por_tema(dias)
     descontento_fuentes = obtener_descontento_por_fuente(dias)
     comentarios_destacados = obtener_comentarios_destacados(limite=30, dias=dias)
+    mapa_departamentos = obtener_mapa_departamentos(dias=dias)
+    social_feed = obtener_feed_social(limite=50)
 
     # Nivel de tensión
     if indice <= 25:
@@ -95,8 +100,14 @@ def exportar_dashboard_json(dias: int = 30, output_path: str = None) -> str:
         "sentimiento_por_tema": sentimiento_por_tema,
         "descontento_por_fuente": descontento_fuentes,
         "comentarios_destacados": comentarios_destacados,
+        "mapa_departamentos": mapa_departamentos,
+        "social_feed": social_feed,
+        "lexico_regional": {
+            "expresiones": LÉXICO_REGIONAL_JUJUY["expresiones"][:10],
+            "total_departamentos": len(DEPARTAMENTOS_JUJUY)
+        },
         "actualizado": datetime.now().isoformat(),
-        "fuente": "Datos reales recolectados de medios de Jujuy",
+        "fuente": "Datos reales recolectados de medios de Jujuy y redes sociales",
     }
 
     with open(output_path, "w", encoding="utf-8") as f:

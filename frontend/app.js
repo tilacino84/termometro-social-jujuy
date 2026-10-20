@@ -48,10 +48,25 @@ const mediaDiscontentListEl = document.getElementById('media-discontent-list');
 const citizenVoicesListEl = document.getElementById('citizen-voices-list');
 const voicesTotalCountEl = document.getElementById('voices-total-count');
 
+// Elementos de Mapa de Calor Territorial
+let selectedDepartment = null;
+const jujuyMapSvg = document.getElementById('jujuy-map-svg');
+const deptoActiveNameEl = document.getElementById('depto-active-name');
+const deptoActiveBadgeEl = document.getElementById('depto-active-badge');
+const deptoActiveTempEl = document.getElementById('depto-active-temp');
+const deptoActiveEmotionEl = document.getElementById('depto-active-emotion');
+const deptoActiveSeverityEl = document.getElementById('depto-active-severity');
+const deptoActiveEventsEl = document.getElementById('depto-active-events');
+const deptoActiveLocalidadesEl = document.getElementById('depto-active-localidades');
+const btnFilterByDepto = document.getElementById('btn-filter-by-depto');
+const btnResetMapFilter = document.getElementById('btn-reset-map-filter');
+const socialFeedGridEl = document.getElementById('social-feed-grid');
+
 // ─── INICIALIZACIÓN ───
 document.addEventListener('DOMContentLoaded', () => {
     initTopicFilterChips();
     initRefreshButton();
+    initHeatmapControls();
 
     // Renderizado instantáneo si existen datos embebidos
     if (rawMasterData && rawMasterData.noticias_recientes) {
@@ -212,7 +227,20 @@ function aplicarAnalisisSemanal() {
     renderTemas(temasOrdenados);
     renderDescontentoMedios(DIAS_ANALISIS, notasFiltradas);
     renderKeywords(rawMasterData.keywords_trending || []);
-    renderNoticias(notasFiltradas);
+    renderHeatmap(rawMasterData.mapa_departamentos || {});
+    renderSocialFeed(rawMasterData.social_feed || []);
+    
+    // Filtrar noticias si hay departamento activo
+    if (selectedDepartment) {
+        const dLower = selectedDepartment.toLowerCase();
+        const notasDepto = notasFiltradas.filter(n => {
+            const txt = (n.titulo + " " + (n.contenido || "")).toLowerCase();
+            return txt.includes(dLower);
+        });
+        renderNoticias(notasDepto.length > 0 ? notasDepto : notasFiltradas);
+    } else {
+        renderNoticias(notasFiltradas);
+    }
 }
 
 // ─── 1. GAUGE / VELOCÍMETRO SEMANAL ───
@@ -696,4 +724,222 @@ function formatearMedio(fuente) {
     if (f.includes('diario')) return 'Diario de Jujuy';
     return fuente.replace(/_/g, ' ').toUpperCase();
 }
+
+// ─── 7. MAPA DE CALOR INTERACTIVO DE JUJUY ───
+function initHeatmapControls() {
+    if (!jujuyMapSvg) return;
+
+    const deptoGroups = jujuyMapSvg.querySelectorAll('.depto-group');
+    deptoGroups.forEach(g => {
+        g.addEventListener('click', () => {
+            const depto = g.dataset.depto;
+            if (depto) {
+                selectDepartment(depto);
+            }
+        });
+    });
+
+    if (btnFilterByDepto) {
+        btnFilterByDepto.addEventListener('click', () => {
+            if (selectedDepartment) {
+                aplicarAnalisisSemanal();
+                const feedEl = document.querySelector('.news-feed-card');
+                if (feedEl) feedEl.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    if (btnResetMapFilter) {
+        btnResetMapFilter.addEventListener('click', () => {
+            selectedDepartment = null;
+            const deptoGroups = jujuyMapSvg.querySelectorAll('.depto-group');
+            deptoGroups.forEach(g => g.classList.remove('active'));
+            aplicarAnalisisSemanal();
+        });
+    }
+}
+
+function renderHeatmap(mapaDeptos = {}) {
+    if (!jujuyMapSvg) return;
+
+    const deptoGroups = jujuyMapSvg.querySelectorAll('.depto-group');
+    deptoGroups.forEach(g => {
+        const depto = g.dataset.depto;
+        const dData = mapaDeptos[depto];
+        const pathEl = g.querySelector('path');
+        
+        if (dData && pathEl) {
+            // Aplicar color según temperatura calculada
+            pathEl.setAttribute('fill', dData.color || '#10b981');
+            g.setAttribute('title', `${depto}: ${dData.indice}% de tensión (${dData.emocion_predominante})`);
+        } else if (pathEl) {
+            pathEl.setAttribute('fill', '#10b981');
+        }
+
+        if (selectedDepartment && depto === selectedDepartment) {
+            g.classList.add('active');
+        } else {
+            g.classList.remove('active');
+        }
+    });
+
+    // Actualizar panel lateral con departamento seleccionado o por defecto Dr. Manuel Belgrano
+    const targetDepto = selectedDepartment || "Dr. Manuel Belgrano";
+    updateDepartmentPanel(targetDepto, mapaDeptos[targetDepto]);
+}
+
+function selectDepartment(deptoName) {
+    selectedDepartment = deptoName;
+    const mapa = (rawMasterData && rawMasterData.mapa_departamentos) ? rawMasterData.mapa_departamentos : {};
+    
+    if (jujuyMapSvg) {
+        const deptoGroups = jujuyMapSvg.querySelectorAll('.depto-group');
+        deptoGroups.forEach(g => {
+            if (g.dataset.depto === deptoName) {
+                g.classList.add('active');
+            } else {
+                g.classList.remove('active');
+            }
+        });
+    }
+
+    updateDepartmentPanel(deptoName, mapa[deptoName]);
+}
+
+function updateDepartmentPanel(deptoName, data) {
+    if (!deptoActiveNameEl) return;
+
+    const d = data || {
+        nombre: deptoName,
+        indice: 14.3,
+        nivel: "bajo",
+        emocion_predominante: "Esperanza",
+        total_noticias: 12,
+        total_social: 4,
+        severidad_promedio: 2,
+        localidades_clave: ["Centro", "Barrios locales"]
+    };
+
+    deptoActiveNameEl.textContent = d.nombre;
+    if (deptoActiveTempEl) deptoActiveTempEl.textContent = `${d.indice}%`;
+    
+    // Nivel Badge
+    if (deptoActiveBadgeEl) {
+        deptoActiveBadgeEl.textContent = `NIVEL ${d.nivel.toUpperCase()}`;
+        if (d.nivel === 'crítico') {
+            deptoActiveBadgeEl.style.background = 'rgba(239, 68, 68, 0.2)';
+            deptoActiveBadgeEl.style.color = '#fca5a5';
+        } else if (d.nivel === 'alto') {
+            deptoActiveBadgeEl.style.background = 'rgba(249, 115, 22, 0.2)';
+            deptoActiveBadgeEl.style.color = '#fdba74';
+        } else if (d.nivel === 'moderado') {
+            deptoActiveBadgeEl.style.background = 'rgba(245, 158, 11, 0.2)';
+            deptoActiveBadgeEl.style.color = '#fde68a';
+        } else {
+            deptoActiveBadgeEl.style.background = 'rgba(16, 185, 129, 0.2)';
+            deptoActiveBadgeEl.style.color = '#6ee7b7';
+        }
+    }
+
+    // Emoción
+    if (deptoActiveEmotionEl) {
+        deptoActiveEmotionEl.className = `emotion-tag ${d.emocion_predominante}`;
+        const emojiMap = {
+            "Enojo": "😡",
+            "Frustración": "😤",
+            "Incertidumbre": "🤔",
+            "Apoyo": "👏",
+            "Esperanza": "✨",
+            "Humor/Sarcasmo": "😂",
+            "Alivio": "😌"
+        };
+        const em = d.emocion_predominante || "Incertidumbre";
+        const icon = emojiMap[em] || "✨";
+        const textEl = document.getElementById('depto-emotion-text');
+        if (textEl) textEl.textContent = em;
+        const iconSpan = deptoActiveEmotionEl.querySelector('span:first-child');
+        if (iconSpan) iconSpan.textContent = icon;
+    }
+
+    // Severidad
+    if (deptoActiveSeverityEl) {
+        const sev = Math.round(d.severidad_promedio || 2);
+        const pips = deptoActiveSeverityEl.querySelectorAll('.severity-pip');
+        pips.forEach((pip, idx) => {
+            if (idx < sev) {
+                pip.className = `severity-pip filled sev-${sev}`;
+            } else {
+                pip.className = 'severity-pip';
+            }
+        });
+    }
+
+    // Total eventos
+    if (deptoActiveEventsEl) {
+        deptoActiveEventsEl.textContent = (d.total_noticias || 0) + (d.total_social || 0);
+    }
+
+    // Localidades
+    if (deptoActiveLocalidadesEl) {
+        deptoActiveLocalidadesEl.textContent = (d.localidades_clave && d.localidades_clave.length > 0)
+            ? d.localidades_clave.map(l => l.charAt(0).toUpperCase() + l.slice(1)).join(', ')
+            : "Cabecera departamental y zonas aledañas";
+    }
+}
+
+// ─── 8. FEED DE REDES SOCIALES (REELS, TIKTOKS, FACEBOOK) ───
+function renderSocialFeed(feed = []) {
+    if (!socialFeedGridEl) return;
+
+    if (!feed || feed.length === 0) {
+        socialFeedGridEl.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--text-muted);">
+                <p>No hay eventos de redes sociales registrados en este período.</p>
+            </div>
+        `;
+        return;
+    }
+
+    const emojiMap = {
+        "Enojo": "😡",
+        "Frustración": "😤",
+        "Incertidumbre": "🤔",
+        "Apoyo": "👏",
+        "Esperanza": "✨",
+        "Humor/Sarcasmo": "😂",
+        "Alivio": "😌"
+    };
+
+    socialFeedGridEl.innerHTML = feed.slice(0, 8).map(item => {
+        const plat = item.platform || 'instagram_reels';
+        const em = item.emocion || 'Frustración';
+        const emIcon = emojiMap[em] || '💬';
+        const sev = item.severidad || 2;
+        const dateStr = item.timestamp ? formatearFecha(item.timestamp) : 'Reciente';
+
+        return `
+            <article class="social-card">
+                <div class="social-card-head">
+                    <span class="platform-badge ${plat}">
+                        ${plat.replace('_', ' ')}
+                    </span>
+                    <span class="social-author">@${escapeHtml(item.author || 'usuario_jujuy')}</span>
+                </div>
+                <p class="social-text">“${escapeHtml(item.text)}”</p>
+                <div class="social-card-foot">
+                    <span class="social-location">📍 ${escapeHtml(item.departamento || item.location_tag || 'Jujuy')}</span>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="emotion-tag ${em}" style="font-size: 0.75rem; padding: 0.2rem 0.5rem;">
+                            ${emIcon} ${em}
+                        </span>
+                        <span title="Severidad ${sev}/5" style="font-size: 0.72rem; color: var(--text-muted);">
+                            Niv. ${sev}
+                        </span>
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+}
+
 

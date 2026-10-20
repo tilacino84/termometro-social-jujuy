@@ -141,16 +141,82 @@ def sembrar_datos_demo():
             for com_texto in noti["comentarios"]:
                 analysis = analizar_sentimiento(com_texto)
                 fecha_com = (base_time - timedelta(hours=random.randint(1, 48))).strftime("%Y-%m-%d %H:%M:%S")
-                insertar_comentario(
-                    noticia_id=noticia_id,
-                    texto=com_texto,
-                    sentimiento=analysis["sentimiento"],
-                    score=analysis["score"],
-                    keywords=analysis["keywords"],
-                    fecha=fecha_com
-                )
+    # Sembrar eventos de redes sociales con IA Regional
+    from backend.ai_regional import procesar_evento_red_social
+    from backend.database import insertar_evento_social
 
-    print("✅ Datos sembrados con éxito. Listo para visualizar en el Dashboard.")
+    eventos_redes_demo = [
+        {
+            "id": "reel_jujuy_01",
+            "platform": "instagram_reels",
+            "author": "vecino_capitalino",
+            "text": "Tremendo el aumento del boleto en San Salvador, no se aguanta más viajar como ganado en el Xibi Xibi",
+            "timestamp": (base_time - timedelta(hours=3)).isoformat(),
+            "location_tag": "San Salvador de Jujuy"
+        },
+        {
+            "id": "tiktok_tilcara_02",
+            "platform": "tiktok",
+            "author": "quebradeño_viajero",
+            "text": "Qué churo se pone Tilcara y Humahuaca cuando arranca la comparsa, orgullo de nuestra Pachamama",
+            "timestamp": (base_time - timedelta(hours=6)).isoformat(),
+            "location_tag": "Tilcara"
+        },
+        {
+            "id": "fb_palpala_03",
+            "platform": "facebook_groups",
+            "author": "vecinos_palpala_alerta",
+            "text": "En Palpalá otra vez cortes de agua y la Muni de San Salvador ni se entera, un abandono total",
+            "timestamp": (base_time - timedelta(hours=10)).isoformat(),
+            "location_tag": "Palpalá"
+        },
+        {
+            "id": "fb_purma_04",
+            "platform": "facebook_groups",
+            "author": "comunidades_puna",
+            "text": "Corte en Purmamarca y asamblea en Tumbaya por el agua y las regalías del litio",
+            "timestamp": (base_time - timedelta(hours=14)).isoformat(),
+            "location_tag": "Purmamarca, Tumbaya"
+        },
+        {
+            "id": "tiktok_laquiaca_05",
+            "platform": "tiktok",
+            "author": "fronterizo_quiaca",
+            "text": "Por las nubes el precio para coquear en La Quiaca y Yavi, hasta la hoja de coca se fue al diablo",
+            "timestamp": (base_time - timedelta(hours=18)).isoformat(),
+            "location_tag": "La Quiaca, Yavi"
+        },
+        {
+            "id": "x_ledesma_06",
+            "platform": "x_twitter",
+            "author": "trabajador_yungas",
+            "text": "Avanza la producción en Ledesma y Calilegua, generando laburo para la gente de Libertador",
+            "timestamp": (base_time - timedelta(hours=22)).isoformat(),
+            "location_tag": "Libertador General San Martín"
+        },
+        {
+            "id": "reel_sanpedro_07",
+            "platform": "instagram_reels",
+            "author": "ramaleño_activo",
+            "text": "Alerta por el dengue en San Pedro y La Esperanza, necesitamos más fumigaciones y médicos en el hospital",
+            "timestamp": (base_time - timedelta(hours=26)).isoformat(),
+            "location_tag": "San Pedro"
+        },
+        {
+            "id": "fb_susques_08",
+            "platform": "facebook_groups",
+            "author": "camioneros_puna",
+            "text": "Ruta intransitable en Susques y salar de Olaroz, los camiones rompen todo y no hay mantenimiento",
+            "timestamp": (base_time - timedelta(hours=30)).isoformat(),
+            "location_tag": "Susques"
+        }
+    ]
+
+    for ev in eventos_redes_demo:
+        proc = procesar_evento_red_social(ev)
+        insertar_evento_social(proc)
+
+    print("✅ Datos sembrados con éxito (noticias, comentarios y redes sociales de Jujuy).")
 
 
 def main():

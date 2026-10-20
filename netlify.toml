@@ -1,6 +1,17 @@
 # Configuración de despliegue para Netlify
 [build]
   publish = "frontend"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/sentiment"
+  to = "/.netlify/functions/sentiment"
+  status = 200
+
+[[redirects]]
+  from = "/api/social-feed"
+  to = "/.netlify/functions/social-feed"
+  status = 200
 
 [[headers]]
   for = "/*"

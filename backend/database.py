@@ -57,6 +57,21 @@ def init_db() -> None:
                     ON DELETE CASCADE
             );
 
+            CREATE TABLE IF NOT EXISTS social_feed (
+                id          TEXT    PRIMARY KEY,
+                platform    TEXT    NOT NULL,
+                author      TEXT    DEFAULT '',
+                texto       TEXT    NOT NULL,
+                timestamp   TEXT    NOT NULL,
+                location_tag TEXT   DEFAULT '',
+                departamento TEXT   DEFAULT 'Dr. Manuel Belgrano',
+                emocion     TEXT    DEFAULT 'Frustración',
+                severidad   INTEGER DEFAULT 2,
+                sentimiento TEXT    DEFAULT 'NEU',
+                score       REAL    DEFAULT 0.0,
+                created_at  TEXT    DEFAULT (datetime('now'))
+            );
+
             CREATE INDEX IF NOT EXISTS idx_noticias_fecha
                 ON noticias(fecha DESC);
             CREATE INDEX IF NOT EXISTS idx_noticias_fuente
@@ -69,6 +84,10 @@ def init_db() -> None:
                 ON comentarios(sentimiento);
             CREATE INDEX IF NOT EXISTS idx_comentarios_fecha
                 ON comentarios(fecha DESC);
+            CREATE INDEX IF NOT EXISTS idx_social_depto
+                ON social_feed(departamento);
+            CREATE INDEX IF NOT EXISTS idx_social_timestamp
+                ON social_feed(timestamp DESC);
         """)
         conn.commit()
         logger.info("Base de datos inicializada correctamente en %s", DB_PATH)
@@ -463,6 +482,173 @@ def obtener_comentarios_destacados(limite: int = 25, dias: int = 30) -> list[dic
             (fecha_limite, limite),
         ).fetchall()
         return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
+# ─────────────────────────────────────────────
+# OPERACIONES DE REDES SOCIALES Y GEOLOCALIZACIÓN
+# ─────────────────────────────────────────────
+
+def insertar_evento_social(evento: dict) -> bool:
+    """Inserta o actualiza un evento procesado de redes sociales."""
+    conn = _get_connection()
+    try:
+        conn.execute(
+            """
+            INSERT OR REPLACE INTO social_feed 
+            (id, platform, author, texto, timestamp, location_tag, departamento, emocion, severidad, sentimiento, score)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                evento["id"],
+                evento.get("platform", "general"),
+                evento.get("author", ""),
+                evento.get("text", evento.get("texto", "")),
+                evento.get("timestamp", datetime.now().isoformat()),
+                evento.get("location_tag", ""),
+                evento.get("departamento", "Dr. Manuel Belgrano"),
+                evento.get("emocion", "Frustración"),
+                evento.get("severidad", 2),
+                evento.get("sentimiento", "NEU"),
+                evento.get("score", 0.0),
+            )
+        )
+        conn.commit()
+        return True
+    except sqlite3.Error as e:
+        logger.error("Error al insertar evento social: %s", e)
+        return False
+    finally:
+        conn.close()
+
+
+def obtener_feed_social(limite: int = 50, departamento: str = None) -> list[dict]:
+    """Retorna eventos recientes de redes sociales filtrados opcionalmente por departamento."""
+    conn = _get_connection()
+    try:
+        if departamento and departamento != "all":
+            rows = conn.execute(
+                """
+                SELECT id, platform, author, texto as text, timestamp, location_tag, 
+                       departamento, emocion, severidad, sentimiento, score
+                FROM social_feed
+                WHERE departamento = ?
+                ORDER BY timestamp DESC
+                LIMIT ?
+                """,
+                (departamento, limite)
+            ).fetchall()
+        else:
+            rows = conn.execute(
+                """
+                SELECT id, platform, author, texto as text, timestamp, location_tag, 
+                       departamento, emocion, severidad, sentimiento, score
+                FROM social_feed
+                ORDER BY timestamp DESC
+                LIMIT ?
+                """,
+                (limite,)
+            ).fetchall()
+        return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
+def obtener_mapa_departamentos(dias: int = 30) -> dict:
+    """
+    Calcula temperatura (índice de tensión social), volumen y emoción predominante
+    para cada uno de los 16 departamentos de Jujuy.
+    Combina noticias, menciones territoriales y eventos de redes sociales.
+    """
+    from backend.config import DEPARTAMENTOS_JUJUY
+    fecha_limite = (datetime.now() - timedelta(days=dias)).strftime("%Y-%m-%d")
+
+    conn = _get_connection()
+    try:
+        # 1. Obtener eventos sociales agrupados por departamento
+        rows_social = conn.execute(
+            """
+            SELECT departamento, 
+                   COUNT(*) as total,
+                   SUM(CASE WHEN sentimiento = 'NEG' THEN 1 ELSE 0 END) as neg,
+                   SUM(CASE WHEN sentimiento = 'POS' THEN 1 ELSE 0 END) as pos,
+                   SUM(CASE WHEN sentimiento = 'NEU' THEN 1 ELSE 0 END) as neu,
+                   AVG(severidad) as severidad_prom,
+                   emocion
+            FROM social_feed
+            WHERE timestamp >= ?
+            GROUP BY departamento
+            """,
+            (fecha_limite,)
+        ).fetchall()
+        social_stats = {r["departamento"]: dict(r) for r in rows_social}
+
+        # 2. Obtener noticias y comentarios para cruzarlos con el léxico geográfico
+        noticias_rows = conn.execute(
+            """
+            SELECT id, titulo, contenido, tema, fecha
+            FROM noticias
+            WHERE fecha >= ?
+            """,
+            (fecha_limite,)
+        ).fetchall()
+
+        # Construir matriz de los 16 departamentos
+        deptos_resultado = {}
+        for depto, localidades in DEPARTAMENTOS_JUJUY.items():
+            # Contar menciones en noticias
+            notas_coincidentes = 0
+            for n in noticias_rows:
+                texto_nota = f"{n['titulo']} {n['contenido']}".lower()
+                if depto.lower() in texto_nota or any(loc in texto_nota for loc in localidades):
+                    notas_coincidentes += 1
+
+            s = social_stats.get(depto, {})
+            total_soc = s.get("total", 0)
+            neg_soc = s.get("neg", 0)
+            pos_soc = s.get("pos", 0)
+
+            # Cálculo de temperatura/tensión del departamento (0 a 100)
+            total_items = notas_coincidentes + total_soc
+            if total_items > 0:
+                ratio_neg = (neg_soc + (notas_coincidentes * 0.18)) / max(total_items, 1)
+                indice = min(100.0, max(5.0, round(ratio_neg * 100, 1)))
+            else:
+                # Línea base provincial tranquila
+                indice = 12.0
+
+            # Nivel y emoción predominante
+            if indice >= 75:
+                nivel = "crítico"
+                emocion = s.get("emocion") or "Enojo"
+                color = "#ef4444" # Rojo
+            elif indice >= 50:
+                nivel = "alto"
+                emocion = s.get("emocion") or "Frustración"
+                color = "#f97316" # Naranja
+            elif indice >= 25:
+                nivel = "moderado"
+                emocion = s.get("emocion") or "Incertidumbre"
+                color = "#f59e0b" # Amarillo
+            else:
+                nivel = "bajo"
+                emocion = s.get("emocion") or "Esperanza"
+                color = "#10b981" # Verde esmeralda
+
+            deptos_resultado[depto] = {
+                "nombre": depto,
+                "indice": indice,
+                "nivel": nivel,
+                "color": color,
+                "emocion_predominante": emocion,
+                "total_noticias": notas_coincidentes,
+                "total_social": total_soc,
+                "severidad_promedio": round(s.get("severidad_prom", 2.0), 1),
+                "localidades_clave": localidades[:4]
+            }
+
+        return deptos_resultado
     finally:
         conn.close()
 

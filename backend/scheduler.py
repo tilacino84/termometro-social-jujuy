@@ -31,6 +31,7 @@ from backend.database import init_db
 from backend.scraper_news import ejecutar_scraper_noticias
 from backend.scraper_comments import ejecutar_scraper_comentarios
 from backend.analyzer import analizar_comentarios_pendientes
+from backend.scraper_social import ejecutar_scraper_social
 
 logger = logging.getLogger(__name__)
 
@@ -64,12 +65,20 @@ def ejecutar_pipeline_completo() -> dict:
         resumen_comentarios = {"error": str(e), "total": 0}
 
     # Paso 3: Analizar sentimiento
-    logger.info("\n🧠 PASO 3/3: Analizando sentimiento...")
+    logger.info("\n🧠 PASO 3/4: Analizando sentimiento de comentarios...")
     try:
         resumen_analisis = analizar_comentarios_pendientes()
     except Exception as e:
         logger.error("Error en análisis de sentimiento: %s", e)
         resumen_analisis = {"error": str(e), "analizados": 0}
+
+    # Paso 4: Redes Sociales e IA Regional
+    logger.info("\n📱 PASO 4/4: Recolectando redes sociales (Reels, TikTok, Facebook)...")
+    try:
+        resumen_social = ejecutar_scraper_social()
+    except Exception as e:
+        logger.error("Error en colector de redes sociales: %s", e)
+        resumen_social = {"error": str(e), "total": 0}
 
     duracion = round(time.time() - inicio, 1)
 
@@ -77,6 +86,7 @@ def ejecutar_pipeline_completo() -> dict:
         "noticias": resumen_noticias,
         "comentarios": resumen_comentarios,
         "analisis": resumen_analisis,
+        "social": resumen_social,
         "duracion_total_segundos": duracion,
         "timestamp": datetime.now().isoformat(),
     }
@@ -86,6 +96,7 @@ def ejecutar_pipeline_completo() -> dict:
     logger.info("   Noticias nuevas: %s", resumen_noticias.get("total_nuevas", 0))
     logger.info("   Comentarios nuevos: %s", resumen_comentarios.get("total", 0))
     logger.info("   Comentarios analizados: %s", resumen_analisis.get("analizados", 0))
+    logger.info("   Eventos de redes sociales: %s", resumen_social.get("guardados_con_ia", 0))
     logger.info("   Duración total: %s segundos", duracion)
     logger.info("═" * 60)
 

@@ -204,3 +204,48 @@ HTTP_HEADERS = {
 # INTERVALO DE EJECUCIÓN DEL SCRAPER (minutos)
 # ─────────────────────────────────────────────
 SCRAPER_INTERVAL_MINUTES = int(os.getenv("SCRAPER_INTERVAL", "60"))
+
+# ─────────────────────────────────────────────
+# CONFIGURACIÓN DE IA Y MODELO REGIONAL JUJUY
+# ─────────────────────────────────────────────
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+META_GRAPH_ACCESS_TOKEN = os.getenv("META_GRAPH_ACCESS_TOKEN", "")
+TIKTOK_CLIENT_KEY = os.getenv("TIKTOK_CLIENT_KEY", "")
+
+# 16 Departamentos oficiales de Jujuy y sus localidades representativas
+DEPARTAMENTOS_JUJUY = {
+    "Dr. Manuel Belgrano": ["san salvador", "san salvador de jujuy", "alto comedero", "reyes", "villa jardín de reyes", "yala", "capital", "xibi xibi", "chijra", "cuyaya", "gorriti", "los perales", "la viña"],
+    "Palpalá": ["palpalá", "palpala", "río blanco", "rio blanco", "centro forestal", "carahunco"],
+    "San Pedro": ["san pedro", "san pedro de jujuy", "la esperanza", "la mendieta", "arrayanal", "rodeito"],
+    "Ledesma": ["ledesma", "libertador", "libertador general san martín", "calilegua", "fraile pintado", "caimancito", "chalicán"],
+    "El Carmen": ["el carmen", "perico", "ciudad perico", "monterrico", "pampa blanca", "aguas calientes"],
+    "San Antonio": ["san antonio", "los alisos", "el ceibal", "la toma"],
+    "Tilcara": ["tilcara", "maimará", "maimara", "huacalera", "juella", "pucará"],
+    "Humahuaca": ["humahuaca", "uquía", "uquia", "coctaca", "tres cruces", "el aguilar", "mina el aguilar"],
+    "Tumbaya": ["tumbaya", "purmamarca", "volcán", "volcan", "bárcena", "barcena"],
+    "Cochinoca": ["cochinoca", "abra pampa", "puesto del marqués", "casabindo", "abdón castro tolay", "barrancas"],
+    "Yavi": ["yavi", "la quiaca", "cangrejillos", "el cóndor", "pumahuasi"],
+    "Santa Catalina": ["santa catalina", "cieneguillas", "la ciénaga", "el angosto"],
+    "Rinconada": ["rinconada", "mina pirquitas", "nuevo pirquitas", "coyaguayma"],
+    "Susques": ["susques", "catua", "coranzulí", "coranzuli", "olacapato", "olaroz", "salar de olaroz", "cauchari"],
+    "Valle Grande": ["valle grande", "santa ana", "caspalá", "caspala", "san francisco", "pampichuela"],
+    "Santa Bárbara": ["santa bárbara", "santa clara", "palma sola", "el piquete", "vinalito", "el fuerte"]
+}
+
+# Modismos, instituciones y referencias locales para enriquecer el contexto del LLM
+LÉXICO_REGIONAL_JUJUY = {
+    "expresiones": ["churo", "chura", "coquear", "coqueo", "acullico", "chango", "changa", "coya", "pacha", "pachamama", "tucura", "yuto", "chaya", "comparsa", "cascotazo", "chulengo"],
+    "lugares_e_hitos": ["el xibi xibi", "alto comedero", "corte en purmamarca", "la muni", "casa de gobierno", "puente san martín", "plaza belgrano", "parque lineal", "la viña", "la tupac"],
+    "servicios_y_entidades": ["ejesa", "agua potable", "secheep", "unju", "colectivo xibi xibi", "san jorge", "unión bus", "santa ana", "el urbano", "isj", "tribunales", "cedems", "adep", "seom"]
+}
+
+# Emociones catalogadas para el Termómetro Social
+EMOCIONES_CATALOGO = [
+    "Enojo",
+    "Incertidumbre",
+    "Frustración",
+    "Apoyo",
+    "Esperanza",
+    "Humor/Sarcasmo",
+    "Alivio"
+]

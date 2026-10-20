@@ -31,12 +31,22 @@ from backend.database import (
     obtener_comentarios_por_noticia,
     obtener_descontento_por_fuente,
     obtener_comentarios_destacados,
+    insertar_evento_social,
+    obtener_feed_social,
+    obtener_mapa_departamentos,
 )
 from backend.analyzer import (
     obtener_palabras_clave_trending,
     obtener_resumen_sentimiento_por_tema,
     analizar_sentimiento,
 )
+from backend.ai_regional import (
+    procesar_evento_red_social,
+    analizar_con_gemini_api,
+    estimar_emocion_y_severidad_heuristica,
+    detectar_departamento_heuristico,
+)
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 
@@ -108,6 +118,8 @@ async def get_dashboard(dias: int = Query(7, ge=1, le=90)):
             descripcion = "Clima social muy caliente"
 
         total_comentarios = sum(sentimientos.values())
+        mapa_deptos = obtener_mapa_departamentos(dias)
+        social_feed = obtener_feed_social(limite=30)
 
         return {
             "termometro": {
@@ -129,6 +141,8 @@ async def get_dashboard(dias: int = Query(7, ge=1, le=90)):
             "sentimiento_por_tema": sentimiento_por_tema,
             "descontento_por_fuente": descontento_fuentes,
             "comentarios_destacados": comentarios_destacados,
+            "mapa_departamentos": mapa_deptos,
+            "social_feed": social_feed,
             "actualizado": datetime.now().isoformat(),
         }
     except Exception as e:
@@ -235,6 +249,85 @@ async def health_check():
         "servicio": "Termómetro Social de Jujuy",
         "timestamp": datetime.now().isoformat(),
     }
+
+
+# ─────────────────────────────────────────────
+# ENDPOINTS: REDES SOCIALES & IA REGIONAL JUJUY
+# ─────────────────────────────────────────────
+
+class SocialEventInput(BaseModel):
+    id: Optional[str] = None
+    platform: str = Field(default="instagram_reels", description="instagram_reels, tiktok, facebook_groups, x_twitter, etc.")
+    author: Optional[str] = "anónimo"
+    text: str = Field(..., min_length=3, description="Texto del comentario o transcripción")
+    timestamp: Optional[str] = None
+    location_tag: Optional[str] = ""
+
+
+class SentimentInput(BaseModel):
+    text: str = Field(..., min_length=3, description="Texto a clasificar con IA regional")
+    location_tag: Optional[str] = ""
+
+
+@app.post("/api/social-feed")
+async def ingest_social_event(evento: SocialEventInput):
+    """
+    Ingesta un evento de redes sociales, lo procesa con el modelo regional de Jujuy
+    (detectando emoción, departamento, severidad y polaridad) y lo almacena.
+    """
+    try:
+        evento_dict = evento.model_dump()
+        procesado = procesar_evento_red_social(evento_dict)
+        insertar_evento_social(procesado)
+        return {
+            "status": "success",
+            "message": "Evento procesado con IA Regional de Jujuy",
+            "data": procesado
+        }
+    except Exception as e:
+        logger.error("Error procesando evento social: %s", e)
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+@app.get("/api/social-feed")
+async def get_social_feed(
+    limite: int = Query(50, ge=1, le=100),
+    departamento: Optional[str] = Query(None, description="Filtro opcional por departamento de Jujuy")
+):
+    """Retorna los eventos procesados de redes sociales."""
+    return obtener_feed_social(limite=limite, departamento=departamento)
+
+
+@app.post("/api/sentiment")
+async def post_sentiment_regional(input_data: SentimentInput):
+    """
+    Clasifica un texto con el contexto sociocultural de Jujuy:
+    devuelve emoción predominante, departamento asignado, severidad (1-5) y sentimiento.
+    """
+    evento = {
+        "text": input_data.text,
+        "location_tag": input_data.location_tag
+    }
+    return procesar_evento_red_social(evento)
+
+
+@app.get("/api/sentiment")
+async def get_sentiment_regional(
+    text: str = Query(..., min_length=3),
+    location_tag: Optional[str] = Query("")
+):
+    """Versión GET rápida para testing del modelo regional Jujuy."""
+    evento = {
+        "text": text,
+        "location_tag": location_tag
+    }
+    return procesar_evento_red_social(evento)
+
+
+@app.get("/api/mapa-departamentos")
+async def get_mapa_departamentos(dias: int = Query(30, ge=1, le=90)):
+    """Retorna el índice de tensión social y datos consolidados de los 16 departamentos de Jujuy."""
+    return obtener_mapa_departamentos(dias=dias)
 
 
 # ─────────────────────────────────────────────
