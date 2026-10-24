@@ -6,19 +6,19 @@
     "descripcion": "Clima social tranquilo en Jujuy"
   },
   "estadisticas": {
-    "total_noticias": 626,
-    "total_comentarios": 641,
+    "total_noticias": 631,
+    "total_comentarios": 648,
     "sentimientos": {
       "POS": 37,
-      "NEG": 69,
-      "NEU": 535
+      "NEG": 70,
+      "NEU": 541
     },
     "periodo_dias": 30
   },
   "temas_frecuentes": [
     {
       "tema": "General",
-      "total": 244
+      "total": 246
     },
     {
       "tema": "Política",
@@ -26,7 +26,7 @@
     },
     {
       "tema": "Seguridad",
-      "total": 80
+      "total": 81
     },
     {
       "tema": "Economía",
@@ -50,7 +50,7 @@
     },
     {
       "tema": "Litio",
-      "total": 11
+      "total": 13
     },
     {
       "tema": "Medio Ambiente",
@@ -124,16 +124,16 @@
     {
       "dia": "2026-10-23",
       "pos": 5,
-      "neg": 12,
-      "neu": 85,
-      "total": 102
+      "neg": 13,
+      "neu": 89,
+      "total": 107
     },
     {
       "dia": "2026-10-24",
       "pos": 0,
       "neg": 4,
-      "neu": 14,
-      "total": 18
+      "neu": 16,
+      "total": 20
     }
   ],
   "noticias_recientes": [
@@ -195,6 +195,19 @@
       "link": "https://www.jujuyalmomento.com/animales/china-suena-una-familia-n209025",
       "fecha": "2026-10-24 13:44:18",
       "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1214,
+      "titulo": "Doble alerta en Jujuy por ráfagas de más de 100 km/h y viento Zonda: las zonas afectadas - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Doble%20alerta%20en%20Jujuy%20por%20r%C3%A1fagas%20de%20m%C3%A1s%20de%20100%20km/h%20y%20viento%20Zonda%3A%20las%20zonas%20a&tbm=nws",
+      "fecha": "2026-10-24 13:43:22",
+      "fuente": "google_news",
       "keywords": "",
       "tema": "General",
       "total_comentarios": 1,
@@ -288,6 +301,19 @@
       "fuente": "jujuy_online",
       "keywords": "",
       "tema": "Salud",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1228,
+      "titulo": "Recuperan en Salta un automóvil requerido por la Justicia de Jujuy - Jujuy al día",
+      "link": "https://www.google.com/search?q=Recuperan%20en%20Salta%20un%20autom%C3%B3vil%20requerido%20por%20la%20Justicia%20de%20Jujuy%20-%20Jujuy%20al%20d%C3%AD&tbm=nws",
+      "fecha": "2026-10-24 07:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
       "total_comentarios": 1,
       "pos": 0,
       "neg": 0,
@@ -437,6 +463,19 @@
       "neu": 1
     },
     {
+      "id": 1239,
+      "titulo": "La Quiaca: allanaron casas de narcotraficantes y secuestraron más de 10 millones de pesos",
+      "link": "https://www.jujuyalmomento.com/la-quiaca/la-quiaca-allanaron-casas-narcotraficantes-y-secuestraron-mas-10-millones-pesos-n209018",
+      "fecha": "2026-10-23 21:56:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 3,
+      "pos": 0,
+      "neg": 0,
+      "neu": 3
+    },
+    {
       "id": 1131,
       "titulo": "Alto Comedero: violento sujeto atacó a golpes a su pareja en un baile",
       "link": "https://www.jujuyalmomento.com/alto-comedero/alto-comedero-violento-sujeto-ataco-golpes-su-pareja-un-baile-n209017",
@@ -474,6 +513,19 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
+    },
+    {
+      "id": 1241,
+      "titulo": "Salarios bajos, paritarias congeladas y recibos \"en negro\": el reclamo de choferes de UTA",
+      "link": "https://www.jujuyalmomento.com/salarios/salarios-bajos-paritarias-congeladas-y-recibos-en-negro-el-reclamo-choferes-uta-n209013",
+      "fecha": "2026-10-23 20:54:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Litio",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 1,
+      "neu": 0
     },
     {
       "id": 1092,
@@ -587,6 +639,19 @@
       "fuente": "jujuy_al_momento",
       "keywords": "",
       "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1240,
+      "titulo": "Debate por Coparticipación: Susques reclama mayores recursos",
+      "link": "https://www.jujuyalmomento.com/coparticipacion/debate-coparticipacion-susques-reclama-mayores-recursos-n208998",
+      "fecha": "2026-10-23 19:55:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Litio",
       "total_comentarios": 1,
       "pos": 0,
       "neg": 0,
@@ -1371,77 +1436,12 @@
       "pos": 0,
       "neg": 0,
       "neu": 1
-    },
-    {
-      "id": 922,
-      "titulo": "La Justicia procesó a José Luis Espert por lavado de dinero y le prohibió salir del país",
-      "link": "https://www.jujuyalmomento.com/justicia/la-justicia-proceso-jose-luis-espert-lavado-dinero-y-le-prohibio-salir-del-pais-n208956",
-      "fecha": "2026-10-22 20:15:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 964,
-      "titulo": "Garantía del BID por US$200 millones para mejorar el sistema eléctrico y evitar cortes de luz",
-      "link": "https://www.jujuyalmomento.com/bid/garantia-del-bid-us200-millones-mejorar-el-sistema-electrico-y-evitar-cortes-luz-n208955",
-      "fecha": "2026-10-22 20:12:46",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 1,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 961,
-      "titulo": "Sabores y Lugares: Pascólito y la Semana de la Trucha, con sabores de las cuatro regiones de Jujuy",
-      "link": "https://www.jujuyalmomento.com/sabores-y-lugares/sabores-y-lugares-pascolito-y-la-semana-la-trucha-sabores-las-cuatro-regiones-jujuy-n208951",
-      "fecha": "2026-10-22 20:12:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Economía",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 925,
-      "titulo": "Milei sobre Malvinas: \"Los ingleses están inquietos y los vamos a seguir incomodando\"",
-      "link": "https://www.jujuyalmomento.com/milei/milei-malvinas-los-ingleses-estan-inquietos-y-los-vamos-seguir-incomodando-n208954",
-      "fecha": "2026-10-22 20:07:47",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 966,
-      "titulo": "Las ventas en supermercados cayeron por tercer mes consecutivo en agosto",
-      "link": "https://www.jujuyalmomento.com/ventas/las-ventas-supermercados-cayeron-tercer-mes-consecutivo-agosto-n208953",
-      "fecha": "2026-10-22 20:05:03",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Economía",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
     }
   ],
   "keywords_trending": [
     {
       "palabra": "jujuy",
-      "total": 222,
+      "total": 224,
       "en_negativos": 18,
       "en_positivos": 7
     },
@@ -1464,16 +1464,16 @@
       "en_positivos": 1
     },
     {
+      "palabra": "alerta",
+      "total": 17,
+      "en_negativos": 1,
+      "en_positivos": 0
+    },
+    {
       "palabra": "tiempo",
       "total": 17,
       "en_negativos": 0,
       "en_positivos": 1
-    },
-    {
-      "palabra": "alerta",
-      "total": 16,
-      "en_negativos": 1,
-      "en_positivos": 0
     },
     {
       "palabra": "nuevo",
@@ -1563,11 +1563,11 @@
   "sentimiento_por_tema": [
     {
       "tema": "General",
-      "total_comentarios": 178,
-      "score_promedio": -0.025280898876404494,
+      "total_comentarios": 180,
+      "score_promedio": -0.025,
       "positivos": 2,
       "negativos": 7,
-      "neutros": 169
+      "neutros": 171
     },
     {
       "tema": "Política",
@@ -1587,11 +1587,11 @@
     },
     {
       "tema": "Seguridad",
-      "total_comentarios": 74,
-      "score_promedio": -0.1858108108108108,
+      "total_comentarios": 77,
+      "score_promedio": -0.17857142857142858,
       "positivos": 3,
       "negativos": 18,
-      "neutros": 53
+      "neutros": 56
     },
     {
       "tema": "Salud",
@@ -1627,11 +1627,11 @@
     },
     {
       "tema": "Litio",
-      "total_comentarios": 14,
-      "score_promedio": -0.19999999999999998,
+      "total_comentarios": 16,
+      "score_promedio": -0.2375,
       "positivos": 0,
-      "negativos": 3,
-      "neutros": 11
+      "negativos": 4,
+      "neutros": 12
     },
     {
       "tema": "Medio Ambiente",
@@ -1645,19 +1645,19 @@
   "descontento_por_fuente": [
     {
       "fuente": "jujuy_al_momento",
-      "total_opiniones": 347,
-      "reclamos": 39,
+      "total_opiniones": 352,
+      "reclamos": 40,
       "favorables": 25,
-      "neutrales": 283,
-      "porcentaje_descontento": 11.2
+      "neutrales": 287,
+      "porcentaje_descontento": 11.4
     },
     {
       "fuente": "google_news",
-      "total_opiniones": 201,
+      "total_opiniones": 203,
       "reclamos": 18,
       "favorables": 5,
-      "neutrales": 178,
-      "porcentaje_descontento": 9.0
+      "neutrales": 180,
+      "porcentaje_descontento": 8.9
     },
     {
       "fuente": "jujuy_online",
@@ -1720,6 +1720,17 @@
       "noticia_fuente": "google_news",
       "noticia_link": "https://www.google.com/search?q=Vecinos%20se%20preparan%20en%20Jujuy%20para%20actuar%20en%20situaciones%20de%20emergencia%20por%20%E2%80%9CEl%20Ni&tbm=nws",
       "noticia_tema": "General"
+    },
+    {
+      "id": 683,
+      "texto": "Salarios bajos, paritarias congeladas y recibos \"en negro\": el reclamo de choferes de UTA",
+      "sentimiento": "NEG",
+      "score": -1.0,
+      "fecha": "2026-10-23 20:54:00",
+      "noticia_titulo": "Salarios bajos, paritarias congeladas y recibos \"en negro\": el reclamo de choferes de UTA",
+      "noticia_fuente": "jujuy_al_momento",
+      "noticia_link": "https://www.jujuyalmomento.com/salarios/salarios-bajos-paritarias-congeladas-y-recibos-en-negro-el-reclamo-choferes-uta-n209013",
+      "noticia_tema": "Litio"
     },
     {
       "id": 653,
@@ -1995,28 +2006,17 @@
       "noticia_fuente": "jujuy_al_momento",
       "noticia_link": "https://www.jujuyalmomento.com/clases/sin-clases-ni-respuestas-increible-sancion-una-victima-violencia-escolar-alto-comedero-n208884",
       "noticia_tema": "Seguridad"
-    },
-    {
-      "id": 419,
-      "texto": "Desde la cárcel de Jujuy se hacían pasar por el presidente de la Corte Suprema para estafar - Todo Jujuy",
-      "sentimiento": "NEG",
-      "score": -1.0,
-      "fecha": "2026-10-21 13:46:00",
-      "noticia_titulo": "Desde la cárcel de Jujuy se hacían pasar por el presidente de la Corte Suprema para estafar - Todo Jujuy",
-      "noticia_fuente": "google_news",
-      "noticia_link": "https://www.google.com/search?q=Desde%20la%20c%C3%A1rcel%20de%20Jujuy%20se%20hac%C3%ADan%20pasar%20por%20el%20presidente%20de%20la%20Corte%20Suprema%20p&tbm=nws",
-      "noticia_tema": "General"
     }
   ],
   "mapa_departamentos": {
     "Dr. Manuel Belgrano": {
       "nombre": "Dr. Manuel Belgrano",
-      "indice": 24.5,
+      "indice": 24.7,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Incertidumbre",
-      "total_noticias": 280,
-      "total_social": 24,
+      "total_noticias": 282,
+      "total_social": 25,
       "severidad_promedio": 3.0,
       "localidades_clave": [
         "san salvador",
@@ -2027,12 +2027,12 @@
     },
     "Palpalá": {
       "nombre": "Palpalá",
-      "indice": 52.0,
+      "indice": 52.3,
       "nivel": "alto",
       "color": "#f97316",
       "emocion_predominante": "Incertidumbre",
-      "total_noticias": 31,
-      "total_social": 22,
+      "total_noticias": 32,
+      "total_social": 23,
       "severidad_promedio": 5.0,
       "localidades_clave": [
         "palpalá",
@@ -2059,12 +2059,12 @@
     },
     "Ledesma": {
       "nombre": "Ledesma",
-      "indice": 8.6,
+      "indice": 8.4,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
       "total_noticias": 21,
-      "total_social": 23,
+      "total_social": 24,
       "severidad_promedio": 2.0,
       "localidades_clave": [
         "ledesma",
@@ -2107,12 +2107,12 @@
     },
     "Tilcara": {
       "nombre": "Tilcara",
-      "indice": 6.2,
+      "indice": 6.0,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Apoyo",
       "total_noticias": 12,
-      "total_social": 23,
+      "total_social": 24,
       "severidad_promedio": 1.0,
       "localidades_clave": [
         "tilcara",
@@ -2139,11 +2139,11 @@
     },
     "Tumbaya": {
       "nombre": "Tumbaya",
-      "indice": 16.0,
+      "indice": 16.2,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
-      "total_noticias": 8,
+      "total_noticias": 9,
       "total_social": 1,
       "severidad_promedio": 2.0,
       "localidades_clave": [
@@ -2175,7 +2175,7 @@
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
-      "total_noticias": 18,
+      "total_noticias": 19,
       "total_social": 1,
       "severidad_promedio": 2.0,
       "localidades_clave": [
@@ -2223,8 +2223,8 @@
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Frustración",
-      "total_noticias": 8,
-      "total_social": 23,
+      "total_noticias": 9,
+      "total_social": 24,
       "severidad_promedio": 2.0,
       "localidades_clave": [
         "susques",
@@ -2268,6 +2268,32 @@
   },
   "social_feed": [
     {
+      "id": "soc_live_1792883549_1",
+      "platform": "instagram_reels",
+      "author": "jujeño_ciudadano",
+      "text": "La frecuencia del colectivo Xibi Xibi en Alto Comedero es una vergüenza, esperamos una hora con frío",
+      "timestamp": "2026-10-24T22:27:29.569185",
+      "location_tag": "Alto Comedero, San Salvador",
+      "departamento": "Dr. Manuel Belgrano",
+      "emocion": "Enojo",
+      "severidad": 3,
+      "sentimiento": "NEG",
+      "score": -0.8
+    },
+    {
+      "id": "soc_live_1792883549_2",
+      "platform": "tiktok",
+      "author": "cultura_quebrada",
+      "text": "Qué churo el carnaval en Tilcara y Purmamarca, recibiendo a miles con nuestras tradiciones",
+      "timestamp": "2026-10-24T21:12:29.569185",
+      "location_tag": "Tilcara",
+      "departamento": "Tilcara",
+      "emocion": "Esperanza",
+      "severidad": 1,
+      "sentimiento": "POS",
+      "score": 0.6
+    },
+    {
       "id": "soc_live_1792874825_1",
       "platform": "instagram_reels",
       "author": "jujeño_ciudadano",
@@ -2279,6 +2305,19 @@
       "severidad": 3,
       "sentimiento": "NEG",
       "score": -0.8
+    },
+    {
+      "id": "soc_live_1792883549_3",
+      "platform": "facebook_groups",
+      "author": "vecinos_unidos_palpala",
+      "text": "Sin agua potable en barrio 18 de Noviembre en Palpalá. Exigimos respuesta urgente a la Muni",
+      "timestamp": "2026-10-24T19:12:29.569185",
+      "location_tag": "Palpalá",
+      "departamento": "Palpalá",
+      "emocion": "Incertidumbre",
+      "severidad": 5,
+      "sentimiento": "NEG",
+      "score": -0.2
     },
     {
       "id": "soc_live_1792874825_2",
@@ -2307,6 +2346,19 @@
       "score": -0.2
     },
     {
+      "id": "soc_live_1792883549_4",
+      "platform": "x_twitter",
+      "author": "empleo_yungas",
+      "text": "Comenzó la temporada en el Ingenio Ledesma y Calilegua, buena noticia para la economía regional",
+      "timestamp": "2026-10-24T16:12:29.569185",
+      "location_tag": "Ledesma",
+      "departamento": "Ledesma",
+      "emocion": "Frustración",
+      "severidad": 2,
+      "sentimiento": "NEU",
+      "score": 0.0
+    },
+    {
       "id": "soc_live_1792857359_1",
       "platform": "instagram_reels",
       "author": "jujeño_ciudadano",
@@ -2318,6 +2370,19 @@
       "severidad": 3,
       "sentimiento": "NEG",
       "score": -0.8
+    },
+    {
+      "id": "soc_live_1792883549_5",
+      "platform": "facebook_groups",
+      "author": "comunidades_litio_susques",
+      "text": "Asamblea por el uso del agua en salar de Olaroz y Susques. Cuidemos la Puna jujeña",
+      "timestamp": "2026-10-24T14:12:29.569185",
+      "location_tag": "Susques",
+      "departamento": "Susques",
+      "emocion": "Esperanza",
+      "severidad": 2,
+      "sentimiento": "NEU",
+      "score": 0.0
     },
     {
       "id": "soc_live_1792857359_2",
@@ -2851,71 +2916,6 @@
       "severidad": 1,
       "sentimiento": "POS",
       "score": 0.6
-    },
-    {
-      "id": "soc_live_1792704896_4",
-      "platform": "x_twitter",
-      "author": "empleo_yungas",
-      "text": "Comenzó la temporada en el Ingenio Ledesma y Calilegua, buena noticia para la economía regional",
-      "timestamp": "2026-10-22T14:34:56.071885",
-      "location_tag": "Ledesma",
-      "departamento": "Ledesma",
-      "emocion": "Frustración",
-      "severidad": 2,
-      "sentimiento": "NEU",
-      "score": 0.0
-    },
-    {
-      "id": "soc_live_1792688996_3",
-      "platform": "facebook_groups",
-      "author": "vecinos_unidos_palpala",
-      "text": "Sin agua potable en barrio 18 de Noviembre en Palpalá. Exigimos respuesta urgente a la Muni",
-      "timestamp": "2026-10-22T13:09:56.861557",
-      "location_tag": "Palpalá",
-      "departamento": "Palpalá",
-      "emocion": "Incertidumbre",
-      "severidad": 5,
-      "sentimiento": "NEG",
-      "score": -0.2
-    },
-    {
-      "id": "soc_live_1792704896_5",
-      "platform": "facebook_groups",
-      "author": "comunidades_litio_susques",
-      "text": "Asamblea por el uso del agua en salar de Olaroz y Susques. Cuidemos la Puna jujeña",
-      "timestamp": "2026-10-22T12:34:56.071885",
-      "location_tag": "Susques",
-      "departamento": "Susques",
-      "emocion": "Esperanza",
-      "severidad": 2,
-      "sentimiento": "NEU",
-      "score": 0.0
-    },
-    {
-      "id": "soc_live_1792669721_1",
-      "platform": "instagram_reels",
-      "author": "jujeño_ciudadano",
-      "text": "La frecuencia del colectivo Xibi Xibi en Alto Comedero es una vergüenza, esperamos una hora con frío",
-      "timestamp": "2026-10-22T11:03:41.922697",
-      "location_tag": "Alto Comedero, San Salvador",
-      "departamento": "Dr. Manuel Belgrano",
-      "emocion": "Enojo",
-      "severidad": 3,
-      "sentimiento": "NEG",
-      "score": -0.8
-    },
-    {
-      "id": "soc_live_1792688996_4",
-      "platform": "x_twitter",
-      "author": "empleo_yungas",
-      "text": "Comenzó la temporada en el Ingenio Ledesma y Calilegua, buena noticia para la economía regional",
-      "timestamp": "2026-10-22T10:09:56.861557",
-      "location_tag": "Ledesma",
-      "departamento": "Ledesma",
-      "emocion": "Frustración",
-      "severidad": 2,
-      "sentimiento": "NEU",
-      "score": 0.0
     }
   ],
   "lexico_regional": {
@@ -2933,6 +2933,6 @@
     ],
     "total_departamentos": 16
   },
-  "actualizado": "2026-10-24T20:47:06.149538",
+  "actualizado": "2026-10-24T23:12:29.839714",
   "fuente": "Datos reales recolectados de medios de Jujuy y redes sociales"
 }
