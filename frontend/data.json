@@ -1,24 +1,24 @@
 {
   "termometro": {
-    "indice": 10.8,
+    "indice": 10.6,
     "nivel": "bajo",
     "emoji": "🟢",
     "descripcion": "Clima social tranquilo en Jujuy"
   },
   "estadisticas": {
-    "total_noticias": 638,
-    "total_comentarios": 660,
+    "total_noticias": 650,
+    "total_comentarios": 671,
     "sentimientos": {
       "POS": 40,
       "NEG": 71,
-      "NEU": 549
+      "NEU": 560
     },
     "periodo_dias": 30
   },
   "temas_frecuentes": [
     {
       "tema": "General",
-      "total": 253
+      "total": 261
     },
     {
       "tema": "Política",
@@ -26,15 +26,15 @@
     },
     {
       "tema": "Seguridad",
-      "total": 82
+      "total": 83
     },
     {
       "tema": "Economía",
-      "total": 61
+      "total": 62
     },
     {
       "tema": "Transporte",
-      "total": 43
+      "total": 45
     },
     {
       "tema": "Salud",
@@ -125,25 +125,51 @@
       "dia": "2026-10-23",
       "pos": 7,
       "neg": 13,
-      "neu": 90,
-      "total": 110
+      "neu": 91,
+      "total": 111
     },
     {
       "dia": "2026-10-24",
       "pos": 1,
       "neg": 5,
-      "neu": 22,
-      "total": 28
+      "neu": 30,
+      "total": 36
     },
     {
       "dia": "2026-10-25",
       "pos": 0,
       "neg": 0,
-      "neu": 1,
-      "total": 1
+      "neu": 3,
+      "total": 3
     }
   ],
   "noticias_recientes": [
+    {
+      "id": 1309,
+      "titulo": "Domingo frío y lluvioso en la capital jujeña",
+      "link": "https://www.jujuyalmomento.com/domingo/domingo-frio-y-lluvioso-la-capital-jujena-n209034",
+      "fecha": "2026-10-25 11:06:48",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1287,
+      "titulo": "Fallece un joven futbolista en trágico accidente de tránsito en Jujuy - Diario Panorama",
+      "link": "https://www.google.com/search?q=Fallece%20un%20joven%20futbolista%20en%20tr%C3%A1gico%20accidente%20de%20tr%C3%A1nsito%20en%20Jujuy%20-%20Diario%20P&tbm=nws",
+      "fecha": "2026-10-25 05:16:08",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
     {
       "id": 1269,
       "titulo": "Se recordará en Jujuy los 100 años de la MEPRA y la lucha de Salvador Mazza contra el chagas - Vía País",
@@ -162,6 +188,19 @@
       "titulo": "Noviembre llegará con lluvias por encima de lo normal en Argentina: qué pasará en Jujuy - Todo Jujuy",
       "link": "https://www.google.com/search?q=Noviembre%20llegar%C3%A1%20con%20lluvias%20por%20encima%20de%20lo%20normal%20en%20Argentina%3A%20qu%C3%A9%20pasar%C3%A1%20e&tbm=nws",
       "fecha": "2026-10-24 23:54:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1284,
+      "titulo": "Un fuerte sismo despertó a varios jujeños este sábado - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Un%20fuerte%20sismo%20despert%C3%B3%20a%20varios%20juje%C3%B1os%20este%20s%C3%A1bado%20-%20Que%20Pasa%20Jujuy&tbm=nws",
+      "fecha": "2026-10-24 22:41:02",
       "fuente": "google_news",
       "keywords": "",
       "tema": "General",
@@ -223,6 +262,45 @@
       "neu": 3
     },
     {
+      "id": 1305,
+      "titulo": "Alto Comedero: más de 350 familias viven sin agua potable, cloacas ni alumbrado público",
+      "link": "https://www.jujuyalmomento.com/alto-comedero/alto-comedero-mas-350-familias-viven-agua-potable-cloacas-ni-alumbrado-publico-n208774",
+      "fecha": "2026-10-24 15:00:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "Seguridad",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1285,
+      "titulo": "Subió la verdura en Jujuy y advierten que El Niño traerá más aumentos - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Subi%C3%B3%20la%20verdura%20en%20Jujuy%20y%20advierten%20que%20El%20Ni%C3%B1o%20traer%C3%A1%20m%C3%A1s%20aumentos%20-%20Que%20Pasa&tbm=nws",
+      "fecha": "2026-10-24 14:38:27",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1308,
+      "titulo": "Una gatita \"arisca\" busca una familia que le enseñe a confiar",
+      "link": "https://www.jujuyalmomento.com/una-gatita-arisca-busca-una-familia-que-le-ensene-confiar-n209031",
+      "fecha": "2026-10-24 14:24:55",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
       "id": 1164,
       "titulo": "¡Urgente! Una perra necesita un hogar",
       "link": "https://www.jujuyalmomento.com/animales/urgente-una-perra-necesita-un-hogar-n209030",
@@ -230,6 +308,32 @@
       "fuente": "jujuy_al_momento",
       "keywords": "",
       "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1289,
+      "titulo": "Tragedia en Jujuy: un joven motociclista murió tras chocar de frente contra una camioneta - Que Pasa Jujuy",
+      "link": "https://www.google.com/search?q=Tragedia%20en%20Jujuy%3A%20un%20joven%20motociclista%20muri%C3%B3%20tras%20chocar%20de%20frente%20contra%20una%20&tbm=nws",
+      "fecha": "2026-10-24 14:05:27",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1307,
+      "titulo": "\"Mora\" se perdió en barrio San Francisco de Álava",
+      "link": "https://www.jujuyalmomento.com/animales/mora-se-perdio-barrio-san-francisco-alava-n209028",
+      "fecha": "2026-10-24 14:05:27",
+      "fuente": "jujuy_al_momento",
+      "keywords": "",
+      "tema": "General",
       "total_comentarios": 1,
       "pos": 0,
       "neg": 0,
@@ -340,6 +444,19 @@
       "neu": 1
     },
     {
+      "id": 1288,
+      "titulo": "Un colectivo que iba con 45 pasajeros se incendió en Libertador: no hubo personas heridas - Todo Jujuy",
+      "link": "https://www.google.com/search?q=Un%20colectivo%20que%20iba%20con%2045%20pasajeros%20se%20incendi%C3%B3%20en%20Libertador%3A%20no%20hubo%20persona&tbm=nws",
+      "fecha": "2026-10-24 13:01:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "Transporte",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
       "id": 1261,
       "titulo": "Llega una nueva edición del \"Zombie Con Jujuy\" con concursos, videojuegos y soft combat - Somos Jujuy",
       "link": "https://www.google.com/search?q=Llega%20una%20nueva%20edici%C3%B3n%20del%20%22Zombie%20Con%20Jujuy%22%20con%20concursos%2C%20videojuegos%20y%20soft&tbm=nws",
@@ -422,6 +539,19 @@
       "titulo": "Recuperan en Salta un automóvil requerido por la Justicia de Jujuy - Jujuy al día",
       "link": "https://www.google.com/search?q=Recuperan%20en%20Salta%20un%20autom%C3%B3vil%20requerido%20por%20la%20Justicia%20de%20Jujuy%20-%20Jujuy%20al%20d%C3%AD&tbm=nws",
       "fecha": "2026-10-24 07:00:00",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1280,
+      "titulo": "Toma 2 de JOY Airline en Jujuy - Aviacionline",
+      "link": "https://www.google.com/search?q=Toma%202%20de%20JOY%20Airline%20en%20Jujuy%20-%20Aviacionline&tbm=nws",
+      "fecha": "2026-10-24 04:05:01",
       "fuente": "google_news",
       "keywords": "",
       "tema": "General",
@@ -620,6 +750,19 @@
       "fuente": "jujuy_al_momento",
       "keywords": "",
       "tema": "Economía",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1
+    },
+    {
+      "id": 1292,
+      "titulo": "Jujuy será sede del primer Salón Internacional del Alfajor - Jujuy Al Momento",
+      "link": "https://www.google.com/search?q=Jujuy%20ser%C3%A1%20sede%20del%20primer%20Sal%C3%B3n%20Internacional%20del%20Alfajor%20-%20Jujuy%20Al%20Momento&tbm=nws",
+      "fecha": "2026-10-23 21:16:14",
+      "fuente": "google_news",
+      "keywords": "",
+      "tema": "General",
       "total_comentarios": 1,
       "pos": 0,
       "neg": 0,
@@ -1300,155 +1443,12 @@
       "pos": 0,
       "neg": 0,
       "neu": 0
-    },
-    {
-      "id": 967,
-      "titulo": "Diputado calificó de \"obscena\" la pauta oficial y sugirió destinarla a tomógrafos",
-      "link": "https://www.jujuyalmomento.com/jujuy/diputado-califico-obscena-la-pauta-oficial-y-sugirio-destinarla-tomografos-n208948",
-      "fecha": "2026-10-22 23:54:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 965,
-      "titulo": "El Trail argentino hace base en la provincia con Fernando Díaz Sánchez",
-      "link": "https://www.jujuyalmomento.com/trail-running/el-trail-argentino-hace-base-la-provincia-fernando-diaz-sanchez-n208947",
-      "fecha": "2026-10-22 23:36:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Economía",
-      "total_comentarios": 5,
-      "pos": 1,
-      "neg": 0,
-      "neu": 4
-    },
-    {
-      "id": 1028,
-      "titulo": "Litio: Río Tinto comenzará en 2027 el desarrollo de una planta piloto en el salar de Cauchari en Jujuy - econojournal.com.ar",
-      "link": "https://www.google.com/search?q=Litio%3A%20R%C3%ADo%20Tinto%20comenzar%C3%A1%20en%202027%20el%20desarrollo%20de%20una%20planta%20piloto%20en%20el%20sala&tbm=nws",
-      "fecha": "2026-10-22 23:23:48",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Litio",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 993,
-      "titulo": "\"Sentimos que podemos jugar la final\": Gimnasia de Jujuy se ilusiona antes de enfrentar a Atlanta - Somos Jujuy",
-      "link": "https://www.google.com/search?q=%22Sentimos%20que%20podemos%20jugar%20la%20final%22%3A%20Gimnasia%20de%20Jujuy%20se%20ilusiona%20antes%20de%20en&tbm=nws",
-      "fecha": "2026-10-22 23:00:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 2,
-      "pos": 0,
-      "neg": 0,
-      "neu": 2
-    },
-    {
-      "id": 1009,
-      "titulo": "El Colegio de Ingenieros de Jujuy inicia el proceso de elecciones",
-      "link": "https://www.jujuyalmomento.com/ingenieros/el-colegio-ingenieros-jujuy-inicia-el-proceso-elecciones-n208972",
-      "fecha": "2026-10-22 22:20:25",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 1021,
-      "titulo": "El Colegio de Ingenieros de Jujuy inicia el proceso de elecciones - Jujuy Al Momento",
-      "link": "https://www.google.com/search?q=El%20Colegio%20de%20Ingenieros%20de%20Jujuy%20inicia%20el%20proceso%20de%20elecciones%20-%20Jujuy%20Al%20Mom&tbm=nws",
-      "fecha": "2026-10-22 22:20:25",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 1095,
-      "titulo": "Motociclista murió tras un trágico derrape sobre la Ruta provincial 2, en La Almona",
-      "link": "https://www.jujuyalmomento.com/motociclista/motociclista-murio-un-tragico-derrape-la-ruta-provincial-2-la-almona-n208970",
-      "fecha": "2026-10-22 21:56:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Seguridad",
-      "total_comentarios": 0,
-      "pos": 0,
-      "neg": 0,
-      "neu": 0
-    },
-    {
-      "id": 960,
-      "titulo": "Elecciones de CTA en Jujuy: denuncian \"fraude\" y \"acuerdos a espaldas\"",
-      "link": "https://www.jujuyalmomento.com/elecciones/elecciones-cta-jujuy-denuncian-fraude-y-acuerdos-espaldas-n208966",
-      "fecha": "2026-10-22 21:54:00",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 1023,
-      "titulo": "Elecciones de CTA en Jujuy: denuncian \"fraude\" y \"acuerdos a espaldas\" - Jujuy Al Momento",
-      "link": "https://www.google.com/search?q=Elecciones%20de%20CTA%20en%20Jujuy%3A%20denuncian%20%22fraude%22%20y%20%22acuerdos%20a%20espaldas%22%20-%20Jujuy%20A&tbm=nws",
-      "fecha": "2026-10-22 21:54:00",
-      "fuente": "google_news",
-      "keywords": "",
-      "tema": "Política",
-      "total_comentarios": 2,
-      "pos": 0,
-      "neg": 0,
-      "neu": 2
-    },
-    {
-      "id": 1054,
-      "titulo": "¡Urgente! Animal desorientado busca a su familia",
-      "link": "https://www.jujuyalmomento.com/animales/urgente-animal-desorientado-busca-su-familia-n208969",
-      "fecha": "2026-10-22 21:42:48",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
-    },
-    {
-      "id": 1048,
-      "titulo": "¡Urgente! Perro perdido en centro capitalino",
-      "link": "https://www.jujuyalmomento.com/atencion-mascoteros/urgente-perro-perdido-centro-capitalino-n208968",
-      "fecha": "2026-10-22 21:39:07",
-      "fuente": "jujuy_al_momento",
-      "keywords": "",
-      "tema": "General",
-      "total_comentarios": 1,
-      "pos": 0,
-      "neg": 0,
-      "neu": 1
     }
   ],
   "keywords_trending": [
     {
       "palabra": "jujuy",
-      "total": 231,
+      "total": 238,
       "en_negativos": 18,
       "en_positivos": 8
     },
@@ -1531,6 +1531,12 @@
       "en_positivos": 0
     },
     {
+      "palabra": "será",
+      "total": 13,
+      "en_negativos": 0,
+      "en_positivos": 1
+    },
+    {
       "palabra": "morales",
       "total": 13,
       "en_negativos": 0,
@@ -1543,38 +1549,32 @@
       "en_positivos": 0
     },
     {
-      "palabra": "será",
-      "total": 12,
-      "en_negativos": 0,
-      "en_positivos": 1
-    },
-    {
-      "palabra": "sadir",
+      "palabra": "jujeña",
       "total": 11,
       "en_negativos": 1,
       "en_positivos": 0
     },
     {
-      "palabra": "gobierno",
+      "palabra": "jujeños",
       "total": 11,
-      "en_negativos": 0,
-      "en_positivos": 1
+      "en_negativos": 1,
+      "en_positivos": 0
     },
     {
-      "palabra": "buenos",
+      "palabra": "pasa",
       "total": 11,
-      "en_negativos": 0,
-      "en_positivos": 1
+      "en_negativos": 1,
+      "en_positivos": 0
     }
   ],
   "sentimiento_por_tema": [
     {
       "tema": "General",
-      "total_comentarios": 188,
-      "score_promedio": -0.018617021276595744,
+      "total_comentarios": 196,
+      "score_promedio": -0.017857142857142856,
       "positivos": 3,
       "negativos": 7,
-      "neutros": 178
+      "neutros": 186
     },
     {
       "tema": "Política",
@@ -1594,11 +1594,11 @@
     },
     {
       "tema": "Seguridad",
-      "total_comentarios": 80,
-      "score_promedio": -0.146875,
+      "total_comentarios": 81,
+      "score_promedio": -0.14506172839506173,
       "positivos": 5,
       "negativos": 18,
-      "neutros": 57
+      "neutros": 58
     },
     {
       "tema": "Salud",
@@ -1618,11 +1618,11 @@
     },
     {
       "tema": "Transporte",
-      "total_comentarios": 34,
-      "score_promedio": -0.11764705882352941,
+      "total_comentarios": 36,
+      "score_promedio": -0.1111111111111111,
       "positivos": 0,
       "negativos": 4,
-      "neutros": 30
+      "neutros": 32
     },
     {
       "tema": "Carnaval y Cultura",
@@ -1652,19 +1652,19 @@
   "descontento_por_fuente": [
     {
       "fuente": "jujuy_al_momento",
-      "total_opiniones": 357,
+      "total_opiniones": 361,
       "reclamos": 41,
       "favorables": 27,
-      "neutrales": 289,
-      "porcentaje_descontento": 11.5
+      "neutrales": 293,
+      "porcentaje_descontento": 11.4
     },
     {
       "fuente": "google_news",
-      "total_opiniones": 210,
+      "total_opiniones": 217,
       "reclamos": 18,
       "favorables": 6,
-      "neutrales": 186,
-      "porcentaje_descontento": 8.6
+      "neutrales": 193,
+      "porcentaje_descontento": 8.3
     },
     {
       "fuente": "jujuy_online",
@@ -2018,12 +2018,12 @@
   "mapa_departamentos": {
     "Dr. Manuel Belgrano": {
       "nombre": "Dr. Manuel Belgrano",
-      "indice": 24.9,
-      "nivel": "bajo",
-      "color": "#10b981",
+      "indice": 25.0,
+      "nivel": "moderado",
+      "color": "#f59e0b",
       "emocion_predominante": "Incertidumbre",
-      "total_noticias": 284,
-      "total_social": 26,
+      "total_noticias": 289,
+      "total_social": 27,
       "severidad_promedio": 3.0,
       "localidades_clave": [
         "san salvador",
@@ -2034,12 +2034,12 @@
     },
     "Palpalá": {
       "nombre": "Palpalá",
-      "indice": 52.5,
+      "indice": 53.3,
       "nivel": "alto",
       "color": "#f97316",
       "emocion_predominante": "Incertidumbre",
       "total_noticias": 33,
-      "total_social": 24,
+      "total_social": 25,
       "severidad_promedio": 5.0,
       "localidades_clave": [
         "palpalá",
@@ -2070,8 +2070,8 @@
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
-      "total_noticias": 21,
-      "total_social": 25,
+      "total_noticias": 22,
+      "total_social": 26,
       "severidad_promedio": 2.0,
       "localidades_clave": [
         "ledesma",
@@ -2086,7 +2086,7 @@
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
-      "total_noticias": 35,
+      "total_noticias": 36,
       "total_social": 0,
       "severidad_promedio": 2.0,
       "localidades_clave": [
@@ -2114,12 +2114,12 @@
     },
     "Tilcara": {
       "nombre": "Tilcara",
-      "indice": 5.8,
+      "indice": 5.7,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Apoyo",
       "total_noticias": 12,
-      "total_social": 25,
+      "total_social": 26,
       "severidad_promedio": 1.0,
       "localidades_clave": [
         "tilcara",
@@ -2231,7 +2231,7 @@
       "color": "#10b981",
       "emocion_predominante": "Frustración",
       "total_noticias": 9,
-      "total_social": 25,
+      "total_social": 26,
       "severidad_promedio": 2.0,
       "localidades_clave": [
         "susques",
@@ -2246,7 +2246,7 @@
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Esperanza",
-      "total_noticias": 5,
+      "total_noticias": 6,
       "total_social": 0,
       "severidad_promedio": 2.0,
       "localidades_clave": [
@@ -2275,6 +2275,58 @@
   },
   "social_feed": [
     {
+      "id": "soc_live_1792927340_1",
+      "platform": "instagram_reels",
+      "author": "jujeño_ciudadano",
+      "text": "La frecuencia del colectivo Xibi Xibi en Alto Comedero es una vergüenza, esperamos una hora con frío",
+      "timestamp": "2026-10-25T10:37:20.745753",
+      "location_tag": "Alto Comedero, San Salvador",
+      "departamento": "Dr. Manuel Belgrano",
+      "emocion": "Enojo",
+      "severidad": 3,
+      "sentimiento": "NEG",
+      "score": -0.8
+    },
+    {
+      "id": "soc_live_1792927340_2",
+      "platform": "tiktok",
+      "author": "cultura_quebrada",
+      "text": "Qué churo el carnaval en Tilcara y Purmamarca, recibiendo a miles con nuestras tradiciones",
+      "timestamp": "2026-10-25T09:22:20.745753",
+      "location_tag": "Tilcara",
+      "departamento": "Tilcara",
+      "emocion": "Esperanza",
+      "severidad": 1,
+      "sentimiento": "POS",
+      "score": 0.6
+    },
+    {
+      "id": "soc_live_1792927340_3",
+      "platform": "facebook_groups",
+      "author": "vecinos_unidos_palpala",
+      "text": "Sin agua potable en barrio 18 de Noviembre en Palpalá. Exigimos respuesta urgente a la Muni",
+      "timestamp": "2026-10-25T07:22:20.745753",
+      "location_tag": "Palpalá",
+      "departamento": "Palpalá",
+      "emocion": "Incertidumbre",
+      "severidad": 5,
+      "sentimiento": "NEG",
+      "score": -0.2
+    },
+    {
+      "id": "soc_live_1792927340_4",
+      "platform": "x_twitter",
+      "author": "empleo_yungas",
+      "text": "Comenzó la temporada en el Ingenio Ledesma y Calilegua, buena noticia para la economía regional",
+      "timestamp": "2026-10-25T04:22:20.745753",
+      "location_tag": "Ledesma",
+      "departamento": "Ledesma",
+      "emocion": "Frustración",
+      "severidad": 2,
+      "sentimiento": "NEU",
+      "score": 0.0
+    },
+    {
       "id": "soc_live_1792903097_1",
       "platform": "instagram_reels",
       "author": "jujeño_ciudadano",
@@ -2299,6 +2351,19 @@
       "severidad": 1,
       "sentimiento": "POS",
       "score": 0.6
+    },
+    {
+      "id": "soc_live_1792927340_5",
+      "platform": "facebook_groups",
+      "author": "comunidades_litio_susques",
+      "text": "Asamblea por el uso del agua en salar de Olaroz y Susques. Cuidemos la Puna jujeña",
+      "timestamp": "2026-10-25T02:22:20.745753",
+      "location_tag": "Susques",
+      "departamento": "Susques",
+      "emocion": "Esperanza",
+      "severidad": 2,
+      "sentimiento": "NEU",
+      "score": 0.0
     },
     {
       "id": "soc_live_1792903097_3",
@@ -2858,71 +2923,6 @@
       "severidad": 3,
       "sentimiento": "NEG",
       "score": -0.8
-    },
-    {
-      "id": "soc_live_1792730821_2",
-      "platform": "tiktok",
-      "author": "cultura_quebrada",
-      "text": "Qué churo el carnaval en Tilcara y Purmamarca, recibiendo a miles con nuestras tradiciones",
-      "timestamp": "2026-10-23T02:47:01.622240",
-      "location_tag": "Tilcara",
-      "departamento": "Tilcara",
-      "emocion": "Esperanza",
-      "severidad": 1,
-      "sentimiento": "POS",
-      "score": 0.6
-    },
-    {
-      "id": "soc_live_1792755382_5",
-      "platform": "facebook_groups",
-      "author": "comunidades_litio_susques",
-      "text": "Asamblea por el uso del agua en salar de Olaroz y Susques. Cuidemos la Puna jujeña",
-      "timestamp": "2026-10-23T02:36:22.521732",
-      "location_tag": "Susques",
-      "departamento": "Susques",
-      "emocion": "Esperanza",
-      "severidad": 2,
-      "sentimiento": "NEU",
-      "score": 0.0
-    },
-    {
-      "id": "soc_live_1792730821_3",
-      "platform": "facebook_groups",
-      "author": "vecinos_unidos_palpala",
-      "text": "Sin agua potable en barrio 18 de Noviembre en Palpalá. Exigimos respuesta urgente a la Muni",
-      "timestamp": "2026-10-23T00:47:01.622240",
-      "location_tag": "Palpalá",
-      "departamento": "Palpalá",
-      "emocion": "Incertidumbre",
-      "severidad": 5,
-      "sentimiento": "NEG",
-      "score": -0.2
-    },
-    {
-      "id": "soc_live_1792730821_4",
-      "platform": "x_twitter",
-      "author": "empleo_yungas",
-      "text": "Comenzó la temporada en el Ingenio Ledesma y Calilegua, buena noticia para la economía regional",
-      "timestamp": "2026-10-22T21:47:01.622240",
-      "location_tag": "Ledesma",
-      "departamento": "Ledesma",
-      "emocion": "Frustración",
-      "severidad": 2,
-      "sentimiento": "NEU",
-      "score": 0.0
-    },
-    {
-      "id": "soc_live_1792704896_1",
-      "platform": "instagram_reels",
-      "author": "jujeño_ciudadano",
-      "text": "La frecuencia del colectivo Xibi Xibi en Alto Comedero es una vergüenza, esperamos una hora con frío",
-      "timestamp": "2026-10-22T20:49:56.071885",
-      "location_tag": "Alto Comedero, San Salvador",
-      "departamento": "Dr. Manuel Belgrano",
-      "emocion": "Enojo",
-      "severidad": 3,
-      "sentimiento": "NEG",
-      "score": -0.8
     }
   ],
   "lexico_regional": {
@@ -2940,6 +2940,6 @@
     ],
     "total_departamentos": 16
   },
-  "actualizado": "2026-10-25T04:38:17.701112",
+  "actualizado": "2026-10-25T11:22:21.044641",
   "fuente": "Datos reales recolectados de medios de Jujuy y redes sociales"
 }
