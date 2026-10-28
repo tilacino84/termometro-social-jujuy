@@ -1,24 +1,24 @@
 {
   "termometro": {
-    "indice": 14.6,
+    "indice": 14.7,
     "nivel": "bajo",
     "emoji": "🟢",
     "descripcion": "Clima social tranquilo en Jujuy"
   },
   "estadisticas": {
-    "total_noticias": 420,
-    "total_comentarios": 471,
+    "total_noticias": 426,
+    "total_comentarios": 477,
     "sentimientos": {
-      "POS": 31,
-      "NEG": 69,
-      "NEU": 367
+      "POS": 32,
+      "NEG": 70,
+      "NEU": 371
     },
     "periodo_dias": 30
   },
   "temas_frecuentes": [
     {
       "tema": "General",
-      "total": 179
+      "total": 184
     },
     {
       "tema": "Salud",
@@ -30,7 +30,7 @@
     },
     {
       "tema": "Política",
-      "total": 47
+      "total": 48
     },
     {
       "tema": "Educación",
@@ -276,6 +276,13 @@
       "total": 1
     },
     {
+      "dia": "2026-05-05",
+      "pos": 0,
+      "neg": 0,
+      "neu": 1,
+      "total": 1
+    },
+    {
       "dia": "2026-05-08",
       "pos": 0,
       "neg": 1,
@@ -328,8 +335,8 @@
       "dia": "2026-05-26",
       "pos": 0,
       "neg": 0,
-      "neu": 1,
-      "total": 1
+      "neu": 2,
+      "total": 2
     },
     {
       "dia": "2026-05-27",
@@ -497,6 +504,13 @@
       "pos": 0,
       "neg": 0,
       "neu": 1,
+      "total": 1
+    },
+    {
+      "dia": "2026-08-07",
+      "pos": 1,
+      "neg": 0,
+      "neu": 0,
       "total": 1
     },
     {
@@ -845,9 +859,9 @@
     {
       "dia": "2026-10-21",
       "pos": 0,
-      "neg": 0,
+      "neg": 1,
       "neu": 3,
-      "total": 3
+      "total": 4
     },
     {
       "dia": "2026-10-22",
@@ -888,8 +902,8 @@
       "dia": "2026-10-27",
       "pos": 8,
       "neg": 22,
-      "neu": 109,
-      "total": 142
+      "neu": 111,
+      "total": 144
     },
     {
       "dia": "2026-10-28",
@@ -900,6 +914,90 @@
     }
   ],
   "noticias_recientes": [
+    {
+      "id": 2124868363,
+      "titulo": "San Pedro invita a celebrar Halloween con actividades gratuitas para toda la familia - Somos Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMXZ0TUgwWUpjVWRUaDlWbWN3Zi1kVEI3cVVEcERacUxkM0dqcVBoQXl6Sy0tNm51UXNkUXBUVUJWd2xDdDZDUUtoWEhGZUtyYlc1eWtTXy1pZVVOQndzZEUzbkwwZld3bFJBeHF3RDlxY1hTbnB5UUdwNFdWdU5odFd1aW9qWkRKeG12cG9qNXN3WU10c3Bja2xIYXd5X2FWTDFocF9mOWhwUzRCV2lFaUoxUXXSAboBQVVfeXFMTnRYNVQ1ODVxd2N5SDJ3aW5vdDY2cmNLTkNYSXRYUDhKVlBZeTYzQmJiQklSRXBSMDBwNDkxaTVmeVFpSjFRRUJpS1lvQ1JfYVRJT1h6cTFlNEJ5SXQwM1FhNWhpMmI3VGd5NVV5MFNMRGxMVW1oU0theDNHbjNhYzdwY1BrTzlxb2NyQjAwX05QY1c3WmRFRG8tRlJ1dFZxQVdGeWdFQVNRdXp2bWhRbXk3dW5RSlktLU9n?oc=5",
+      "fecha": "2026-10-27 18:13:00",
+      "fuente": "somos_jujuy",
+      "keywords": "San Pedro",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1,
+      "sentimiento": "NEU"
+    },
+    {
+      "id": 1289844581,
+      "titulo": "Jujuy bajo alerta por fuertes vientos hasta el viernes con ráfagas que podrían superar los 100 km/h - Página Central Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5NdHAwVDFOS2lqVHVqZWlDcnc5dFl5QW9sZGx1WFB5eWNndExZVWNyVTg1NDlXQXByaUtnVHJxTXI1QTFmcFNtZXZPaGJBWjZfOUJGVzlBckVRRnhPaHhQNjktTnLSAWpBVV95cUxPMDBlMzVfcUxVODRwZW4tcWRWUFZQWjR4ejhuYTdVcHNtY0QtZ2hlTjIxZEZBTDhESmkwQUdPdkZ1YmJDMkZraXlSWjFtejhibG4ycG9pVktwVWsxMnJZUzA3U1ZQN1dKTW13?oc=5",
+      "fecha": "2026-10-21 20:49:26",
+      "fuente": "p_gina_central_jujuy",
+      "keywords": "Dr. Manuel Belgrano",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 1,
+      "neu": 0,
+      "sentimiento": "NEG"
+    },
+    {
+      "id": 1263574652,
+      "titulo": "El programa REE Sí! llega a la Puna y completa la cobertura territorial en toda la provincia - Somos Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOOUVVZFJUbTRPR2dOeHFDbVVacFMzQWgxNkJ4dkxqZC1ZYlF3ZkZpYUpDN3YyZlkzNko4OFRRSHlRRWZxMGtLaXFuTUV3b19pYVFjN081Nmh0VXBvVUFFc0xTVmkzU2I5ajIwQWdzU2JJMmR1bHd2UVl6TEtOWEwwdzE1TXQ2TVl2bERWMU1ON2J1ZU9yUWZZSlNRbW1NTnlUR0pFc3VlSFFxSUNBUl96amJ5TU5iTEJkWW9R0gHAAUFVX3lxTE5WUUc2T1pGejlwcEoyWW1hVmRLM2xCMTB5RFJpM2x2Z2JiX0thamVGQk5USF9OLWtDWjVibmRTRzhVZzBWRmNQcHRxcVkxTVlDb0NEUzZwYU41VTNiRzhQOUtJSXotVXFpVFk0U3pjc2lWSko2NW1GUHdpSktzb1JaRTVZUmRPa2kwYTNDZUozakUweGc1UU1ZSjhXdGdBWGREc25leTRNUnZ4ME1NbXIyYkNVM3dnTXhrTXg5Z0h6Wg?oc=5",
+      "fecha": "2026-10-27 16:27:04",
+      "fuente": "somos_jujuy",
+      "keywords": "Dr. Manuel Belgrano",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1,
+      "sentimiento": "NEU"
+    },
+    {
+      "id": 386965033,
+      "titulo": "Formación de jóvenes 3° edición de REE SI!: bienestar y liderazgos de juventudes en Jujuy - Prensa Jujuy",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVFVjT0swM1UyWkN0QzNHTkh1MmxQQ3k5QkxkVVplMmswUE42ZjZqc3BJYm15S05aUkVBSFRmdW40QzB5SGk3OVctcDYzQy1vLTgzdUFvemc1TDlpYTJMcHMtNUtqUTJsR3RmTW1aNTZlYWpYMVNXT2RnM0lWdlpOZVhzcGlMaFpYVTNadTNZbnlHbnRHMkR3RVNxbkpRbDcy?oc=5",
+      "fecha": "2026-05-26 07:00:00",
+      "fuente": "prensa_jujuy",
+      "keywords": "Dr. Manuel Belgrano",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1,
+      "sentimiento": "NEU"
+    },
+    {
+      "id": 233738152,
+      "titulo": "La Copa Jujuy de Vóley pone primera con récord de equipos - Jujuy Al Momento",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVFk5RFgzcm1oT004ZFp3U2RrWkJUN3lBRm9IYXV4VVpNX0UzUW5hU1gtUS1uWnlMN0RhZ2VadTFzaWtwX0gtYW5sX0tHaXBDMHJBSDJtcnJmdC1KLW1CLWZUTW04UGZNbkwzaVkxOXZuNnRpZ24yNS1wZGtNSDJfT19RS0Y2ZW1HbG8zTENPN0JpdWxjTHZqV2lLcThpd9IBowFBVV95cUxNemU1blpfSW9QVnJfOC1KTFZKTG9POUNBeGVCNDFXSE1NU2Q3TUxNNmhwd1FHRmRUOEQ5YmhzVzhuNDkycjRNbk9DUFZrWFRTZV9GeFJORXdXbGVNbmR0X2RpVkh3SjhBcmNOOFN2Yld0ZWVWeW9NMVNmUTN4Wk1OTlBGZExRazZwdkdKY3hWNmdQc2dxV0hLb215LXUyalMwSDU0?oc=5",
+      "fecha": "2026-08-07 07:00:00",
+      "fuente": "jujuy_al_momento",
+      "keywords": "Dr. Manuel Belgrano",
+      "tema": "General",
+      "total_comentarios": 1,
+      "pos": 1,
+      "neg": 0,
+      "neu": 0,
+      "sentimiento": "POS"
+    },
+    {
+      "id": 2112981481,
+      "titulo": "El Gobierno de Jujuy amplía los operativos de documentación en San Pedro, Los Molinos y Capital - prensa.jujuy.gob.ar",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQW1xYkFETTJzVC1IYnRVMmNxYkJ4bFc2TDN4X2lXUEpORGZfanh5dEIwOU43cUVXMmVLWEVlaVN6TEdJN1lybUtJanpEZ0hOVUtRaW1HOUM4TmVydDNOY1NTczdOeW1DemZvVnJ3QlpzUXpPQ1Vrd3Y0c3pPN1daZnU2U1FTYjFuclJMNll5dUFwN1pIbmc1V195b2hneDM0dVpQNlE2UlF5SkJZYjRERDB6LU9yU0h1ZktkU1VURk5qZG5GeG14Z0JzTXpOcWpQU1E?oc=5",
+      "fecha": "2026-05-05 07:00:00",
+      "fuente": "prensa_jujuy_gob_ar",
+      "keywords": "Dr. Manuel Belgrano",
+      "tema": "Política",
+      "total_comentarios": 1,
+      "pos": 0,
+      "neg": 0,
+      "neu": 1,
+      "sentimiento": "NEU"
+    },
     {
       "id": 364730922,
       "titulo": "Una violenta pelea en un lubricentro de barrio Luján terminó con apuñalados y el robo de $6.000.000 - Somos Jujuy",
@@ -7254,11 +7352,11 @@
   "mapa_departamentos": {
     "Dr. Manuel Belgrano": {
       "nombre": "Dr. Manuel Belgrano",
-      "indice": 15.1,
+      "indice": 15.2,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Incertidumbre",
-      "total_noticias": 423,
+      "total_noticias": 428,
       "total_social": 39,
       "severidad_promedio": 3,
       "localidades_clave": [
@@ -7286,11 +7384,11 @@
     },
     "San Pedro": {
       "nombre": "San Pedro",
-      "indice": 7.7,
+      "indice": 7.4,
       "nivel": "bajo",
       "color": "#10b981",
       "emocion_predominante": "Incertidumbre",
-      "total_noticias": 26,
+      "total_noticias": 27,
       "total_social": 1,
       "severidad_promedio": 2,
       "localidades_clave": [
@@ -8176,6 +8274,6 @@
     ],
     "total_departamentos": 16
   },
-  "actualizado": "2026-10-28T15:17:56.438Z",
+  "actualizado": "2026-10-28T21:34:23.491Z",
   "fuente": "Datos reales recolectados de medios de Jujuy y redes sociales"
 }

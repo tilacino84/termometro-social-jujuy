@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { scrapeFreeJujuyFeeds, mergeAndRecalculateDashboard } from './server/scraper.js';
+import { scrapeFreeJujuyFeeds, mergeAndRecalculateDashboard } from './server/scraper';
 import { DashboardPayload } from './src/types';
 
 const __filename = fileURLToPath(import.meta.url);
