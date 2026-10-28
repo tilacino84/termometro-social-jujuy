@@ -14,6 +14,9 @@ import { MediaDiscontent } from './components/MediaDiscontent';
 import { CitizenVoices } from './components/CitizenVoices';
 import { NewsFeed } from './components/NewsFeed';
 import { Footer } from './components/Footer';
+import { AlertTicker } from './components/AlertTicker';
+import { ScenarioSimulator } from './components/ScenarioSimulator';
+import { ExecutiveReportModal } from './components/ExecutiveReportModal';
 import { CheckCircle2, AlertCircle, X, Sparkles } from 'lucide-react';
 
 const DIAS_ANALISIS = 7;
@@ -27,6 +30,13 @@ export const App: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(null);
   const [selectedKeyword, setSelectedKeyword] = useState<string | null>(null);
   const [notification, setNotification] = useState<{ type: 'success' | 'info' | 'error'; text: string } | null>(null);
+
+  // Advanced feature states: Simulator and Executive Report
+  const [isSimulatorActive, setIsSimulatorActive] = useState(false);
+  const [simulatedDelta, setSimulatedDelta] = useState<number>(0);
+  const [simulatedDept, setSimulatedDept] = useState<string | null>(null);
+  const [simulatedEventTitle, setSimulatedEventTitle] = useState<string | null>(null);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   // Live added social feed items
   const [socialFeed, setSocialFeed] = useState<SocialFeedItem[]>(
@@ -190,6 +200,39 @@ export const App: React.FC = () => {
     };
   }, [masterData]);
 
+  // Computed effective values taking into account simulation
+  const effectiveIndice = useMemo(() => {
+    if (!isSimulatorActive || simulatedDelta === 0) {
+      return weeklyAnalysis.indice;
+    }
+    return Math.min(100, Math.max(0, Number((weeklyAnalysis.indice + simulatedDelta).toFixed(1))));
+  }, [weeklyAnalysis.indice, isSimulatorActive, simulatedDelta]);
+
+  // Adjust department severity in heatmap if simulation targets a specific department
+  const effectiveDepartamentos: Record<string, typeof masterData.mapa_departamentos[string]> = useMemo(() => {
+    const original = masterData.mapa_departamentos || {};
+    if (!isSimulatorActive || !simulatedDept || !original[simulatedDept]) {
+      return original;
+    }
+    const targetDept = original[simulatedDept];
+    const newSeveridad = simulatedDelta > 0
+      ? Math.min(5, (targetDept.severidad_promedio || 2) + 2)
+      : Math.max(1, (targetDept.severidad_promedio || 2) - 1);
+
+    const newNivel: 'bajo' | 'moderado' | 'alto' | 'crítico' =
+      newSeveridad >= 4 ? 'crítico' : newSeveridad === 3 ? 'alto' : newSeveridad === 2 ? 'moderado' : 'bajo';
+
+    return {
+      ...original,
+      [simulatedDept]: {
+        ...targetDept,
+        severidad_promedio: newSeveridad,
+        nivel: newNivel,
+        emocion_predominante: simulatedDelta > 0 ? 'Indignación (Simulado)' : 'Alivio (Simulado)'
+      }
+    };
+  }, [masterData.mapa_departamentos, isSimulatorActive, simulatedDept, simulatedDelta]);
+
   const handleFilterNewsByDepartment = useCallback((depto: string) => {
     setSelectedDepartment(depto);
     const feedEl = document.getElementById('news-feed-card');
@@ -213,15 +256,46 @@ export const App: React.FC = () => {
     }
   }, []);
 
+  const handleApplySimulatedDelta = (delta: number, dept?: string, title?: string) => {
+    setSimulatedDelta(delta);
+    if (dept) setSimulatedDept(dept);
+    if (title) setSimulatedEventTitle(title);
+    setIsSimulatorActive(true);
+  };
+
+  const handleResetSimulation = () => {
+    setSimulatedDelta(0);
+    setSimulatedDept(null);
+    setSimulatedEventTitle(null);
+    setIsSimulatorActive(false);
+  };
+
   return (
     <div className="min-h-screen bg-[#070a12] text-[#f8fafc] font-sans antialiased selection:bg-indigo-500/30 selection:text-white">
       {/* TOP NAVIGATION BAR */}
       <TopNav
         onRefresh={fetchData}
         onScrape={() => handleScrape()}
+        onOpenReport={() => setIsReportModalOpen(true)}
+        onToggleSimulator={() => setIsSimulatorActive((prev) => !prev)}
+        isSimulatorActive={isSimulatorActive}
         isRefreshing={isRefreshing}
         isScraping={isScraping}
-        currentIndice={weeklyAnalysis.indice}
+        currentIndice={effectiveIndice}
+      />
+
+      {/* TICKER DE ALERTAS TEMPRANAS EN TIEMPO REAL */}
+      <AlertTicker
+        indice={effectiveIndice}
+        onDepartmentSelect={handleFilterNewsByDepartment}
+      />
+
+      {/* REPORTE EJECUTIVO MODAL */}
+      <ExecutiveReportModal
+        isOpen={isReportModalOpen}
+        onClose={() => setIsReportModalOpen(false)}
+        data={masterData}
+        indiceActual={effectiveIndice}
       />
 
       {/* NOTIFICACIÓN FLOTANTE / TOAST */}
@@ -262,6 +336,17 @@ export const App: React.FC = () => {
 
       {/* DASHBOARD SHELL */}
       <main className="dashboard-shell max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-8">
+        {/* SIMULADOR PREDICTIVO DE IMPACTO SOCIAL (SI ESTÁ ACTIVO O ACCIONADO) */}
+        {isSimulatorActive && (
+          <ScenarioSimulator
+            baseIndice={weeklyAnalysis.indice}
+            onApplySimulatedDelta={handleApplySimulatedDelta}
+            onResetSimulation={handleResetSimulation}
+            isSimulating={isSimulatorActive && simulatedDelta !== 0}
+            currentSimulatedDelta={simulatedDelta}
+          />
+        )}
+
         {/* PANEL DE SCRAPING GRATUITO EN VIVO (0 CRÉDITOS / SIN COSTOS) */}
         <FreeScraperPanel
           isScraping={isScraping}
@@ -273,7 +358,7 @@ export const App: React.FC = () => {
 
         {/* HERO GAUGE SECTION */}
         <HeroGauge
-          indice={weeklyAnalysis.indice}
+          indice={effectiveIndice}
           totalNotas={weeklyAnalysis.totalNotas}
           totalComentarios={weeklyAnalysis.totalComentarios}
           sentimientos={weeklyAnalysis.sentimientos}
@@ -281,7 +366,7 @@ export const App: React.FC = () => {
 
         {/* MAPA DE CALOR TERRITORIAL DE JUJUY (16 DEPARTAMENTOS) */}
         <HeatmapJujuy
-          departamentos={masterData.mapa_departamentos || {}}
+          departamentos={effectiveDepartamentos}
           selectedDepartment={selectedDepartment}
           onSelectDepartment={setSelectedDepartment}
           onFilterNewsByDepartment={handleFilterNewsByDepartment}

@@ -1,5 +1,4 @@
 import express, { Request, Response } from 'express';
-import { createServer as createViteServer } from 'vite';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,8 +8,10 @@ import { DashboardPayload } from './src/types';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 3000;
-const DATA_FILE_PATH = path.resolve(__dirname, 'public/data.json');
+const PORT = Number(process.env.PORT) || 3000;
+const DATA_FILE_PATH = fs.existsSync(path.resolve(__dirname, 'public/data.json'))
+  ? path.resolve(__dirname, 'public/data.json')
+  : path.resolve(__dirname, 'dist/data.json');
 
 // In-memory master state initialized from public/data.json
 let currentDashboardData: DashboardPayload;
@@ -119,11 +120,13 @@ async function startServer() {
 
   // Configurar Vite middleware en desarrollo o servir dist en producción
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'dist')));
-    app.get('*', (_req: Request, res: Response) => {
-      res.sendFile(path.resolve(__dirname, 'dist/index.html'));
+    const distPath = path.resolve(__dirname, 'dist');
+    app.use(express.static(distPath));
+    app.use((_req: Request, res: Response) => {
+      res.sendFile(path.resolve(distPath, 'index.html'));
     });
   } else {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa'
@@ -132,7 +135,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 Servidor Termómetro Social Jujuy corriendo en http://0.0.0.0:${PORT}`);
+    console.log(`🚀 Servidor Termómetro Social Jujuy corriendo en http://0.0.0.0:${PORT} (modo: ${process.env.NODE_ENV || 'development'})`);
   });
 
   // Scraping automático periódico en segundo plano (cada 15 minutos, 100% gratuito)

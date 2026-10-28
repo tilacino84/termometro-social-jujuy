@@ -1,9 +1,12 @@
 import React from 'react';
-import { RotateCw, Calendar, Radio, Activity, Compass, MessageSquare, BarChart3, Newspaper, Map } from 'lucide-react';
+import { RotateCw, Calendar, Radio, Activity, Compass, MessageSquare, BarChart3, Newspaper, Map, FileText, Sliders } from 'lucide-react';
 
 interface TopNavProps {
   onRefresh: () => void;
   onScrape: () => void;
+  onOpenReport: () => void;
+  onToggleSimulator: () => void;
+  isSimulatorActive: boolean;
   isRefreshing: boolean;
   isScraping: boolean;
   currentIndice?: number;
@@ -12,6 +15,9 @@ interface TopNavProps {
 export const TopNav: React.FC<TopNavProps> = ({
   onRefresh,
   onScrape,
+  onOpenReport,
+  onToggleSimulator,
+  isSimulatorActive,
   isRefreshing,
   isScraping,
   currentIndice = 14.3,
@@ -24,10 +30,10 @@ export const TopNav: React.FC<TopNavProps> = ({
   };
 
   const getTensionBadge = (val: number) => {
-    if (val <= 15) return { label: 'Calmo', color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30 dot-emerald-400' };
-    if (val <= 35) return { label: 'Moderado', color: 'text-amber-400 bg-amber-500/10 border-amber-500/30 dot-amber-400' };
-    if (val <= 65) return { label: 'Tensión Media', color: 'text-orange-400 bg-orange-500/10 border-orange-500/30 dot-orange-400' };
-    return { label: 'Conflicto Alto', color: 'text-rose-400 bg-rose-500/10 border-rose-500/30 dot-rose-400' };
+    if (val <= 15) return { label: 'Calmo', color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30' };
+    if (val <= 35) return { label: 'Moderado', color: 'text-sky-400 bg-sky-500/10 border-sky-500/30' };
+    if (val <= 65) return { label: 'Tensión Media', color: 'text-amber-400 bg-amber-500/10 border-amber-500/30' };
+    return { label: 'Conflicto Alto', color: 'text-rose-400 bg-rose-500/10 border-rose-500/30' };
   };
 
   const tensionInfo = getTensionBadge(currentIndice);
@@ -74,14 +80,14 @@ export const TopNav: React.FC<TopNavProps> = ({
             className="px-2.5 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1 cursor-pointer"
           >
             <Map className="w-3 h-3 text-sky-400" />
-            <span>Mapa Territorial</span>
+            <span>Mapa</span>
           </button>
           <button
             onClick={() => scrollTo('social-radar-section')}
             className="px-2.5 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1 cursor-pointer"
           >
             <MessageSquare className="w-3 h-3 text-pink-400" />
-            <span>Redes Sociales</span>
+            <span>Redes</span>
           </button>
           <button
             onClick={() => scrollTo('analytics-section')}
@@ -101,12 +107,29 @@ export const TopNav: React.FC<TopNavProps> = ({
 
         {/* ACTIONS */}
         <div className="nav-actions flex items-center gap-2 flex-wrap">
-          <div className="timeframe-badge inline-flex items-center gap-1.5 bg-indigo-500/15 border border-indigo-500/30 rounded-full px-3 py-1 text-xs text-slate-200 shadow-sm hidden sm:inline-flex">
-            <Calendar className="w-3.5 h-3.5 text-indigo-400" />
-            <span className="text-[0.75rem]">
-              Ventana: <strong className="text-indigo-300 font-bold">7 Días</strong>
-            </span>
-          </div>
+          {/* BOTÓN SIMULADOR PREDICTIVO */}
+          <button
+            onClick={onToggleSimulator}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all cursor-pointer active:scale-95 ${
+              isSimulatorActive
+                ? 'bg-indigo-600 border-indigo-400 text-white shadow-[0_0_15px_rgba(99,102,241,0.4)]'
+                : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10 hover:text-white'
+            }`}
+            title="Abrir o cerrar el Simulador Predictivo de Escenarios de Conflicto"
+          >
+            <Sliders className="w-3.5 h-3.5 text-indigo-400" />
+            <span className="hidden sm:inline">Simulador</span>
+          </button>
+
+          {/* BOTÓN REPORTE EJECUTIVO */}
+          <button
+            onClick={onOpenReport}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white transition-all cursor-pointer active:scale-95"
+            title="Generar Resumen Ejecutivo para Gabinete y Prensa"
+          >
+            <FileText className="w-3.5 h-3.5 text-amber-400" />
+            <span className="hidden sm:inline">Reporte</span>
+          </button>
 
           {/* BOTÓN DE SCRAPING GRATUITO SIN CRÉDITOS */}
           <button
@@ -134,10 +157,10 @@ export const TopNav: React.FC<TopNavProps> = ({
             title="Recargar datos del dashboard"
           >
             <RotateCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-indigo-400' : ''}`} />
-            <span className="hidden sm:inline">Recargar</span>
           </button>
         </div>
       </div>
     </header>
   );
 };
+
