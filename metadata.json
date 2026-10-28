@@ -1,0 +1,8 @@
+{
+  "name": "Termómetro Social Jujuy",
+  "description": "Monitor en tiempo real de clima y tensión social de la provincia de Jujuy con análisis de medios locales, mapa territorial y pulso de redes sociales.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ],
+  "permissions": []
+}
